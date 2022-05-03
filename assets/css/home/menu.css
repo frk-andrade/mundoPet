@@ -1,0 +1,20 @@
+.nav-menu {
+  background-color: var(--primary-color);
+  padding: 24px 20px 24px 20px;
+}
+
+.nav-menu--caixa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu--icones {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-menu--texto p, h3 {
+  color: white;
+}

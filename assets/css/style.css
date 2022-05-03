@@ -1,0 +1,8 @@
+/* GLOBAL */
+@import './global/reset.css';
+
+
+/* HOME */
+@import './home/menu.css';
+@import './global/variaveis.css';
+@import './global/componentes.css'
