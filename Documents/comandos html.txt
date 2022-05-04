@@ -1,0 +1,13 @@
+Tags semânticas
+main - conteúdo principal
+aside - conteúdo secundário
+section - agrupa conteúdos semelhantes
+article - conteúdo específico
+strong - destaque para texto
+emphasize - ênfase
+del - conteúdo obsoleto, inválido
+nav - navegação
+<p></p>paragrafos
+<br> quebra linhas 
+<h1></h1> vai ate o h6 são titulos
+ul>li*4= abre 4li dentro da ul

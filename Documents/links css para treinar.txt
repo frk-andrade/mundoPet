@@ -1,0 +1,14 @@
+       URLS para treinar css
+
+https://djament.com.br/praticas/css/background/index.html
+background-image: url(https://wallpaperaccess.com/full/443046.jpg)
+https://djament.com.br/praticas/css/display/index.html
+https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
+https://djament.com.br/praticas/css/position/index.html
+https://cubic-bezier.com/#.17,.67,.83,.67https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+https://css-tricks.com/
+https://www.youtube.com/channel/UCJZv4d5rbIKd4QHMPkcABCw
+https://cssbattle.dev/
+frontendmentor.io - pegar referências
+https://flexboxfroggy.com/#pt-br - desafios
+https://docs.google.com/forms/d/e/1FAIpQLScRMhZny0krNEm9-mZ2j2PjD3LS7QjguCusk40XqAZPnEnQPA/viewform
