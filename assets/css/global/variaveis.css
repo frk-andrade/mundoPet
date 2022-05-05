@@ -1,4 +1,43 @@
 :root {
   --primary-color: #012F45;
+  --primary-color-background-button: #FF9100;
+
   --second-color: #67B8E4;
+  --second-color-background: #012F46;
+
+  --third-color: #FCF5A7;
+}
+
+
+
+/* Tipogragia */
+
+
+.font-1-xs {
+  font: 400 0.9375rem "Open Sans", sans-serif;
+}
+
+.font-2-xs {
+  font: 400 1.25rem "Open Sans", sans-serif;
+}
+
+.font-1-s {
+  font: 400 1.56rem "Open Sans", sans-serif;
+}
+
+.font-2-s {
+  font: 400  1.68rem "Open Sans", sans-serif;
+}
+
+.font-1-m,
+.font-1-m-b {
+  font: 400  1.75rem "Open Sans", sans-serif;
+}
+
+.font-2-xl {
+  font: 700 2.5rem "Open Sans", sans-serif;
+}
+
+.font-1-xxl {
+  font: 700 4rem "Open Sans", sans-serif;
 }
