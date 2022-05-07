@@ -1,0 +1,18 @@
+.banner-caixa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-right: 2rem;
+  padding-left: 2rem;
+
+  margin-top: 4rem;
+}
+
+.banner-caixa h2 {
+  text-align: center;
+}
+
+.banner-caixa img {
+  border-radius: 8px;
+}

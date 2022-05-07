@@ -1,0 +1,16 @@
+.vantagens {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+
+  margin-top: 6rem;
+}
+
+.vantagens-icones { 
+  display: flex;
+  align-items: center;
+}
+
+.vantagens-icones img{
+  margin-right: 0.5rem;
+}
