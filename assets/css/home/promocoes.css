@@ -1,0 +1,16 @@
+.promocoes {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.promocoes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+
+.promocoes-img {
+  width: 20%;
+}
