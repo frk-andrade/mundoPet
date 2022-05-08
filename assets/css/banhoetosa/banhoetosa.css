@@ -27,6 +27,7 @@ h1 {
     margin-top: 20px;
     margin-left: 35%;
     font-size: larger;
+    text-align: center;
 }
 
 img.gatoecachorro {
@@ -43,4 +44,19 @@ img.gatoecachorro {
     height: 436px;
     margin-top: 20%;
     margin-left: 35%;
+}
+
+.caixa2 {
+    display: flex;
+    align-content: space-between;
+}
+
+img.cachorrocontorno, .maiscontorno {
+    width: 132px;
+    height: 132px;
+}
+
+.botoes1, .botoes2 {
+    display: flex;
+    align-self: center;
 }
