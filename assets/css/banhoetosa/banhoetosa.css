@@ -45,16 +45,24 @@ img.gatoecachorro {
 
 .caixa2 {
     display: flex;
-    align-content: space-between;
     position: relative;
+    align-content: space-between;
 }
 
 img.cachorrocontorno, .maiscontorno {
-    width: 132px;
-    height: 132px;
+    width: 100px;
+    height: 100px;
     display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
 }
 
+.botoes1 {
+    position: relative;
+    left: 25%;
+}
 .botoes2 {
     position: relative;
+    left: 45%;
 }
