@@ -1,0 +1,13 @@
+/* GLOBAL */
+@import './global/reset.css';
+@import './global/variaveis.css';
+@import './global/componentes.css';
+
+
+/* HOME */
+@import './home/menu.css';
+@import './home/sub-menu.css';
+@import './home/banner-primario.css';
+@import './home/vantagens.css';
+@import './home/promocoes.css';
+@import './home/parceiros.css';
