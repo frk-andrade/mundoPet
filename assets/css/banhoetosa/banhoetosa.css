@@ -1,0 +1,46 @@
+/* GLOBAL */
+@import '../global/reset.css';
+@import '../global/variaveis.css';
+@import '../global/componentes.css';
+
+
+/* HOME */
+@import '../home/menu.css';
+@import '../home/sub-menu.css';
+@import '../home/banner-primario.css';
+@import '../home/vantagens.css';
+@import '../home/promocoes.css';
+@import '../home/parceiros.css';
+
+/*BANHOETOSA*/
+.caixa1{
+    display: flex;
+    align-content: space-around;
+}
+
+.caixa0 {
+    display: flex;
+    align-content: center;
+}
+
+h1 {
+    margin-top: 20px;
+    margin-left: 35%;
+    font-size: larger;
+}
+
+img.gatoecachorro {
+    display: flex;
+    width: 554px;
+    height: 360px;
+    margin-left: 30%;
+}
+
+.textbanho {
+    display: flex;
+    text-align: center;
+    width: 654px;
+    height: 436px;
+    margin-top: 20%;
+    margin-left: 35%;
+}
