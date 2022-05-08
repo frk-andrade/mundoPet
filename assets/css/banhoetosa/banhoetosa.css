@@ -50,8 +50,8 @@ img.gatoecachorro {
 }
 
 img.cachorrocontorno, .maiscontorno {
-    width: 100px;
-    height: 100px;
+    width: 85px;
+    height: 85px;
     display: flex;
     position: relative;
     justify-content: center;
