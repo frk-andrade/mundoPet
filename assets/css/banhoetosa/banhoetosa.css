@@ -25,7 +25,6 @@
 
 h1 {
     margin-top: 20px;
-    margin-left: 35%;
     font-size: larger;
     text-align: center;
 }
@@ -34,7 +33,6 @@ img.gatoecachorro {
     display: flex;
     width: 554px;
     height: 360px;
-    margin-left: 30%;
 }
 
 .textbanho {
@@ -43,20 +41,20 @@ img.gatoecachorro {
     width: 654px;
     height: 436px;
     margin-top: 20%;
-    margin-left: 35%;
 }
 
 .caixa2 {
     display: flex;
     align-content: space-between;
+    position: relative;
 }
 
 img.cachorrocontorno, .maiscontorno {
     width: 132px;
     height: 132px;
+    display: flex;
 }
 
-.botoes1, .botoes2 {
-    display: flex;
-    align-self: center;
+.botoes2 {
+    position: relative;
 }
