@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MundoPet | Cadastro Pet</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+      
+        <!-- FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+      
+      </head>
+      <body>
+        <nav class="nav-menu">
+          <div class="nav-menu--caixa container">
+            <a href="#"><img src="./assets/img/logo.svg" alt="Logo MundoPet"></a>
+      
+            <div class="nav-menu--icones">
+      
+              <img src="./assets/img/login.svg" alt="">
+              <div class="nav-menu--texto">
+                <h3 class="font-2-xs">Bem vindo</h3>
+                <a class="font-1-xs" href="#">Entre ou cadastre-se</a>
+              </div>
+      
+              <img src="./assets/img/carrinho.svg" alt="">
+              <div class="nav-menu--texto">
+                <h3 class="font-2-xs">Carrinho</h3>
+                <a class="font-1-xs" href="#">0 item</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      
+        <section class="sub-menu">
+          <div class="container">
+            <ul>
+              <li class="font-2-xs font-2-m-b"><a href="#">Assinatura</a></li>
+              <li class="font-2-xs font-2-m-b"><a href="#">Amigo</a></li>
+              <li class="font-2-xs font-2-m-b"><a href="#">Espaço Pet</a></li>
+              <li class="font-2-xs font-2-m-b"><a href="#">Retirar na Loja</a></li>
+              <li class="font-2-xs font-2-m-b"><a href="#">Mundo Pet já</a></li>
+              <li class="font-2-xs font-2-m-b"><a href="#">Blog</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="container">
+            <form action="" method="post">
+            <h2>Passo 1</h2>
+            <br>
+            <h2>Selecione o Pet</h2>
+            <br>
+            <div class="topoagendamento">
+            <div div class="botoes1">
+            <img src="./assets/img/osso.png" alt="avatar do pet">
+            <br>
+            <h4>(Nome do Pet)</h4>
+            </div>
+            <div class="botoes2">
+                <img src="./assets/img/mais.png" alt="sinal de mais" class="maiscontorno">
+                <br>
+                <button class="botao-secundario font-2-xs">Cadastrar Novo Pet</button>
+            </div>
+            </div>
+            <br>
+            <h2>Passo 2</h2>
+            <br>
+            <label for="servico">Selecione o serviço</label>
+                <br><br>
+                <select name="servico" id="servico">
+                    <option selected disabled>Selecione</option>
+                    <option value="lorem">Lorem</option>
+                    <option value="ipsum"> Ipsum</option>
+                    <option value="loremipsum">Lorem Ipsum</option>
+                    <option value="ipsumlorem">Ipsum Lorem</option>
+                </select>
+                <br><br>
+                <h2>Passo 3</h2>
+                <br><br>
+            <label for="local">Escolha entre as três opções para selecionar a loja</label>
+            <br><br>
+            <input type="radio" id="localizacao" value="localizacao" name="local"><label for="local">Usar localização</label>
+            <input type="radio" id="endereco" value="endereco" name="local"><label for="local">Endereço (Rua, Cidade ou Estado)</label>
+            <input type="radio" id="CEP" value="CEP" name="local"><label for="local">CEP</label>
+            <br><br>
+            <input type="text" id="local" name="local">
+            <br><br>
+            <h2>Passo 4</h2>
+            <br><br>
+            <label for="loja">Selecione o local</label>
+            <br><br>
+            <select name="loja" id="loja">
+                <option selected disabled>Selecione</option>
+                <option value="lorem">Lorem</option>
+                <option value="ipsum"> Ipsum</option>
+                <option value="loremipsum">Lorem Ipsum</option>
+                <option value="ipsumlorem">Ipsum Lorem</option>
+            </select>
+            <br><br>
+            <h2>Passo 5</h2>
+            <br><br>
+            <label for="dia">Selecione o dia</label>
+            <br>
+            <input type="date" name="dia">
+            <br><br>
+            <label for="hora">Selecione a hora</label>
+            <br><br>
+            <input type="time" name="hora">
+            <br><br>
+            <button class="botao-secundario font-2-xs">Agendar para mais um Pet</button>
+            <button class="botao-secundario font-2-xs">Finalizar Agendamento</button>
+            </form>
+        </section>
+        <footer class="footer">
+          <div class="footer-conteudo container">
+            <div class="footer-links">
+              <h3 class="font-2-xs font-2-m-b">Produtos</h3>
+              <ul>
+                <li><a class="font-2-xs font-2-m-b" href="">link 1</a></li>
+                <li><a class="font-2-xs font-2-m-b" href="">link 2</a></li>
+                <li><a class="font-2-xs font-2-m-b" href="">link 3</a></li>
+                <li><a class="font-2-xs font-2-m-b" href="">link 4</a></li>
+              </ul>
+            </div>
+      
+            <div class="footer-links">
+              <h3 class="font-2-xs font-2-m-b">Serviços</h3>
+              <ul>
+                <li><a class="font-2-xs font-2-m-b" href="">link 1</a></li>
+                <li><a class="font-2-xs font-2-m-b" href="">link 2</a></li>
+                <li><a class="font-2-xs font-2-m-b" href="">link 3</a></li>
+                <li><a class="font-2-xs font-2-m-b" href="">link 4</a></li>
+              </ul>
+            </div>
+      
+            <div class="footer-links">
+              <h3 class="font-2-xs font-2-m-b">Contatos</h3>
+              <ul>
+                <li><a class="font-2-xs font-2-m-b" href="">link 1</a></li>
+                <li><a class="font-2-xs font-2-m-b" href="">link 2</a></li>
+                <li><a class="font-2-xs font-2-m-b" href="">link 3</a></li>
+                <li><a class="font-2-xs font-2-m-b" href="">link 4</a></li>
+              </ul>
+            </div>
+      
+            <div>
+              <div class="footer-redes">
+                <h3 class="font-2-xs font-2-m-b">Siga o MundoPet nas redes sociais</h3>
+                <ul>
+                  <li><a href="#"><img src="./assets/img/facebook.png" alt=""></a></li>
+                  <li><a href="#"><img src="./assets/img/instagram.png" alt=""></a></li>
+                  <li><a href="#"><img src="./assets/img/youtube.png" alt=""></a></li>
+                  <li><a href="#"><img src="./assets/img/twiter.png" alt=""></a></li>
+                </ul>
+                <p class="font-2-xs font-2-m-b">Baixe nosso aplicativo</p>
+                <a class="footer-aplicativo" href="#"><img src="./assets/img/aplicativos.png" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      
+        <div class="copy">
+          <div class="container">
+            <div id="footer-direiros_autorais">
+              <p class="font-2-xs">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium obcaecati ab incidunt aliquam soluta voluptate! Quae ipsa voluptatibus vel accusantium voluptatem voluptas veritatis reiciendis natus perspiciatis. Quae dolores laudantium magni. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolorem eaque non, expedita veritatis quis libero ab, dolorum quo unde officiis aperiam perspiciatis dolores laudantium aliquam sapiente! Doloribus, suscipit fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque omnis commodi incidunt magnam earum debitis aliquam ab, quam inventore vitae asperiores, quaerat natus distinctio porro explicabo at quo optio a!
+              </p>
+              <p class="font-2-xs">Lorem Ipsum | Lorem Ipsum | Lorem Ipsum</p>
+            </div>
+          </div>
+        </div>
+         
+</body>
+</html>

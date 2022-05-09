@@ -1,0 +1,81 @@
+
+.principalbanho{
+    display: flex;
+    align-content: center;
+    margin-top: 6rem;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.caixa0 {
+   text-align: center;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: larger;
+    text-align: center;
+}
+
+img.gatoecachorro {
+    display: flex;
+    width: 554px;
+    height: 360px;
+}
+
+.textbanho {
+    display: flex;
+    text-align: center;
+    width: 654px;
+    height: 436px;
+    margin-top: 20%;
+}
+
+.botoespbanho {
+    display: flex;
+    gap: 10rem;
+    align-content:space-between;
+    flex-wrap: wrap;
+}
+
+img.cachorrocontorno, .maiscontorno {
+    width: 85px;
+    height: 85px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.botoes1 {
+    display: flex;
+    align-items: center;
+    margin-top: 6rem;
+    flex-direction: column;
+    margin-left: 20rem;
+    justify-content: center;
+    gap: 1rem;
+}
+.botoes2 {
+    display: flex;
+    align-items: center;
+    margin-top: 6rem;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+.iconeadd {
+    width: 50px;
+    height: 50px;
+}
+
+.botoes3 {
+    position: relative;
+}
+
+.topoagendamento {
+    display: flex;
+    gap: 10rem;
+    align-content:space-between;
+    flex-wrap: wrap;
+}
