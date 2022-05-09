@@ -1,26 +1,14 @@
-/* GLOBAL */
-@import '../global/reset.css';
-@import '../global/variaveis.css';
-@import '../global/componentes.css';
 
-
-/* HOME */
-@import '../home/menu.css';
-@import '../home/sub-menu.css';
-@import '../home/banner-primario.css';
-@import '../home/vantagens.css';
-@import '../home/promocoes.css';
-@import '../home/parceiros.css';
-
-/*BANHOETOSA*/
 .caixa1{
     display: flex;
-    align-content: space-around;
+    align-content: center;
+    margin-top: 6rem;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .caixa0 {
-    display: flex;
-    align-content: center;
+   text-align: center;
 }
 
 h1 {
@@ -45,8 +33,9 @@ img.gatoecachorro {
 
 .caixa2 {
     display: flex;
-    position: relative;
-    align-content: space-between;
+    gap: 1rem;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 img.cachorrocontorno, .maiscontorno {
@@ -59,8 +48,8 @@ img.cachorrocontorno, .maiscontorno {
 }
 
 .botoes1 {
-    position: relative;
-    left: 25%;
+    display: flex;
+    flex-direction: column;
 }
 .botoes2 {
     position: relative;

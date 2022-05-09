@@ -11,3 +11,6 @@
 @import './home/vantagens.css';
 @import './home/promocoes.css';
 @import './home/parceiros.css';
+
+/*BANHO E TOSA*/
+@import './banhoetosa/banhoetosa.css';
