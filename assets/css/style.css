@@ -15,3 +15,6 @@
 @import './home/lojas.css';
 @import './home/footer.css';
 @import './home/desconto.css';
+
+/* BLOG */
+@import './blog/noticias.css';
