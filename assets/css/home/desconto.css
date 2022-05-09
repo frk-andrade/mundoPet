@@ -1,0 +1,17 @@
+.cupom_desconto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  background-color: var(--second-color-background);
+
+  padding: 1rem;
+  border-radius: 8px;
+
+  margin-top: 6rem;
+}
+
+.cupom_desconto p {
+  color: #FFFFFF;
+}
