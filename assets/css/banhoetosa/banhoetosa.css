@@ -72,3 +72,10 @@ img.cachorrocontorno, .maiscontorno {
 .botoes3 {
     position: relative;
 }
+
+.topoagendamento {
+    display: flex;
+    gap: 10rem;
+    align-content:space-between;
+    flex-wrap: wrap;
+}
