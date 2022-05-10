@@ -18,3 +18,6 @@
 
 /* BLOG */
 @import './blog/noticias.css';
+
+/* DOGWALKER */
+@import './dogwalker/dogwalker-menu.css';
