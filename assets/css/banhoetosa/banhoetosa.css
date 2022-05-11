@@ -1,5 +1,12 @@
+.banhoetosa-titulo {
+    text-align: center;
+ 
+    margin-top: 6rem;
 
-.principalbanho{
+    color: var(--primary-color-subtitle);
+ }
+ 
+.principal-banho{
     display: flex;
     align-content: center;
     margin-top: 6rem;
@@ -7,23 +14,16 @@
     gap: 1rem;
 }
 
-.caixa0 {
-   text-align: center;
+.principal-banho p {
+    text-align: justify;
 }
 
-h1 {
-    margin-top: 20px;
-    font-size: larger;
-    text-align: center;
+.gatoecachorro {
+    width: 34rem;
+    height: 22.5rem;
 }
 
-img.gatoecachorro {
-    display: flex;
-    width: 554px;
-    height: 360px;
-}
-
-.textbanho {
+.banhoetosa-conteudo {
     display: flex;
     text-align: center;
     width: 654px;
@@ -34,13 +34,14 @@ img.gatoecachorro {
 .botoespbanho {
     display: flex;
     gap: 10rem;
+    align-items: center;
     align-content:space-between;
     flex-wrap: wrap;
 }
 
-img.cachorrocontorno, .maiscontorno {
-    width: 85px;
-    height: 85px;
+.cachorrocontorno, .maiscontorno {
+    width: 80px;
+    height: 80px;
     display: flex;
     position: relative;
     justify-content: center;
@@ -52,7 +53,8 @@ img.cachorrocontorno, .maiscontorno {
     align-items: center;
     margin-top: 6rem;
     flex-direction: column;
-    margin-left: 20rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
     justify-content: center;
     gap: 1rem;
 }
