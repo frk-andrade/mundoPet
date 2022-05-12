@@ -1,0 +1,41 @@
+.beneficios {
+  padding: 1rem;
+  margin-top: 6rem;
+
+  background-color: var(--primary-color-subtitle);
+}
+
+.beneficios h2 {
+  color: #FFFFFF;
+}
+
+.beneficios-dogwalker {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  gap: 1rem;
+
+  flex-wrap: wrap;
+
+  margin-top: 4rem;
+}
+
+.beneficios-dogwalker--conteudo h3{
+  color: #FFFFFF;
+
+  margin-top: 1rem;
+}
+
+.beneficios-dogwalker--conteudo p{
+  color: #FFFFFF;
+
+  margin-top: 1rem;
+}
+
+.botao-dogwalker {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 3rem;
+}
