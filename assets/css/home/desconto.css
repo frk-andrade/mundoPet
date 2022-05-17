@@ -15,3 +15,17 @@
 .cupom_desconto p {
   color: #FFFFFF;
 }
+
+@media (max-width: 450px) {
+  .cupom_desconto p {
+    font-size: 0.75rem;
+  }
+
+  .cupom_desconto span {
+    font-size: 0.75rem;
+  }
+
+  .cupom_desconto img {
+    width: 50%;
+  }
+}
