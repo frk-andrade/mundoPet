@@ -16,3 +16,19 @@
 .vantagens-icones img{
   margin-right: 0.5rem;
 }
+
+@media (max-width: 450px) {
+  .vantagens {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .vantagens-icones img {
+    width: 20px;
+  }
+
+  .vantagens-icones p {
+    font-size: 0.75rem;
+  }
+}
