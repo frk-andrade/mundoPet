@@ -16,3 +16,9 @@
 .banner-caixa img {
   border-radius: 8px;
 }
+
+@media (max-width: 450px) {
+  .banner-caixa img {
+    width: 350px;
+  }
+}
