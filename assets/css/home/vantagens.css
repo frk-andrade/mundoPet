@@ -20,15 +20,15 @@
 @media (max-width: 450px) {
   .vantagens {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     gap: 1rem;
   }
 
   .vantagens-icones img {
-    width: 20px;
+    width: 25px;
   }
 
   .vantagens-icones p {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
 }
