@@ -64,17 +64,3 @@
 
 
 /* DIREITOS AUTORAIS */
-
-.copy {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-
-.copy p {
-  text-align: justify;
-  color: var(--primary-color-subtitle);
-}
-
-.copy p:first-child {
-  margin-bottom: 1rem;
-}
