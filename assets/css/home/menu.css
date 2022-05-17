@@ -18,3 +18,23 @@
 .nav-menu--texto a, h3 {
   color: white;
 }
+
+@media (max-width: 450px) {
+  .nav-menu--caixa{
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .nav-menu--icones img{
+    width: 20px;
+  }
+
+  .nav-menu--icones h3 {
+    display: none;
+  }
+}
