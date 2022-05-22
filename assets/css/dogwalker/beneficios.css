@@ -69,7 +69,7 @@
 }
 
 .beneficios2-dogwalker--conteudo p {
-  color: var(--primary);
+  color: var(--light);
   margin-top: 1rem;
 }
 
@@ -78,7 +78,7 @@
 }
 
 .beneficios h2 {
-  color: #FFFFFF;
+  color: var(--terciaria);
 }
 
 .beneficios-dogwalker {
