@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
+var controller = require('../controller/BlogController')
 
-router.get('/:id', (req, res) => res.send(`POST ${req.params.id}`));
-router.get('/', (req, res) => res.send("Blog"));
+router.get('/:id', controller.show)
+router.get('/', controller.index) 
 
 
 module.exports = router;
