@@ -3,7 +3,6 @@
 @import './global/variaveis.css';
 @import './global/componentes.css';
 
-
 /* HOME */
 @import './home/menu.css';
 @import './home/sub-menu.css';
@@ -21,8 +20,6 @@
 
 /* BLOG */
 @import './blog/noticias.css';
-<<<<<<< HEAD
-=======
 
 /* DOGWALKER */
 @import './dogwalker/dogwalker-menu.css';
@@ -34,4 +31,3 @@
 
 /* FORMULÁRIO-REGISTRO */
 @import './formulario-registro/formulario.css';
->>>>>>> feature/formulario-de-registro
