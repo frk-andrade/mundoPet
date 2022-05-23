@@ -1,0 +1,26 @@
+.sub-menu-dogwalker {
+  background-color: var(--second-color-background);
+
+  margin-top: 1rem;
+}
+
+.sub-menu-dogwalker ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 20px;   
+}
+
+.sub-menu-dogwalker li {
+  color: white;
+}
+
+.sub-menu-dogwalker a {
+  padding: 1rem;
+}
+
+.sub-menu-dogwalker a:hover {
+  color: var(--third-color);
+}
