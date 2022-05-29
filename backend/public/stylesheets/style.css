@@ -11,15 +11,11 @@
 @import './home/promocoes.css';
 @import './home/parceiros.css';
 
-/*BANHO E TOSA*/
-@import './banhoetosa/banhoetosa.css';
-@import './home/servicos.css';
-@import './home/lojas.css';
-@import './home/footer.css';
-@import './home/desconto.css';
+/*PÁGINA DE RAÇÃO*/
+@import './categoria-racao/categoria-racao.css'
 
 /* BLOG */
-@import './blog/noticias.css';
+@import './blog/noticias.css'
 
 /* DOGWALKER */
 @import './dogwalker/dogwalker-menu.css';
