@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MundoPet | Home</title>
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/paginacontato.css">
 
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
 
 </head>
+
 <body>
   <nav class="nav-menu">
     <div class="nav-menu--caixa container">
@@ -49,34 +53,41 @@
         </ul>
       </div>
     </section>
-  
+
     <section class="banner-primario">
       <div class="banner-caixa">
         <img src="./assets/img/banner -1.png" alt="">
       </div>
     </section>
-    <section class="flex-container flex-container-- col skills_cta primary">
-        <h2 class="skills_title cta_title">FALE CONOSCO!</h2>
-        <p class="cta_description">Envie sua mensagem</p>
-  <form action="/mundoPet/" method="get" class="cta_form"></form>
-  <input type="hidden" name="versao" value="">
-  <div class="input-group">
-      <label for="name">nome </label>
-      <input type="text" required name="nome" id="nome" placeholder="nome">
-  </div>
-  <div class="input-group">
-    <label for="email"> email</label>
-    <input type="email" required name="email" id="email" placeholder="email@mail.com">
-</div>
-<div class="input-group">
-    <label for="phone"> telefone</label>
-    <input type="tel" required name="phone" id="phone" placeholder="+55 11 99999-9999">
-</div>
-<textarea id="text" name="text" rows="5" cols="33">
-</textarea> 
-<div class="submit-group">
-    <button title="Enviar">Enviar</button>
-</div>
+    <section class="section-form">
+      <div class="container">
+
+        <h2 class="title">FALE CONOSCO!</h2>
+        <p class="description">Envie sua mensagem</p>
+
+        <form class="form" action="/mundoPet/" method="get" class="cta_form">
+          <input type="hidden" name="versao" value="">
+          <div class="input-group">
+            <label for="name">nome: </label>
+            <input type="text" required name="nome" id="nome" placeholder="nome">
+          </div>
+          <div class="input-group">
+            <label for="email"> email:</label>
+            <input type="email" required name="email" id="email" placeholder="email@mail.com">
+          </div>
+          <div class="input-group">
+            <label for="phone"> telefone:</label>
+            <input type="tel" required name="phone" id="phone" placeholder="+55 11 99999-9999">
+          </div>
+          <textarea id="text" name="text" rows="5" cols="33">
+</textarea>
+          <div class="submit-group">
+            <button title="Enviar">Enviar</button>
+          </div>
+        </form>
+        
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -131,12 +142,19 @@
     <div class="container">
       <div id="footer-direiros_autorais">
         <p class="font-2-xs">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium obcaecati ab incidunt aliquam soluta voluptate! Quae ipsa voluptatibus vel accusantium voluptatem voluptas veritatis reiciendis natus perspiciatis. Quae dolores laudantium magni. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolorem eaque non, expedita veritatis quis libero ab, dolorum quo unde officiis aperiam perspiciatis dolores laudantium aliquam sapiente! Doloribus, suscipit fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque omnis commodi incidunt magnam earum debitis aliquam ab, quam inventore vitae asperiores, quaerat natus distinctio porro explicabo at quo optio a!
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium obcaecati ab incidunt aliquam soluta
+          voluptate! Quae ipsa voluptatibus vel accusantium voluptatem voluptas veritatis reiciendis natus perspiciatis.
+          Quae dolores laudantium magni. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolorem eaque
+          non, expedita veritatis quis libero ab, dolorum quo unde officiis aperiam perspiciatis dolores laudantium
+          aliquam sapiente! Doloribus, suscipit fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
+          omnis commodi incidunt magnam earum debitis aliquam ab, quam inventore vitae asperiores, quaerat natus
+          distinctio porro explicabo at quo optio a!
         </p>
         <p class="font-2-xs">Lorem Ipsum | Lorem Ipsum | Lorem Ipsum</p>
       </div>
     </div>
   </div>
-   
+
 </body>
+
 </html>
