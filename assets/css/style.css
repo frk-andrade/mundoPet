@@ -28,5 +28,8 @@
 @import './dogwalker/beneficios2.css';
 @import './dogwalker/sobre-dogwalker.css';
 
+/*PÁGINA CONTATO*/
+@import './contato/paginacontato.css';
+
 /* FORMULÁRIO-REGISTRO */
 @import './formulario-registro/formulario.css';
