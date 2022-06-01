@@ -30,12 +30,32 @@
 
 .font-2-s >div{
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   padding: 1rem;
   align-items: center;
-  gap: 10px;
+  gap: 10px; 
+  justify-content: space-around;
+
 }
+
 .botao{
   text-align: center;
   margin-bottom: 40px;
   margin-top: 30px;
+}
+
+.opiniao{
+  display: flex;
+  width: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+.opiniao >div{
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100vh;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
 }
