@@ -1,40 +1,42 @@
-.beneficios2 {
-  margin-top: 6rem;
-  padding: 1rem;
-  background-color: var(--second-color);
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; 
 }
 
-.beneficios2 h2 { 
-  color: #FFFFFF;
- }
- 
-.beneficios2-dogwalker {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  align-items: center;
-  gap: 1rem;
 
+
+.caixacinza {
+  background-color: rgb(243, 242, 242);
+  width: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  position: relative;
+  bottom: 100px;
+}
+
+
+.font-2-s{
+  display: flex;
   flex-wrap: wrap;
-
-  margin-top: 4rem;
-}
- 
-.beneficios2-dogwalker--conteudo h3{
- color: #FFFFFF;
-
-  margin-top: 1rem;
-}
- 
-.beneficios2-dogwalker--conteudo p{
- color: #FFFFFF;
-
-  margin-top: 1rem;
-}
- 
-.botao-dogwalker {
-  display: flex;
+  margin: 1rem;
   justify-content: center;
+  align-items: center;
+  justify-content: space-around; 
+  gap: 10px;
+  padding-bottom: 2rem; 
+}
 
-  margin-top: 3rem;
+.font-2-s >div{
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-around;
+}
+.botao{
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 30px;
 }
