@@ -1,7 +1,7 @@
-*{
+* {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 
@@ -17,41 +17,41 @@
 }
 
 
-.font-2-s{
+.font-2-s {
   display: flex;
   flex-wrap: wrap;
   margin: 1rem;
   justify-content: center;
   align-items: center;
-  justify-content: space-around; 
+  justify-content: space-around;
   gap: 10px;
-  padding-bottom: 2rem; 
+  padding-bottom: 2rem;
 }
 
-.font-2-s >div{
+.font-2-s>div {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
   padding: 1rem;
   align-items: center;
-  gap: 10px; 
+  gap: 10px;
   justify-content: space-around;
 
 }
 
-.botao{
+.botao {
   text-align: center;
   margin-bottom: 40px;
   margin-top: 30px;
 }
 
-.opiniao{
+.opiniao {
   display: flex;
   width: 100vh;
   margin-left: auto;
   margin-right: auto;
 }
-.opiniao >div{
+
+.opiniao>div {
   display: flex;
   flex-wrap: nowrap;
   width: 100vh;
@@ -59,3 +59,25 @@
   gap: 2rem;
   padding: 1rem;
 }
+
+.canais {
+  display: flex;
+  width: 100%;
+  background-color: var(--second-color);
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-top: 50px;
+  gap: 10rem;
+}
+
+.canais>div {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  color: white;
+}
+.item{
+ mix-blend-mode: overlay;
+}
+
