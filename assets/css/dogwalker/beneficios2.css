@@ -1,11 +1,12 @@
 * {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
+  box-sizing: border-box;  
 }
+
 .caixacinza {
   background-color: rgb(243, 242, 242);
-  width: 100vh;
+  width: 1000px;
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 30px;
