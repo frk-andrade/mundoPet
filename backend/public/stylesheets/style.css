@@ -10,6 +10,10 @@
 @import './home/vantagens.css';
 @import './home/promocoes.css';
 @import './home/parceiros.css';
+@import './home/footer.css';
+@import './home/servicos.css';
+@import './home/desconto.css';
+@import './home/lojas.css';
 
 /*PÁGINA DE RAÇÃO*/
 @import './categoria-racao/categoria-racao.css';
