@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var blogRouter = require('./routes/blog');
 var dogwalkerRouter = require('./routes/dogwalker');
+var dogwalkerRouter = require('./routes/dogwalker2');
 var contatoRouter = require('./routes/contato');
 
 var app = express();
@@ -26,6 +27,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/blog', blogRouter);
 app.use('/dogwalker', dogwalkerRouter);
+app.use('/dogwalker2', dogwalkerRouter);
 app.use('/contato', contatoRouter)
 
 

@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/frk-andrade/mundoPet/issues"
   },
-  "homepage": "https://github.com/frk-andrade/mundoPet#readme"
+  "homepage": "https://github.com/frk-andrade/mundoPet#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
