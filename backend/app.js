@@ -11,6 +11,7 @@ var dogwalkerRouter = require('./routes/dogwalker');
 var dogwalkerRouter = require('./routes/dogwalker2');
 var contatoRouter = require('./routes/contato');
 var racaoCachorro = require('./routes/categoria-racao');
+var registroRouter = require('./routes/registro');
 
 var app = express();
 
@@ -32,6 +33,7 @@ app.use('/contato', contatoRouter);
 app.use('/racao', racaoCachorro);
 app.use('/dogwalker2', dogwalkerRouter);
 app.use('/contato', contatoRouter)
+app.use('/registro', registroRouter)
 
 
 
