@@ -1,8 +1,8 @@
 .banner-dogwalker {
-  margin-top: 6rem;
+  margin-top: 4rem;
 }
 
 .banner-dogwalker img{
-  max-width: 100%;
+  width: 100%;
   border-radius: 2px;
 }
