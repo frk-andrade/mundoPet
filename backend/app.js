@@ -28,7 +28,7 @@ app.use('/users', usersRouter);
 app.use('/blog', blogRouter);
 app.use('/dogwalker', dogwalkerRouter);
 app.use('/contato', contatoRouter);
-app.use('/racao/cachorro', racaoCachorro);
+app.use('/racao', racaoCachorro);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
