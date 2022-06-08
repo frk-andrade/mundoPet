@@ -5,18 +5,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MundoPet | Home</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="shortcut icon" href="./assets/img/logo.svg" type="image/x-icon">
 
   <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- SLIDE -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css"/>
 
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
   <nav class="nav-menu">
     <div class="nav-menu--caixa container">
-      <a href="#"><img src="./assets/img/logo.svg" alt="Logo MundoPet"></a>
+      <a href="#"><img class="logo" src="./assets/img/logo.svg" alt="Logo MundoPet"></a>
 
       <div class="nav-menu--icones">
 
@@ -45,14 +51,17 @@
           <li class="font-2-xs font-2-m-b"><a href="#">Espaço Pet</a></li>
           <li class="font-2-xs font-2-m-b"><a href="#">Retirar na Loja</a></li>
           <li class="font-2-xs font-2-m-b"><a href="#">Mundo Pet já</a></li>
-          <li class="font-2-xs font-2-m-b"><a href="#">Blog</a></li>
+          <li class="font-2-xs font-2-m-b"><a href="./blog.html">Blog</a></li>
         </ul>
       </div>
     </section>
   
     <section class="banner-primario">
-      <div class="banner-caixa">
-        <img src="./assets/img/banner -1.png" alt="">
+      <div class="banner-caixa carousel">
+        <div><img src="./assets/img/banner1.png" alt=""></div>
+        <div><img src="./assets/img/banner2.png" alt=""></div>
+        <div><img src="./assets/img/banner3.png" alt=""></div>
+ 
       </div>
     </section>
   
@@ -89,7 +98,7 @@
     <section class="container">
       <div class="cupom_desconto">
         <p class="font-1-m-b">Você tem <span class="font-1-xl"> 10% OFF</span> na 1º compra | Insira o cupom no carrinho de compras</p>
-        <img src="/assets/img/desconto10.png" alt="Cupom de desconto DESCONTO10">
+        <img src="./assets/img/desconto10.png" alt="Cupom de desconto DESCONTO10">
       </div>
     </section>
   
@@ -218,17 +227,10 @@
       </div>
     </div>
   </footer>
-
-  <div class="copy">
-    <div class="container">
-      <div id="footer-direiros_autorais">
-        <p class="font-2-xs">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium obcaecati ab incidunt aliquam soluta voluptate! Quae ipsa voluptatibus vel accusantium voluptatem voluptas veritatis reiciendis natus perspiciatis. Quae dolores laudantium magni. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum dolorem eaque non, expedita veritatis quis libero ab, dolorum quo unde officiis aperiam perspiciatis dolores laudantium aliquam sapiente! Doloribus, suscipit fugiat! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque omnis commodi incidunt magnam earum debitis aliquam ab, quam inventore vitae asperiores, quaerat natus distinctio porro explicabo at quo optio a!
-        </p>
-        <p class="font-2-xs">Lorem Ipsum | Lorem Ipsum | Lorem Ipsum</p>
-      </div>
-    </div>
-  </div>
    
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
+  <script src="./main.js"></script>
 </body>
 </html>

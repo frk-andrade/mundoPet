@@ -1,4 +1,4 @@
-*{
+{
   padding: 0;
   margin: 0;
 } */
@@ -8,11 +8,35 @@
   --terciaria: #757373;
   --light: #FFFFFF;
 }
+
+
+.sub-menu-dogwalker {
+  background-color: var(--primary);
+  color: var(--light);
+  margin-bottom: 1rem;
+}
+
+.containermenu ul {
+  background-color: var(--primary);
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 10px; */
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+/* .containermenu a {
+  background-color: #67B8E5;
+} */
+
+
 .beneficios {
   padding: 1rem;
   margin-top: 6rem;
   background-color: rgb(235, 235, 235);
 }
+
 
 .beneficios2 {
   padding: 1rem;
@@ -29,6 +53,25 @@
   padding: 1rem;
   margin-top: 25px;
 }
+
+
+
+.beneficios2 {
+  padding: 1rem;
+  margin-top: 6rem;
+  background-color: var(--secundary);
+  color: var(--light);
+}
+
+.beneficios2-dogwalker--conteudo {
+  color: var(--light);
+}
+
+.sobre-dogwalker {
+  padding: 1rem;
+  margin-top: 25px;
+}
+
 
 .beneficios2-dogwalker {
   display: flex;
@@ -47,17 +90,31 @@
 }
 
 .beneficios2-dogwalker--conteudo p {
+
   color: var(--primary);
+
+  color: var(--light);
+
   margin-top: 1rem;
 }
 
 .beneficios2 h2 {
+
   color: #FFFFFF;
 }
 
 .beneficios h2 {
   color: #FFFFFF;
 }
+
+=======
+  color: #FFFFFF;
+}
+
+.beneficios h2 {
+  color: var(--terciaria);
+}
+
 
 .beneficios-dogwalker {
   display: flex;
@@ -84,6 +141,7 @@
   justify-content: center;
   margin-top: 3rem;
 }
+
 .font-1-xl {
   padding: 10px;
   margin-bottom: 20px;

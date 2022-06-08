@@ -3,7 +3,6 @@
 @import './global/variaveis.css';
 @import './global/componentes.css';
 
-
 /* HOME */
 @import './home/menu.css';
 @import './home/sub-menu.css';
@@ -11,10 +10,9 @@
 @import './home/vantagens.css';
 @import './home/promocoes.css';
 @import './home/parceiros.css';
-@import './home/servicos.css';
-@import './home/lojas.css';
-@import './home/footer.css';
-@import './home/desconto.css';
+
+/* CATEGORIA RAÇÃO*/
+@import './categoria-racao/categoria-racao.css';
 
 /* BLOG */
 @import './blog/noticias.css';
@@ -23,5 +21,11 @@
 @import './dogwalker/dogwalker-menu.css';
 @import './dogwalker/banner-dogwalker.css';
 @import './dogwalker/beneficios.css';
-@import './dogwalker/beneficios2.css';
+@import './dogwalker/dogwalker2.css';
 @import './dogwalker/sobre-dogwalker.css';
+
+/*PÁGINA CONTATO*/
+@import './contato/paginacontato.css';
+
+/* FORMULÁRIO-REGISTRO */
+@import './formulario-registro/formulario.css';
