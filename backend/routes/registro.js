@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var controller = require('../controller/registroController');
+var controller = require('../controller/RegistroController');
 
 router.get('/', controller.index);
 
