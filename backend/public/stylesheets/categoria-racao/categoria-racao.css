@@ -1,0 +1,39 @@
+.banner-cachorro {
+  max-width: max-content;
+}
+
+.texto-cachorro {
+  text-align: justify;
+}
+
+.lista-produtos {
+  margin-top: 2rem;
+}
+
+.lista-racao {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+}
+
+.produto-racao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 0.5rem;
+}
+
+@media(max-width: 980px) {
+  .lista-racao {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media(max-width: 600px) {
+  .lista-racao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}

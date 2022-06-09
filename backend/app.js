@@ -10,7 +10,7 @@ var blogRouter = require('./routes/blog');
 var dogwalkerRouter = require('./routes/dogwalker');
 var dogwalkerRouter = require('./routes/dogwalker2');
 var contatoRouter = require('./routes/contato');
-var racaoCachorro = require('./routes/categoria-racao');
+var cachorroRouter = require('./routes/cachorro');
 var registroRouter = require('./routes/registro');
 
 var app = express();
@@ -30,7 +30,7 @@ app.use('/users', usersRouter);
 app.use('/blog', blogRouter);
 app.use('/dogwalker', dogwalkerRouter);
 app.use('/contato', contatoRouter);
-app.use('/racao', racaoCachorro);
+app.use('/cachorro', cachorroRouter);
 app.use('/dogwalker2', dogwalkerRouter);
 app.use('/contato', contatoRouter)
 app.use('/registro', registroRouter)
