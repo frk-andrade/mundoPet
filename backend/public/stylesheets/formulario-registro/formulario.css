@@ -39,14 +39,17 @@
 
 .form input[type="text"] {
   margin-bottom: 1rem;
+  padding: 0.5rem;
 }
 
 .form input[type="email"] {
   margin-bottom: 1rem;
+  padding: 0.5rem;
 }
 
 .form input[type="password"] {
   margin-bottom: 2rem;
+  padding: 0.5rem;
 }
 
 .botao-formulario {

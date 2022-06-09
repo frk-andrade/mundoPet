@@ -1,28 +1,41 @@
-.section-form{
-    margin: 40px 0px;
+.conta-contato {
+    background-color: var(--second-color);
+    border-radius: 8px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  
+    margin-top: 6rem;
+  
+    padding-bottom: 2rem;
+  }
+
+.form input[type="tel"] {
+    padding: 0.5rem;
+}
+  
+.botao-contato {
+  background-color: var(--third-color);
+  color: var(--primary-color);
+
+  border-radius: 4px;
+  border: 1px solid black;
+  padding: .6rem 4rem .6rem 4rem;
+
+  text-align: center;
+
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
+  cursor: pointer;
 }
 
-.section-form .title{
- text-align: center;
- font-size: 32px;
- font-weight: bold;
- margin-bottom: 15px;
-}
-
-.section-form .description{
-    font-size: 18px;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.section-form .input-group{
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.form{
-    border: 1px solid black;
-    width: 300px;
-    margin: 0px auto;
-    padding: 30px 20px;
+.botao-contato:hover {
+    background-color: #FFFFFF;
+    color: var(--primary-color);
+  
+    transition: 300ms;
 }

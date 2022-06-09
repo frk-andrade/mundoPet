@@ -1,30 +1,27 @@
 <%- include('partials/head') %>
 <%- include('partials/header') %>
-<section class="banner-primario">
-    <div class="banner-caixa">
-      <img src="images/banner -1.png" alt="">
-    </div>
+
+<main class="container-form">
+  <section aria-label="Formulário">
+    <fieldset class="conta-contato">
+      <h2 class="font-1-xl">Fale Conosco</h2>
+        <form class="form" action="">
+          <div class="form-info font-2-m-b font-1-m-b">
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" placeholder="Nome">
+          </div>
+          <div class="form-info font-2-m-b font-1-m-b">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="you@email.com">
+          </div>
+          <div class="form-info font-2-m-b font-1-m-b">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" name="telefone" id="telefone" placeholder="+55 11 9999-9999">
+          </div>
+          <button class="botao-contato font-1-m-b">Criar conta</button>
+      </form>
+    </fieldset>
   </section>
-  <section class="flex-container flex-container-- col skills_cta primary">
-      <h2 class="skills_title cta_title">FALE CONOSCO!</h2>
-      <p class="cta_description">Envie sua mensagem</p>
-<form action="/mundoPet/" method="get" class="cta_form"></form>
-<input type="hidden" name="versao" value="">
-<div class="input-group">
-    <label for="name">nome </label>
-    <input type="text" required name="nome" id="nome" placeholder="nome">
-</div>
-<div class="input-group">
-  <label for="email"> email</label>
-  <input type="email" required name="email" id="email" placeholder="email@mail.com">
-</div>
-<div class="input-group">
-  <label for="phone"> telefone</label>
-  <input type="tel" required name="phone" id="phone" placeholder="+55 11 99999-9999">
-</div>
-<textarea id="text" name="text" rows="5" cols="33">
-</textarea> 
-<div class="submit-group">
-  <button title="Enviar">Enviar</button>
-</div>
+</main>
+
 <%- include('partials/footer') %>
