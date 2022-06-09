@@ -1,8 +1,9 @@
 var express = require('express');
 var router = express.Router();
-var controller = require('../controller/RacaoController');
+var controller = require('../controller/CachorroController');
 
 router.get('/', controller.index);
-router.get('/cachorro', controller.index);
+
+
 
 module.exports = router;

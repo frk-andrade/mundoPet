@@ -33,3 +33,6 @@
 
 /* CONTATO */
 @import './contatos/paginacontato.css';
+
+/* CONTEÚDO CACHORRO */
+@import './cachorro/cachorroInicio.css';
