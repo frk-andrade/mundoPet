@@ -37,4 +37,12 @@
   .nav-menu--icones h3 {
     display: none;
   }
+
+  .nav-menu--texto {
+    display: none;
+  }
+
+  .imagem-menu {
+    margin-right: 2rem;
+  }
 }

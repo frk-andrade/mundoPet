@@ -52,3 +52,10 @@
 
   text-transform: uppercase;
 } 
+
+@media (max-width: 660px) {
+  .noticias {
+    display: flex;
+    flex-direction: column;
+  }
+}
