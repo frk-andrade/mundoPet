@@ -1,8 +1,7 @@
-/* SLIDE */
-$('.carousel').slick({
-  dots: true,
-  infinite: true,
-  speed: 300,
-  slidesToShow: 1,
-  adaptiveHeight: true
-});
+const carousel = new bootstrap.Carousel('#myCarousel')
+
+const myCarouselElement = document.querySelector('#myCarousel')
+const carousel = new bootstrap.Carousel(myCarouselElement, {
+  interval: 2000,
+  wrap: false
+})
