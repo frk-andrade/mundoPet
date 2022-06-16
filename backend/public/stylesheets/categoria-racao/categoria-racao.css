@@ -1,3 +1,11 @@
+.produtos-cachorro h1 {
+  color: var(--primary-color-subtitle);
+}
+
+.produtos-cachorro p {
+  color: var(--primary-color-subtitle);
+}
+
 .banner-cachorro {
   max-width: max-content;
 }
