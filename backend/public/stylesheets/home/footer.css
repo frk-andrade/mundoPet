@@ -14,7 +14,7 @@
 
 .footer-links h3{
   margin-top: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1.5rem;
 
   color: #FFFFFF;
 }
@@ -29,10 +29,10 @@
   background-color: var(--second-color);
   border-radius: 6px;
 
-  margin-top: 2rem;
+  margin-top: 3rem;
   margin-bottom: 2rem;
   
-  padding: .3rem;
+  padding: 3rem;
 }
 
 .footer-redes h3{

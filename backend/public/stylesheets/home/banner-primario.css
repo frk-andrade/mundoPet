@@ -1,25 +1,3 @@
-.banner-caixa {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  padding-right: 2rem;
-  padding-left: 2rem;
-
-  margin-left: auto;
-  margin-right: auto;
-
+#carouselExampleIndicators {
   margin-top: 4rem;
-
-  max-width: 1360px;
-}
-
-.banner-caixa img {
-  border-radius: 8px;
-}
-
-@media (max-width: 450px) {
-  .banner-caixa img {
-    width: 350px;
-  }
 }
