@@ -1,0 +1,15 @@
+.error404 {
+  display: flex;
+  justify-content: center;
+  margin-top: 12rem;
+}
+
+.error404 img {
+  width: 800px;
+}
+
+@media(max-width: 520px) {
+  .error404 img {
+    width: 300px;
+  }
+}

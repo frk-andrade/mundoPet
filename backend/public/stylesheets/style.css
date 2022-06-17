@@ -36,3 +36,6 @@
 
 /* CONTEÚDO CACHORRO */
 @import './cachorro/cachorroInicio.css';
+
+/* ERROR 404 */
+@import './error404/error.css';
