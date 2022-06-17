@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const methodOverride = require('method-override');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -24,6 +25,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -32,8 +34,8 @@ app.use('/dogwalker', dogwalkerRouter);
 app.use('/contato', contatoRouter);
 app.use('/cachorro', cachorroRouter);
 app.use('/dogwalker2', dogwalkerRouter);
-app.use('/contato', contatoRouter)
-app.use('/registro', registroRouter)
+app.use('/contato', contatoRouter);
+app.use('/registro', registroRouter);
 
 
 
