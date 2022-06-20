@@ -27,8 +27,6 @@
   transition: 300ms;
 }
 
-
-
 .botao-secundario-laranja {
   background-color: var(--primary-color-background-button);
   color: #FFFFFF;
@@ -40,6 +38,13 @@
   text-align: center;
 
   cursor: pointer;
+}
+
+.botao-secundario-laranja:hover {
+  background-color: #FFFFFF;
+  color: var(--primary-color-background-button);
+
+  transition: 300ms;
 }
 
 .botao-secundario-laranja:hover {
@@ -62,7 +67,7 @@
   cursor: pointer;
 }
 
-.botao-secundario-laranja:hover {
+.botao-comprar:hover {
   background-color: #FFFFFF;
   color: var(--primary-color-background-button);
 
