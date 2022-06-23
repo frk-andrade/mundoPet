@@ -1,3 +1,28 @@
+<% 
+    const categorias = [
+      {
+        nome: 'Cachorro',
+        link: 'cachorro'
+      },
+      {
+        nome: 'Gato',
+        link: 'gato'
+      },
+      {
+        nome: 'Peixe',
+        link: 'peixe'
+      },
+      {
+        nome: 'Pássaro',
+        link: 'passaro'
+      },
+      {
+        nome: 'Réptil',
+        link: 'reptil'
+      }
+    ]
+
+%>  
   <nav class="nav-menu">
     <div class="nav-menu--caixa container">
       <a href="/"><img class="logo" src="images/logo.svg" alt="Logo MundoPet"></a>
@@ -24,12 +49,15 @@
     <section class="sub-menu">
       <div class="container">
         <ul>
-          <li class="font-1-s font-2-m-b"><a href="/cachorro">Cachorro</a></li>
+          <% for (categoria of categorias) { %> 
+            <li class="font-1-s font-2-m-b"><a href="/<%= categoria.link %> "><%= categoria.nome %> </a>
+          <% } %> 
+          <!-- <li class="font-1-s font-2-m-b"><a href="/cachorro">Cachorro</a></li>
           <li class="font-1-s font-2-m-b"><a href="#">Gato</a></li>
           <li class="font-1-s font-2-m-b"><a href="#">Peixes</a></li>
-          <li class="font-1-s font-2-m-b"><a href="#">Pássaros</a></li>
-          <li class="font-1-s font-2-m-b"><a href="#">Dog Walker</a></li>
-          <li class="font-1-s font-2-m-b"><a href="/blog">Blog</a></li>
+          <li class="font-1-s font-2-m-b"><a href="#">Pássaros</a></li> -->
+          <!-- <li class="font-1-s font-2-m-b"><a href="#">Dog Walker</a></li>
+          <li class="font-1-s font-2-m-b"><a href="/blog">Blog</a></li> -->
         </ul>
       </div>
     </section>

@@ -16,7 +16,7 @@
     "morgan": "~1.9.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.18"
   },
   "main": "app.js",
   "keywords": [],
