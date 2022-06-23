@@ -6,13 +6,20 @@ var logger = require('morgan');
 const methodOverride = require('method-override');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var blogRouter = require('./routes/blog');
-var dogwalkerRouter = require('./routes/dogwalker');
-var dogwalkerRouter = require('./routes/dogwalker2');
-var contatoRouter = require('./routes/contato');
-var cachorroRouter = require('./routes/cachorro');
-var registroRouter = require('./routes/registro');
+var produtosRouter = require('./routes/produtos');
+var produtoRouter = require('./routes/produto');
+var contaRouter = require('./routes/conta');
+var carrinhoRouter = require('./routes/carrinho');
+
+
+
+// var usersRouter = require('./routes/users');
+// var blogRouter = require('./routes/blog');
+// var dogwalkerRouter = require('./routes/dogwalker');
+// var dogwalkerRouter = require('./routes/dogwalker2');
+// var contatoRouter = require('./routes/contato');
+// var cachorroRouter = require('./routes/cachorro');
+// var registroRouter = require('./routes/registro');
 
 var app = express();
 
@@ -28,14 +35,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
-app.use('/blog', blogRouter);
-app.use('/dogwalker', dogwalkerRouter);
-app.use('/contato', contatoRouter);
-app.use('/cachorro', cachorroRouter);
-app.use('/dogwalker2', dogwalkerRouter);
-app.use('/contato', contatoRouter);
-app.use('/registro', registroRouter);
+app.use('/produtos', produtosRouter);
+app.use('/produto', produtoRouter);
+app.use('/minhaconta', contaRouter);
+app.use('/carrinho', carrinhoRouter);
+
+// produtos (listas)
+// produto (podutos individuais (ver, adicionar e editar))
+// minhaconta (dados do cliente, registro do usuario)
+// carrinho (carrinho)
+
+
+
+// app.use('/users', usersRouter);
+// app.use('/blog', blogRouter);
+// app.use('/dogwalker', dogwalkerRouter);
+// app.use('/contato', contatoRouter);
+// app.use('/cachorro', cachorroRouter);
+// app.use('/dogwalker2', dogwalkerRouter);
+// app.use('/contato', contatoRouter);
+// app.use('/registro', registroRouter);
 
 
 
