@@ -1,0 +1,31 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+
+  <section class="container banner-cachorro">
+    <img src="/images/banner_cachorros.png" alt="">
+  </section>
+
+
+  <section class="container produtos-cachorro">
+    <h1 class="font-1-xl">Produto <%= title %> </h1>
+    <p class="font-2-xs texto-cachorro">O Mundo Pet tem tudo para cachorro! Se você é tutor de primeira viagem ou já tem muitos peludos em casa, aqui você vai encontrar itens de diferentes categorias, da alimentação do seu cãozinho, aos cuidados com pelo e pelagem, itens de higiene, equipamentos de segurança, brinquedos e muito mais!</p>
+  </section>
+
+  <section class="container lista-produtos">
+    <div class="lista-racao">
+      
+      
+      <% for (produto of produtos) { %> 
+      <div class="produto-racao">
+        <a href="#"><img src="/images/racao-golden-cachorro.svg" alt="Ração Golden Especial"></a>
+        <p class="font-2-xs"><%= produto %> </p>
+        <p class="font-2-xs font-1-m-b">R$ 200</p>
+        <button class="botao-comprar font-2-xs">Adicionar ao carrinho</button>
+      </div>
+      <% } %> 
+    </div> 
+  </section>
+
+</main>
+<%- include('partials/footer') %>

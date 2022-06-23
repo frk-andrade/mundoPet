@@ -15,10 +15,6 @@
       {
         nome: 'Pássaro',
         link: 'passaro'
-      },
-      {
-        nome: 'Réptil',
-        link: 'reptil'
       }
     ]
 
@@ -50,7 +46,7 @@
       <div class="container">
         <ul>
           <% for (categoria of categorias) { %> 
-            <li class="font-1-s font-2-m-b"><a href="/<%= categoria.link %> "><%= categoria.nome %> </a>
+            <li class="font-1-s font-2-m-b"><a href="/produtos/<%= categoria.link %> "><%= categoria.nome %> </a>
           <% } %> 
           <!-- <li class="font-1-s font-2-m-b"><a href="/cachorro">Cachorro</a></li>
           <li class="font-1-s font-2-m-b"><a href="#">Gato</a></li>
