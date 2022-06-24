@@ -1,0 +1,27 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<main class="container-form">
+  <section aria-label="Formulário">
+    <fieldset class="conta-contato">
+      <h2 class="font-1-xl">Criar produto</h2>
+        <form class="form" method="POST" action="/produto/criar" >
+          <div class="form-info font-2-m-b font-1-m-b">
+            <label for="nome">Nome do produto:</label>
+            <input type="text" name="nome" id="nome">
+          </div>
+          <div class="form-info font-2-m-b font-1-m-b">
+            <label for="descricao">Descrição:</label>
+            <textarea name="descricao" cols="30" rows="10"></textarea>
+          </div>
+          <div class="form-info font-2-m-b font-1-m-b">
+            <label for="preco">Preço:</label>
+            <input type="number" name="preco">
+          </div>
+          <button class="botao-contato font-1-m-b"><%= acao %>  produto</button>
+      </form>
+    </fieldset>
+  </section>
+</main>
+
+<%- include('partials/footer') %>

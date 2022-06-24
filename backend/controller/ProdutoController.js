@@ -2,7 +2,7 @@ const controller = {}
 
 controller.index = (req, res) => res.send('Deve abrir a página produto ' + req.params.id)
 
-controller.criar = (req, res) => res.send('Deve abrir o formulário para adicionar produto ')
+controller.criar = (req, res) => res.render('produto-formulario', {acao: 'Criar'})
 
 controller.editar = (req, res) => {
     if(!req.params.id){
@@ -12,6 +12,6 @@ controller.editar = (req, res) => {
     
 }
 
-controller.add = (req, res) => res.send('Produto adicionado')
+controller.add = (req, res) => res.send(req.body)
 
 module.exports = controller;
