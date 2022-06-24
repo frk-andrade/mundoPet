@@ -12,5 +12,6 @@ controller.editar = (req, res) => {
     
 }
 
+controller.add = (req, res) => res.send('Produto adicionado')
 
 module.exports = controller;

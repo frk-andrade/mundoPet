@@ -4,6 +4,7 @@ const controller = require('../controller/ProdutoController')
 
 /* GET home page. */
 router.get('/criar', controller.criar);
+router.post('/criar', controller.add);
 router.get('/editar/:id?', controller.editar);
 router.get('/:id', controller.index);
 
