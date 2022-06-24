@@ -1,3 +1,5 @@
+const { index } = require("./ProdutoController");
+
 const categorias = [
   {
     nome: 'Cachorro',
@@ -17,7 +19,6 @@ const categorias = [
   }
 ]
 
-
 const controller = {
   index: function(req, res) {
     if (!req.params.categoria) {
@@ -28,14 +29,14 @@ const controller = {
 
       const produtos = ['Racao', 'Racao1', 'Racao2', 'Racao3', 'Racao4']
         // lista de todos os produtos que tem no banco com a categoria solicitada
-  
-        res.render('produtos', { title: cat.nome , produtos});  
+        if(!cat){
+          res.redirect('/produtos')
+        } else {
+          res.render('produtos', { title: cat.nome , produtos})
+        }
         // res.send(cat)
     }
-
-
-  
-}
+  }
 }
 
 module.exports = controller;
