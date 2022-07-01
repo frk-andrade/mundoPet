@@ -10,6 +10,7 @@ var produtosRouter = require('./routes/produtos');
 var produtoRouter = require('./routes/produto');
 var contaRouter = require('./routes/conta');
 var carrinhoRouter = require('./routes/carrinho');
+var adminRouter = require('./routes/admin');
 
 
 
@@ -35,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
+app.use('/admin', adminRouter);
 app.use('/produtos', produtosRouter);
 app.use('/produto', produtoRouter);
 app.use('/minhaconta', contaRouter);
