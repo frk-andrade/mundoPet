@@ -1,0 +1,53 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<main>
+  <section>
+    <fieldset>
+      <h2>Novo Produto</h2>
+      <form class="form">
+        <div>
+          <label for="produto">Produto:</label>
+          <input type="text" name="produto" id="produto" placeholder="Produto">
+        </div>
+        <div>
+          <label for="descricao">Descrição do produto:</label>
+          <input type="textarea" name="" id="descricao" placeholder="descrição do produto">
+        </div>
+        <div>
+          <label for="preco">Preço:</label>
+          <input type="decimal" name="preco" id="preco" placeholder="Preço">
+        </div>
+        <div>
+          <label for="promocao">Promoção:</label>
+          <input type="decimal" name="promocao" id="promocao" placeholder="Promoção">
+        </div>
+        <div>
+          <label for="marca_id">Marcas:</label>
+          <select id="marcas">
+            <option selected disabled value="">Selecione</option>
+            <option>maca 1</option>
+            <option>maca 2</option>
+            <option>marca 3</option>
+            <option>marca 4</option>
+          </select>
+        </div>
+        </div>
+        <div>
+          <label for="categoria">Categoria</label>
+          <select id="categoria">
+            <option selected disabled value="">Selecione</option>
+            <option>categoria 1</option>
+            <option>categoria 2</option>
+            <option>categoria 3</option>
+            <option>categoria 4</option>
+          </select>
+        </div>
+
+        <button>Adicionar Produto</button>
+      </form>
+    </fieldset>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
