@@ -5,14 +5,30 @@
     <section aria-label="Formulário">
       <fieldset class="conta-contato">
         <h2 class="font-1-xl">Adicione uma nova marca</h2>
-          <form class="form" action="">
+          <form class="form" action="" method="POST">
             <div class="form-info font-2-m-b font-1-m-b">
               <label for="nome">Nome:</label>
-              <input type="text" name="nome" id="nome" placeholder="Nome">
+              <input type="text" name="nome" id="nome" placeholder="Nome" required >
             </div>
             <button class="botao-contato font-1-m-b">Incluir</button>
         </form>
       </fieldset>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NOME</th>
+          </tr>
+        </thead>
+        <tbody>
+<% for (marca of marcas) { %> 
+          <tr>
+            <td><%= marca.id %> </td>
+            <td><%= marca.nome %> </td>
+          </tr>
+<% } %> 
+        </tbody>
+      </table>
     </section>
   </main>
 
