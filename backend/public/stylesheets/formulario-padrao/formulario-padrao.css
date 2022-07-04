@@ -1,0 +1,44 @@
+.conta-contato {
+  background-color: var(--second-color);
+  border-radius: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  margin-top: 6rem;
+
+  padding-bottom: 2rem;
+}
+
+.form input[type="text"] {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+}
+  
+.botao-contato {
+  background-color: var(--third-color);
+  color: var(--primary-color);
+
+  border-radius: 4px;
+  border: 2px solid black;
+  padding: .6rem 4rem .6rem 4rem;
+
+  text-align: center;
+
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+
+  cursor: pointer;
+}
+
+.botao-contato:hover {
+  background-color: #FFFFFF;
+  color: var(--primary-color);
+
+  transition: 300ms;
+}

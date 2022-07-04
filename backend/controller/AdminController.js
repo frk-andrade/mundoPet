@@ -22,4 +22,20 @@ controller.addMarcas = async (req, res) => {
     }
 }
 
+controller.listaCategorias = async (req, res) => {
+    const categorias = await db.query('SELECT * FROM categorias', {type: Sequelize.QueryTypes.SELECT})
+
+    res.render('adicionarcategoria', {title: 'Listar Categorias', categorias})
+}
+
+controller.addCategorias = async (req, res) => {
+    const { nome } = req.body
+    const resultado = await db.query(`INSERT INTO categorias (nome) VALUES ('${nome}')`, {type: Sequelize.QueryTypes.INSERT})
+    if (resultado) {
+        res.redirect('/admin/categorias')
+    } else {
+        res.render('error')
+    }
+}
+
 module.exports = controller;

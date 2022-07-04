@@ -32,10 +32,13 @@
 @import './formulario-registro/formulario.css';
 
 /* CONTATO */
-@import './contatos/paginacontato.css';
+@import './formulario-padrao/formulario-padrao.css';
 
 /* CONTEÚDO CACHORRO */
 @import './cachorro/cachorroInicio.css';
 
 /* ERROR 404 */
 @import './error404/error.css';
+
+/* LISTAR MARCAS*/
+@import './marcas/marcas.css';

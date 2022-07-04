@@ -13,23 +13,25 @@
             <button class="botao-contato font-1-m-b">Incluir</button>
         </form>
       </fieldset>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>NOME</th>
+        </div>
+    </section>
+
+    <section class="container-form texto-tabela">
+      <table class="table table-striped table-info">
+        <thead class="form-result">
+          <tr class="font-1-xl">
+            <th>Id</th>
+            <th>Nome</th>
           </tr>
         </thead>
-        <tbody>
-<% for (marca of marcas) { %> 
-          <tr>
-            <td><%= marca.id %> </td>
-            <td><%= marca.nome %> </td>
-          </tr>
-<% } %> 
+        <tbody class="body-marcas">
+          <% for (marca of marcas) { %> 
+            <tr>
+              <td class="font-1-m-b"><%= marca.id %> </td>
+              <td class="font-1-m-b"><%= marca.nome %> </td>
+            </tr>
+            <% } %> 
         </tbody>
       </table>
     </section>
-  </main>
-
 <%- include('partials/footer') %>
