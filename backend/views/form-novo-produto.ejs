@@ -5,49 +5,74 @@
   <section>
     <fieldset>
       <h2>Novo Produto</h2>
-      <form class="form">
+      <form class="form" method="POST" action="">
         <div>
-          <label for="produto">Produto:</label>
-          <input type="text" name="produto" id="produto" placeholder="Produto">
+          <label for="nome">Nome do Produto:</label>
+          <input type="text" name="nome" id="nome" placeholder="Nome" required>
         </div>
         <div>
           <label for="descricao">Descrição do produto:</label>
-          <input type="textarea" name="" id="descricao" placeholder="descrição do produto">
+          <input type="textarea" name="descricao" id="descricao" placeholder="descrição do produto" required>
         </div>
         <div>
           <label for="preco">Preço:</label>
-          <input type="decimal" name="preco" id="preco" placeholder="Preço">
+          <input type="decimal" name="preco" id="preco" placeholder="Preço" required>
         </div>
         <div>
           <label for="promocao">Promoção:</label>
-          <input type="decimal" name="promocao" id="promocao" placeholder="Promoção">
+          <input type="decimal" name="promocao" id="promocao" placeholder="Promoção" required>
         </div>
         <div>
           <label for="marca_id">Marcas:</label>
-          <select id="marcas">
+          <select id="marcas" name="marca" required>
             <option selected disabled value="">Selecione</option>
-            <option>maca 1</option>
-            <option>maca 2</option>
-            <option>marca 3</option>
-            <option>marca 4</option>
+<% for (marca of marcas) { %> 
+            <option value="<%= marca.id %>"><%= marca.nome %> </option>
+<% } %> 
           </select>
         </div>
         </div>
         <div>
           <label for="categoria">Categoria</label>
-          <select id="categoria">
+          <select id="categoria" name="categoria" required>
             <option selected disabled value="">Selecione</option>
-            <option>categoria 1</option>
-            <option>categoria 2</option>
-            <option>categoria 3</option>
-            <option>categoria 4</option>
-          </select>
+<% for (categoria of categorias) { %> 
+              <option value="<%= categoria.id %>"><%= categoria.nome %> </option>
+<% } %> 
+            </select>
         </div>
 
         <button>Adicionar Produto</button>
       </form>
     </fieldset>
   </section>
+
+  <table class="table table-striped table-info">
+    <thead class="form-result">
+      <tr class="font-1-xl">
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th>Preço</th>
+        <th>Promoção</th>
+        <th>Marca</th>
+        <th>Categoria</th>
+      </tr>
+    </thead>
+    <tbody class="body-marcas">
+<% for (produto of produtos) { %> 
+      <tr>
+        <td class="font-1-m-b"><%= produto.id %></td>
+        <td class="font-1-m-b"><%= produto.nome %></td>
+        <td class="font-1-m-b"><%= produto.descricao %></td>
+        <td class="font-1-m-b"><%= produto.preco %></td>
+        <td class="font-1-m-b"><%= produto.promocao %></td>
+        <td class="font-1-m-b"><%= produto.marca %></td>
+        <td class="font-1-m-b"><%= produto.categoria %></td>
+      </tr>
+<% } %> 
+    </tbody>
+  </table>
 </main>
 
 <%- include('partials/footer') %>

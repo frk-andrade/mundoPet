@@ -1,7 +1,7 @@
 const config = {
 
-  username: 'root',
-  password: 'admin123@@',
+  username: 'admin',
+  password: 'admin',
   database: 'mundopet',
   host: 'localhost',
   dialect: 'mysql'

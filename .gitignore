@@ -104,3 +104,4 @@ dist
 .tern-port
 
 backend/database/config/config.js
+.DS_Store

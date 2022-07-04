@@ -10,4 +10,7 @@ router.post('/marcas', controller.addMarcas)
 router.get('/categorias', controller.listaCategorias)
 router.post('/categorias', controller.addCategorias)
 
+router.get('/produtos', controller.listaProdutos)
+router.post('/produtos', controller.addProdutos)
+
 module.exports = router;
