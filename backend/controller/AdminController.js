@@ -1,5 +1,9 @@
 const controller = {}
 
+function valorSql (valor){
+    return valor.replace(',','.')
+}
+
 const Sequelize = require('sequelize')
 const config = require('../database/config/config.js')
 const db = new Sequelize(config)
@@ -55,7 +59,9 @@ controller.listaProdutos = async (req, res) => {
 controller.addProdutos = async (req, res) => {
 
     const {nome, descricao, preco, promocao, marca, categoria} = req.body
-    const insert = `INSERT INTO produtos (nome, descricao, preco, promocao, marca_id, categoria_id) VALUES ('${nome}', '${descricao}', ${preco}, ${promocao}, ${marca}, ${categoria})`
+    let precoSql = valorSql(preco)
+    let promocaoSql = valorSql(promocao)
+    const insert = `INSERT INTO produtos (nome, descricao, preco, promocao, marca_id, categoria_id) VALUES ('${nome}', '${descricao}', ${precoSql}, ${promocaoSql}, ${marca}, ${categoria})`
     const resultado = db.query(insert, {type: Sequelize.QueryTypes.INSERT})
 
     if (resultado) {
