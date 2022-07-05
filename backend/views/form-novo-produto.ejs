@@ -1,40 +1,40 @@
 <%- include('partials/head') %>
 <%- include('partials/header') %>
 
-<main>
-  <section>
-    <fieldset>
-      <h2>Novo Produto</h2>
+<main class="container-form">
+  <section class="formularioproduto" aria-label="Formulário">
+    <fieldset class="conta-contato">
+      <h2 class="font-1-xl">Novo Produto</h2>
       <form class="form" method="POST" action="">
-        <div>
-          <label for="nome">Nome do Produto:</label>
-          <input type="text" name="nome" id="nome" placeholder="Nome" required>
+        <div class="form-info font-2-m-b font-1-m-b mb-3">
+          <label class="form-label" for="nome">Nome do Produto: </label>
+          <input class="form-control" type="text" name="nome" id="nome" placeholder="Nome" required>
         </div>
-        <div>
-          <label for="descricao">Descrição do produto:</label>
-          <input type="textarea" name="descricao" id="descricao" placeholder="descrição do produto" required>
+        <div class="form-info font-2-m-b font-1-m-b mb-3">
+          <label class="form-label" for="descricao">Descrição do produto:</label>
+          <input class="form-control" type="textarea" name="descricao" id="descricao" placeholder="descrição do produto" required>
         </div>
-        <div>
-          <label for="preco">Preço:</label>
-          <input type="decimal" name="preco" id="preco" placeholder="Preço" required>
+        <div class="form-info font-2-m-b font-1-m-b mb-3">
+          <label  class="form-label" for="preco">Preço:</label>
+          <input  class="form-control" type="decimal" name="preco" id="preco" placeholder="Preço" required>
         </div>
-        <div>
-          <label for="promocao">Promoção:</label>
-          <input type="decimal" name="promocao" id="promocao" placeholder="Promoção" required>
+        <div class="form-info font-2-m-b font-1-m-b mb-3">
+          <label class="form-label" for="promocao">Promoção:</label>
+          <input class="form-control" type="decimal" name="promocao" id="promocao" placeholder="Promoção" required>
         </div>
-        <div>
-          <label for="marca_id">Marcas:</label>
-          <select id="marcas" name="marca" required>
-            <option selected disabled value="">Selecione</option>
+        <div class="form-info font-2-m-b font-1-m-b mb-3">
+          <label class="form-label" for="marca_id">Marcas:</label>
+          <select class="form-select" id="marcas" name="marca" required>
+            <option class="selected" selected disabled value="">Selecione</option>
 <% for (marca of marcas) { %> 
-            <option value="<%= marca.id %>"><%= marca.nome %> </option>
+            <option class="selected" value="<%= marca.id %>"><%= marca.nome %> </option>
 <% } %> 
           </select>
         </div>
         </div>
-        <div>
-          <label for="categoria">Categoria</label>
-          <select id="categoria" name="categoria" required>
+        <div class="form-info font-2-m-b font-1-m-b mb-3">
+          <label class="form-label" for="categoria">Categoria</label>
+          <select class="form-select" id="categoria" name="categoria" required>
             <option selected disabled value="">Selecione</option>
 <% for (categoria of categorias) { %> 
               <option value="<%= categoria.id %>"><%= categoria.nome %> </option>
@@ -42,14 +42,14 @@
             </select>
         </div>
 
-        <button>Adicionar Produto</button>
+        <button class="botao-contato font-1-m-b">Adicionar Produto</button>
       </form>
     </fieldset>
   </section>
-
-  <table class="table table-striped table-info">
+  <div class="container">
+  <table class="table table-striped table-info tabelaproduto">
     <thead class="form-result">
-      <tr class="font-1-xl">
+      <tr class="fontecategoriaproduto">
         <th>ID</th>
         <th>Nome</th>
         <th>Descrição</th>
@@ -62,17 +62,18 @@
     <tbody class="body-marcas">
 <% for (produto of produtos) { %> 
       <tr>
-        <td class="font-1-m-b"><%= produto.id %></td>
-        <td class="font-1-m-b"><%= produto.nome %></td>
-        <td class="font-1-m-b"><%= produto.descricao %></td>
-        <td class="font-1-m-b"><%= produto.preco %></td>
-        <td class="font-1-m-b"><%= produto.promocao %></td>
-        <td class="font-1-m-b"><%= produto.marca %></td>
-        <td class="font-1-m-b"><%= produto.categoria %></td>
+        <td class="fonteproduto"><%= produto.id %></td>
+        <td class="fonteproduto"><%= produto.nome %></td>
+        <td class="fonteproduto"><%= produto.descricao %></td>
+        <td class="fonteproduto"><%= produto.preco %></td>
+        <td class="fonteproduto"><%= produto.promocao %></td>
+        <td class="fonteproduto"><%= produto.marca %></td>
+        <td class="fonteproduto"><%= produto.categoria %></td>
       </tr>
 <% } %> 
     </tbody>
   </table>
+</div>
 </main>
 
 <%- include('partials/footer') %>

@@ -42,3 +42,6 @@
 
 /* LISTAR MARCAS*/
 @import './marcas/marcas.css';
+
+/*FORM PRODUTO*/
+@import './formproduto/produto.css';

@@ -1,0 +1,19 @@
+.formularioproduto {
+    margin-bottom: 1rem;
+
+}
+
+.tabelaproduto {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fonteproduto {
+    font-size: 1rem;
+}
+
+.fontecategoriaproduto{
+    font-size: 1.25rem;
+}
