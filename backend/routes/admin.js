@@ -13,4 +13,10 @@ router.post('/categorias', controller.addCategorias)
 router.get('/produtos', controller.listaProdutos)
 router.post('/produtos', controller.addProdutos)
 
+router.get('/usuarios', controller.listaUsuarios)
+router.get('usuarios/:id', controller.editUsuario)
+router.post('/usuarios', controller.addUsuarios)
+router.put('/usuarios/:id', controller.update)
+router.delete('/usuario/:id/excluir', controller.delete)
+
 module.exports = router;
