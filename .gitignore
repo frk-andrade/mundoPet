@@ -103,5 +103,5 @@ dist
 # TernJS port file
 .tern-port
 
-./backend/database/config/config.js
+backend/database/config/config.js
 .DS_Store
