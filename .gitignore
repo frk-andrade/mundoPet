@@ -105,3 +105,4 @@ dist
 
 backend/database/config/config.js
 .DS_Store
+.vscode/
