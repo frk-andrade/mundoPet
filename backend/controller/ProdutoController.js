@@ -1,5 +1,5 @@
 const controller = {}
 
-controller.index = (req, res) => res.send('Deve abrir a página produto ' + req.params.id)
+controller.index = (req, res) => res.render('produto', {title: "Produto"})
 
 module.exports = controller;
