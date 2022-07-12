@@ -18,9 +18,9 @@
       
       <% for (produto of produtos) { %> 
       <div class="produto-racao">
-        <a href="#"><img src="/images/racao-golden-cachorro.svg" alt="Ração Golden Especial"></a>
-        <p class="font-2-xs"><%= produto %> </p>
-        <p class="font-2-xs font-1-m-b">R$ 200</p>
+        <a href="/produto/<%= produto.id %> "><img src="/images/<%= produto.imagem %> " alt="<%= produto.nome %>"></a>
+        <p class="font-2-xs"><%= produto.nome %> </p>
+        <p class="font-2-xs font-1-m-b">R$ <%= produto.preco %> </p>
         <button class="botao-comprar font-2-xs">Adicionar ao carrinho</button>
       </div>
       <% } %> 

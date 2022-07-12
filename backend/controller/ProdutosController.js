@@ -1,42 +1,39 @@
-const { index } = require("./ProdutoController");
+const {Categoria, Endereco, Item, Marca, Pedido, Produto, Usuario} = require('../database/models')
 
-const categorias = [
-  {
-    nome: 'Cachorro',
-    link: 'cachorro'
-  },
-  {
-    nome: 'Gato',
-    link: 'gato'
-  },
-  {
-    nome: 'Peixe',
-    link: 'peixe'
-  },
-  {
-    nome: 'Pássaro',
-    link: 'passaro'
-  }
-]
+// const { index } = require("./ProdutoController");
 
-const controller = {
-  index: function(req, res) {
+
+
+
+const controller = {}
+  controller.index = async (req, res) => {
+    const categorias = await Categoria.findAll()
+    
     if (!req.params.categoria) {
-      res.render('index', { title: 'Home' });
+      res.render('index', { title: 'Home' }, categorias);
     } else {
 
-      const cat = categorias.find( (categoria) => categoria.link == req.params.categoria )
 
-      const produtos = ['Racao', 'Racao1', 'Racao2', 'Racao3', 'Racao4']
+      const cat = await Categoria.findOne({
+        where: {
+          link: req.params.categoria
+        }
+      })
+      console.log(cat)
+      const produtos = await Produto.findAll({
+        where: {
+          categoria_id: cat.id
+        }
+      })
         // lista de todos os produtos que tem no banco com a categoria solicitada
         if(!cat){
           res.redirect('/produtos')
         } else {
-          res.render('produtos', { title: cat.nome , produtos})
+          res.render('produtos', { title: cat.nome , produtos, categorias})
         }
         // res.send(cat)
     }
   }
-}
+
 
 module.exports = controller;
