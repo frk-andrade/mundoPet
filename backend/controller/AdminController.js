@@ -11,12 +11,15 @@ const Sequelize = require('sequelize')
 const config = require('../database/config/config.js')
 const db = new Sequelize(config)
 
-controller.index = (req, res) => res.render('admin', {title: 'Admin'})
-
+controller.index = async (req, res) => {
+    const categorias = await Categoria.findAll()
+    res.render('admin', {title: 'Admin', categorias })
+}
 controller.listaMarcas = async (req, res) => {
+    const categorias = await Categoria.findAll()
     const marcas = await Marca.findAll()
     
-    res.render('listarMarcas', {title: 'Listar Marcas', marcas})
+    res.render('listarMarcas', {title: 'Listar Marcas', marcas, categorias})
 }
 
 controller.addMarcas = async (req, res) => {

@@ -1,16 +1,11 @@
-const {Categoria, Endereco, Item, Marca, Pedido, Produto, Usuario} = require('../database/models')
-
-// const { index } = require("./ProdutoController");
-
-
-
+const {Categoria, Produto} = require('../database/models')
 
 const controller = {}
   controller.index = async (req, res) => {
     const categorias = await Categoria.findAll()
-    
+
     if (!req.params.categoria) {
-      res.render('index', { title: 'Home' }, categorias);
+      res.render('index', { title: 'Home' , categorias});
     } else {
 
 
@@ -19,19 +14,17 @@ const controller = {}
           link: req.params.categoria
         }
       })
-      console.log(cat)
-      const produtos = await Produto.findAll({
-        where: {
-          categoria_id: cat.id
-        }
-      })
-        // lista de todos os produtos que tem no banco com a categoria solicitada
-        if(!cat){
+
+      if(!cat){
           res.redirect('/produtos')
         } else {
+          const produtos = await Produto.findAll({
+            where: {
+              categoria_id: cat.id
+            }
+          })
           res.render('produtos', { title: cat.nome , produtos, categorias})
         }
-        // res.send(cat)
     }
   }
 

@@ -21,7 +21,7 @@
         <a href="/produto/<%= produto.id %> "><img src="/images/<%= produto.imagem %> " alt="<%= produto.nome %>"></a>
         <p class="font-2-xs"><%= produto.nome %> </p>
         <p class="font-2-xs font-1-m-b">R$ <%= produto.preco %> </p>
-        <button class="botao-comprar font-2-xs">Adicionar ao carrinho</button>
+        <a href="/produto/<%= produto.id %> "><button class="botao-comprar font-2-xs">Comprar</button></a>
       </div>
       <% } %> 
     </div> 
