@@ -17,3 +17,9 @@
 .fontecategoriaproduto{
     font-size: 1.25rem;
 }
+/*FORMULÁRIO PRODUTO*/
+
+.form-control {
+    height: 38px !important;
+
+}
