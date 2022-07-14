@@ -6,22 +6,11 @@
     <fieldset class="conta-contato">
       <h2 class="font-1-xl">Novo Produto</h2>
       <form class="form" method="POST" action="">
-        <div class="form-info font-2-m-b font-1-m-b mb-3">
+        <div class="form-info form-info-first font-2-m-b font-1-m-b mb-5">
           <label class="form-label" for="nome">Nome do Produto: </label>
-          <input class="form-control" type="text" name="nome" id="nome" placeholder="Nome" required>
+          <input class="form-control form-nome-produto" type="text" name="nome" id="nome" placeholder="Nome" required>
         </div>
-        <div class="form-info font-2-m-b font-1-m-b mb-3">
-          <label class="form-label" for="descricao">Descrição do produto:</label>
-          <input class="form-control" type="textarea" name="descricao" id="descricao" placeholder="descrição do produto" required>
-        </div>
-        <div class="form-info font-2-m-b font-1-m-b mb-3">
-          <label  class="form-label" for="preco">Preço:</label>
-          <input  class="form-control" type="decimal" name="preco" id="preco" placeholder="Preço" required>
-        </div>
-        <div class="form-info font-2-m-b font-1-m-b mb-3">
-          <label class="form-label" for="promocao">Promoção:</label>
-          <input class="form-control" type="decimal" name="promocao" id="promocao" placeholder="Promoção" required>
-        </div>
+
         <div class="form-info font-2-m-b font-1-m-b mb-3">
           <label class="form-label" for="marca_id">Marcas:</label>
           <select class="form-select" id="marcas" name="marca" required>
@@ -31,10 +20,10 @@
 <% } %> 
           </select>
         </div>
-        </div>
+
         <div class="form-info font-2-m-b font-1-m-b mb-3">
-          <label class="form-label" for="categoria">Categoria</label>
-          <select class="form-select" id="categoria" name="categoria" required>
+          <label class="form-label" for="categoria">Categoria:</label>
+          <select class="form-select form-categoria" id="categoria" name="categoria" required>
             <option selected disabled value="">Selecione</option>
 <% for (categoria of categorias) { %> 
               <option value="<%= categoria.id %>"><%= categoria.nome %> </option>
@@ -42,38 +31,54 @@
             </select>
         </div>
 
+        <div class="form-info font-2-m-b font-1-m-b mb-3">
+          <label  class="form-label" for="preco">Preço:</label>
+          <input  class="form-control" type="decimal" name="preco" id="preco" placeholder="Preço" required>
+        </div>
+
+        <div class="form-info font-2-m-b font-1-m-b mb-3">
+          <label class="form-label" for="promocao">Promoção:</label>
+          <input class="form-control" type="decimal" name="promocao" id="promocao" placeholder="Promoção" required>
+        </div>
+
+        <div class="form-info font-2-m-b font-1-m-b mb-3">
+          <label class="form-label" for="descricao">Descrição do produto:</label>
+          <input class="form-control form-descricao-produto" type="textarea" name="descricao" id="descricao" placeholder="Descrição do produto" required>
+        </div>
+
         <button class="botao-contato font-1-m-b">Adicionar Produto</button>
       </form>
     </fieldset>
   </section>
-  <div class="container">
-  <table class="table table-striped table-info tabelaproduto">
-    <thead class="form-result">
-      <tr class="fontecategoriaproduto">
-        <th>ID</th>
-        <th>Nome</th>
-        <th>Descrição</th>
-        <th>Preço</th>
-        <th>Promoção</th>
-        <th>Marca</th>
-        <th>Categoria</th>
-      </tr>
-    </thead>
-    <tbody class="body-marcas">
-<% for (produto of produtos) { %> 
-      <tr>
-        <td class="fonteproduto"><%= produto.id %></td>
-        <td class="fonteproduto"><%= produto.nome %></td>
-        <td class="fonteproduto"><%= produto.descricao %></td>
-        <td class="fonteproduto"><%= produto.preco %></td>
-        <td class="fonteproduto"><%= produto.promocao %></td>
-        <td class="fonteproduto"><%= produto.marca %></td>
-        <td class="fonteproduto"><%= produto.categoria %></td>
-      </tr>
-<% } %> 
-    </tbody>
-  </table>
-</div>
+
+  <section class="table-responsive bg-form">
+    <table class="table align-middle">
+      <thead class="form-result">
+        <tr class="align-bottom">
+          <th class="font-2-m">ID</th>
+          <th class="font-2-m">Nome</th>
+          <th class="font-2-m">Descrição</th>
+          <th class="font-2-m">Preço</th>
+          <th class="font-2-m">Promoção</th>
+          <th class="font-2-m">Marca</th>
+          <th class="font-2-m">Categoria</th>
+        </tr>
+      </thead>
+      <tbody class="body-marcas">
+  <% for (produto of produtos) { %> 
+        <tr>
+          <td class="align-top font-2-xs"><%= produto.id %></td>
+          <td class="align-top font-2-xs"><%= produto.nome %></td>
+          <td class="align-top font-2-xs"><%= produto.descricao %></td>
+          <td class="align-top font-2-xs"><%= produto.preco %></td>
+          <td class="align-top font-2-xs"><%= produto.promocao %></td>
+          <td class="align-top font-2-xs"><%= produto.marca %></td>
+          <td class="align-top font-2-xs"><%= produto.categoria %></td>
+        </tr>
+  <% } %> 
+      </tbody>
+    </table>
+  </section>
 </main>
 
 <%- include('partials/footer') %>

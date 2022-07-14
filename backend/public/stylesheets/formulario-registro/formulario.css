@@ -1,5 +1,5 @@
 .container-form {
-  max-width: 600px;
+  max-width: 800px;
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
@@ -29,6 +29,15 @@
 
 .form {
   margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-info-first {
+  margin-bottom: 0px !important;
 }
 
 .form-info {
@@ -50,6 +59,19 @@
 .form input[type="password"] {
   margin-bottom: 2rem;
   padding: 0.5rem;
+}
+
+.form-nome-produto {
+  width: 500px;
+}
+
+.form input[type="textarea"] {
+  width: 650px;
+  height: 120px !important;
+}
+
+.form-categoria {
+  margin-right: 4rem;
 }
 
 .botao-formulario {
@@ -74,3 +96,26 @@
   transition: 300ms;
 }
 
+@media (max-width: 425px) {
+  .form {
+    margin-top: initial;
+    display: initial;
+    flex-wrap: initial;
+    justify-content: initial;
+    align-items: initial;
+    gap: initial;
+  }
+
+  .form-nome-produto {
+    width: initial;
+  }
+  
+  .form input[type="textarea"] {
+    width: initial;
+    height: initial;
+  }
+  
+  .form-categoria {
+    margin-right: initial;
+  }
+}
