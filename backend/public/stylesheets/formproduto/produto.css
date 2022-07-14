@@ -1,25 +1,17 @@
-.formularioproduto {
-    margin-bottom: 1rem;
-
+.bg-form {
+    margin-top: 2rem;
+    background-color: var(--second-color);
+    border-radius: 8px;
+    text-align: justify;
+    width: 1600px;
+    margin-left: -400px;
 }
 
-.tabelaproduto {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.fonteproduto {
-    font-size: 1rem;
-}
-
-.fontecategoriaproduto{
-    font-size: 1.25rem;
-}
-/*FORMULÁRIO PRODUTO*/
-
-.form-control {
-    height: 38px !important;
-
+@media (max-width: 425px) {
+    .bg-form {
+        margin-left: initial;
+        width: initial;
+        display: flex;
+        flex-direction: column;
+    }
 }
