@@ -8,20 +8,20 @@
       <form class="form" method="POST" action="">
         <div class="form-info form-info-first font-2-m-b font-1-m-b mb-5">
           <label class="form-label" for="nome">Nome e Sobrenome: </label>
-          <input class="form-control form-nome-produto" type="text" name="nome" id="nome" placeholder="Nome" required>
-          <input class="form-control form-nome-produto" type="text" name="sobrenome" id="sobrenome" placeholder="Sobrenome" required>
+          <input class="form-control form-nome-produto" type="text" name="nome" id="nome" value="<%= usuario.nome %>" required>
+          <input class="form-control form-nome-produto" type="text" name="sobrenome" id="sobrenome" value="<%= usuario.sobrenome %> " required>
         </div>
 
         <div class="form-info font-2-m-b font-1-m-b mb-3">
           <label class="form-label" for="email">Email:</label>
-          <input class="form-control form-nome-produto" type="email" name="email" id="email" placeholder="email@email.com" required>
+          <input class="form-control form-nome-produto" type="email" name="email" id="email" value="<%= usuario.email %> " required>
         </div>
-
         <div class="form-info font-2-m-b font-1-m-b mb-3">
-            <label  class="form-label" for="cpf">CPF:</label>
-            <input  class="form-control" type="number" name="cpf" id="cpf" placeholder="CPF" required>
-          </div>
-
+          <label  class="form-label" for="cpf">CPF:</label>
+          <input  class="form-control" type="number" name="cpf" id="cpf" value="<%= usuario.cpf %>" required>
+        </div>
+        
+<!-- 
           <div class="form-info font-2-m-b font-1-m-b mb-3">
             <label class="form-label" for="endereço">Endereço:</label>
             <input class="form-control form-descricao-produto" type="textarea" name="endereço" id="endereço" placeholder="Endereço" required>
@@ -41,12 +41,12 @@
             <label class="form-label" for="cep">CEP:</label>
             <input class="form-control form-descricao-produto" type="number" name="cep" id="cep" placeholder="CEP" required>
           </div>
-
+ -->
         <div class="form-info font-2-m-b font-1-m-b mb-3">
           <label class="form-label" for="phone">Telefone:</label>
-          <input class="form-control" type="tel" name="phone" id="phone" placeholder="phone" required>
+          <input class="form-control" type="tel" name="phone" id="phone" value="<%= usuario.telefone %>" required>
         </div>
-
+<!-- 
         <div class="form-info font-2-m-b font-1-m-b mb-3">
             <label class="form-label" for="masculino">Masculino:</label>
             <input class="form-control" type="radio" name="masculino" id="masculino" value="masculino" required>
@@ -55,12 +55,19 @@
             <label class="form-label" for="outro">Outro:</label>
             <input class="form-control" type="radio" name="outro" id="outro" value="outro" required>
           </div>
-
           <div class="form-info font-2-m-b font-1-m-b mb-3">
             <label class="form-label" for="data-nascimento">Data de nascimento:</label>
             <input class="form-control" type="date" name="data-nascimento" id="data-nascimento" required>
           </div>
-
+-->
+        <% if (!locals.enderecos) { %>
+          Não temos endereços cadastrados
+        <% } else { 
+          for (const endereco of enderecos) { %>
+            <a href="/minhaconta/endereco/<%= endereco.id %>"><%= endereco.alias %></a>        
+            
+        <% }
+        } %> 
         <button class="botao-contato font-1-m-b">Enviar</button>
       </form>
     </fieldset>
