@@ -19,7 +19,7 @@
       <% for (produto of produtos) { %> 
       <div class="produto-racao">
         <a href="/produto/<%= produto.id %> "><img src="/images/<%= produto.imagem %> " alt="<%= produto.nome %>"></a>
-        <p class="font-2-xs"><%= produto.nome %> </p>
+        <p class="font-2-xs produtos-descricao"><%= produto.nome %> </p>
         <p class="font-2-xs font-1-m-b">R$ <%= produto.preco %> </p>
         <a href="/produto/<%= produto.id %> "><button class="botao-comprar font-2-xs">Comprar</button></a>
       </div>

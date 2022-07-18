@@ -51,3 +51,6 @@
 
 /* MINHA CONTA */
 @import './minha-conta/minha-conta.css';
+
+/* PRODUTOS */
+@import './produtos/produtos.css';
