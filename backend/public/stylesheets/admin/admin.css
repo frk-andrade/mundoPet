@@ -22,3 +22,20 @@
     padding-bottom: 2rem;
     margin: 1rem;
 }
+
+.menu-admin a {
+    background-color: var(--second-color-background);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.menu-admin a:hover {
+    background-color: var(--primary-color-subtitle);
+}
+
+@media (max-width: 425px) {
+    .container-form2 {
+        max-width: max-content;
+        gap: 1rem;
+    }
+}
