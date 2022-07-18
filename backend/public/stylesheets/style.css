@@ -48,3 +48,6 @@
 
 /*MENU ADMIN*/
 @import './admin/admin.css';
+
+/* MINHA CONTA */
+@import './minha-conta/minha-conta.css';

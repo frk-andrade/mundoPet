@@ -38,4 +38,21 @@
         max-width: max-content;
         gap: 1rem;
     }
+    .container-form2 ul {
+        gap: 1rem;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container-form2 {
+        max-width: max-content;
+        gap: 1rem;
+    }
+    .container-form2 ul {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;   
+    }
 }

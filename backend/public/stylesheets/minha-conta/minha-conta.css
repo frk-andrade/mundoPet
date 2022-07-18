@@ -1,0 +1,4 @@
+.form-cadastro-cliente {
+  display: flex !important;
+  flex-direction: column !important;
+}

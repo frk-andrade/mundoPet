@@ -51,6 +51,11 @@
   padding: 0.5rem;
 }
 
+.form input[type="tel"] {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
 .form input[type="email"] {
   margin-bottom: 1rem;
   padding: 0.5rem;

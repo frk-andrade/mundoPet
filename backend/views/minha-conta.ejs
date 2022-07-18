@@ -5,47 +5,51 @@
   <section class="formularioproduto" aria-label="Formulário">
     <fieldset class="conta-contato">
       <h2 class="font-1-xl">Novo Cadastro</h2>
-      <form class="form" method="POST" action="">
+      <form class="form form-cadastro-cliente" method="POST" action="">
         <div class="form-info form-info-first font-2-m-b font-1-m-b mb-5">
-          <label class="form-label" for="nome">Nome e Sobrenome: </label>
+          <label class="form-label" for="nome">Nome: </label>
           <input class="form-control form-nome-produto" type="text" name="nome" id="nome" value="<%= usuario.nome %>" required>
+          <label class="form-label" for="nome">Sobrenome: </label>
           <input class="form-control form-nome-produto" type="text" name="sobrenome" id="sobrenome" value="<%= usuario.sobrenome %> " required>
         </div>
 
-        <div class="form-info font-2-m-b font-1-m-b mb-3">
-          <label class="form-label" for="email">Email:</label>
-          <input class="form-control form-nome-produto" type="email" name="email" id="email" value="<%= usuario.email %> " required>
-        </div>
-        <div class="form-info font-2-m-b font-1-m-b mb-3">
-          <label  class="form-label" for="cpf">CPF:</label>
-          <input  class="form-control" type="number" name="cpf" id="cpf" value="<%= usuario.cpf %>" required>
-        </div>
-        
-<!-- 
+        <div class="form-cadastro">
           <div class="form-info font-2-m-b font-1-m-b mb-3">
-            <label class="form-label" for="endereço">Endereço:</label>
-            <input class="form-control form-descricao-produto" type="textarea" name="endereço" id="endereço" placeholder="Endereço" required>
+            <label class="form-label" for="email">Email:</label>
+            <input class="form-control form-nome-produto" type="email" name="email" id="email" value="<%= usuario.email %> " required>
           </div>
+          <div class="form-info font-2-m-b font-1-m-b mb-3">
+            <label  class="form-label" for="cpf">CPF:</label>
+            <input  class="form-control" type="text" name="cpf" id="cpf" value="<%= usuario.cpf %>" required>
+          </div>
+          
+  <!-- 
+            <div class="form-info font-2-m-b font-1-m-b mb-3">
+              <label class="form-label" for="endereço">Endereço:</label>
+              <input class="form-control form-descricao-produto" type="textarea" name="endereço" id="endereço" placeholder="Endereço" required>
+            </div>
 
-          <div class="form-info font-2-m-b font-1-m-b mb-3">
-            <label class="form-label" for="cidade">Cidade:</label>
-            <input class="form-control form-descricao-produto" type="text" name="cidade" id="cidade" placeholder="cidade" required>
-          </div>
+            <div class="form-info font-2-m-b font-1-m-b mb-3">
+              <label class="form-label" for="cidade">Cidade:</label>
+              <input class="form-control form-descricao-produto" type="text" name="cidade" id="cidade" placeholder="cidade" required>
+            </div>
 
-          <div class="form-info font-2-m-b font-1-m-b mb-3">
-            <label class="form-label" for="estado">Estado:</label>
-            <input class="form-control form-descricao-produto" type="text" name="estado" id="estado" placeholder="Estado" required>
-          </div>
+            <div class="form-info font-2-m-b font-1-m-b mb-3">
+              <label class="form-label" for="estado">Estado:</label>
+              <input class="form-control form-descricao-produto" type="text" name="estado" id="estado" placeholder="Estado" required>
+            </div>
 
+            <div class="form-info font-2-m-b font-1-m-b mb-3">
+              <label class="form-label" for="cep">CEP:</label>
+              <input class="form-control form-descricao-produto" type="number" name="cep" id="cep" placeholder="CEP" required>
+            </div>
+  -->
           <div class="form-info font-2-m-b font-1-m-b mb-3">
-            <label class="form-label" for="cep">CEP:</label>
-            <input class="form-control form-descricao-produto" type="number" name="cep" id="cep" placeholder="CEP" required>
+            <label class="form-label" for="phone">Telefone:</label>
+            <input class="form-control" type="tel" name="phone" id="phone" value="<%= usuario.telefone %>" required>
           </div>
- -->
-        <div class="form-info font-2-m-b font-1-m-b mb-3">
-          <label class="form-label" for="phone">Telefone:</label>
-          <input class="form-control" type="tel" name="phone" id="phone" value="<%= usuario.telefone %>" required>
         </div>
+
 <!-- 
         <div class="form-info font-2-m-b font-1-m-b mb-3">
             <label class="form-label" for="masculino">Masculino:</label>
@@ -61,7 +65,7 @@
           </div>
 -->
         <% if (!locals.enderecos) { %>
-          Não temos endereços cadastrados
+          <!-- Não temos endereços cadastrados -->
         <% } else { 
           for (const endereco of enderecos) { %>
             <a href="/minhaconta/endereco/<%= endereco.id %>"><%= endereco.alias %></a>        
