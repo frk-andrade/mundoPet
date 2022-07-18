@@ -3,9 +3,33 @@
     background-color: var(--second-color);
     border-radius: 8px;
     text-align: justify;
-    width: 1600px;
-    margin-left: -400px;
+    width: 760px;
+    padding: 2rem;
 }
+
+.form-result {
+    color: rgb(255, 255, 255);
+    background-color: var(--primary-color);   
+}
+
+.align-icones{
+    margin: 1px;
+    background-color: black;
+}
+
+.descritivos {
+    color: white;    
+}
+
+td {
+    border: 1px solid var(--primary-color);
+}
+
+tr:nth-child(even) {
+    background-color:rgb(53, 118, 172)
+}
+
+
 
 @media (max-width: 425px) {
     .bg-form {

@@ -54,19 +54,20 @@
   <section class="table-responsive bg-form">
     <table class="table align-middle">
       <thead class="form-result">
-        <tr class="align-bottom">
-          <th class="font-2-m">ID</th>
-          <th class="font-2-m">Nome</th>
-          <th class="font-2-m">Descrição</th>
-          <th class="font-2-m">Preço</th>
-          <th class="font-2-m">Promoção</th>
-          <th class="font-2-m">Marca</th>
-          <th class="font-2-m">Categoria</th>
+        <tr class="align-bottom font-2-xs">
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Preço</th>
+          <th>Promoção</th>
+          <th>Marca</th>
+          <th>Categoria</th>
+          <th> Ações</th>
         </tr>
       </thead>
       <tbody class="body-marcas">
   <% for (produto of produtos) { %> 
-        <tr>
+        <tr class="descritivos">
           <td class="align-top font-2-xs"><%= produto.id %></td>
           <td class="align-top font-2-xs"><%= produto.nome %></td>
           <td class="align-top font-2-xs"><%= produto.descricao %></td>
@@ -74,6 +75,7 @@
           <td class="align-top font-2-xs"><%= produto.promocao %></td>
           <td class="align-top font-2-xs"><%= produto.marca %></td>
           <td class="align-top font-2-xs"><%= produto.categoria %></td>
+          <td class="align-top"><img class="icones-descricao" src="/images/excluir.png" width="17px" alt="excluir"><img src="/images/editar-texto.png" width="17px" alt="editar">
         </tr>
   <% } %> 
       </tbody>

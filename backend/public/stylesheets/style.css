@@ -45,3 +45,6 @@
 
 /*FORM PRODUTO*/
 @import './formproduto/produto.css';
+
+/*MENU ADMIN*/
+@import './admin/admin.css';

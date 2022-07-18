@@ -1,0 +1,24 @@
+.container-form2 {
+    background-color: var(--second-color);
+    border-radius: 0.8rem;
+    width: 600px;
+    margin-top: 5rem;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+.titulo {
+    color: rgb(255, 255, 255);
+    justify-content: center;
+    display: flex;
+    padding-top: 2rem;
+}
+
+.menu-admin  {
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    padding-bottom: 2rem;
+    margin: 1rem;
+}
