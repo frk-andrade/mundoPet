@@ -8,7 +8,9 @@
         <img src="/images/login.svg" alt="" class="imagem-menu">
         <div class="nav-menu--texto">
           <h3 class="font-2-xs">Bem vindo</h3>
-          <a class="font-1-xs" href="#">Entre ou cadastre-se</a>
+          <a class="font-1-xs" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Entre </a>
+          <a class="font-1-xs" href="#" >Cadastre-se</a>
+
         </div>
 
         <img src="/images/carrinho.svg" alt="">
@@ -20,6 +22,31 @@
     </div>
   </nav>
 
+<!-- LOGIN -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title font-1-xs font-2-m-b" id="staticBackdropLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label font-1-xs">E-mail</label>
+          <input type="email" class="form-control font-1-xs" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="inputPassword" class="col-sm-2 col-form-label font-1-xs">Senha</label>
+            <input type="password" class="form-control font-1-xs" id="inputPassword" placeholder="Insira a sua senha">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary font-1-xs font-2-m-b" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary font-1-xs font-2-m-b">Entrar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <main>
     <section class="sub-menu">
