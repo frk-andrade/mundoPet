@@ -8,19 +8,19 @@
       <form class="form form-cadastro-cliente" method="POST" action="">
         <div class="form-info form-info-first font-2-m-b font-1-m-b mb-5">
           <label class="form-label" for="nome">Nome: </label>
-          <input class="form-control form-nome-produto" type="text" name="nome" id="nome" value="<%= usuario.nome %>" required>
+          <input class="form-control form-nome-produto" type="text" pattern="([aA-zZ]+)" placeholder="Apenas letras" name="nome" id="nome"  required>
           <label class="form-label" for="nome">Sobrenome: </label>
-          <input class="form-control form-nome-produto" type="text" name="sobrenome" id="sobrenome" value="<%= usuario.sobrenome %> " required>
+          <input class="form-control form-nome-produto" type="text" pattern="([aA-zZ]+)" placeholder="Apenas letras" name="sobrenome" id="sobrenome" required>
         </div>
 
         <div class="form-cadastro">
           <div class="form-info font-2-m-b font-1-m-b mb-3">
             <label class="form-label" for="email">Email:</label>
-            <input class="form-control form-nome-produto" type="email" name="email" id="email" value="<%= usuario.email %> " required>
+            <input class="form-control form-nome-produto" type="email" placeholder="seunome@mail.com" name="email" id="email" required>
           </div>
           <div class="form-info font-2-m-b font-1-m-b mb-3">
             <label  class="form-label" for="cpf">CPF:</label>
-            <input  class="form-control" type="text" name="cpf" id="cpf" value="<%= usuario.cpf %>" required>
+            <input  class="form-control" type="text" placeholder="Apenas números" name="cpf" id="cpf" pattern="([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})" required>
           </div>
           
   <!-- 
@@ -46,7 +46,7 @@
   -->
           <div class="form-info font-2-m-b font-1-m-b mb-3">
             <label class="form-label" for="phone">Telefone:</label>
-            <input class="form-control" type="tel" name="phone" id="phone" value="<%= usuario.telefone %>" required>
+            <input class="form-control" type="tel" name="phone" placeholder="(DDD) + número" id="phone" required>
           </div>
         </div>
 
