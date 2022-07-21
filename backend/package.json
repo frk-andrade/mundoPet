@@ -18,7 +18,8 @@
     "sequelize": "^6.21.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.18"
+    "nodemon": "^2.0.18",
+    "sequelize-cli": "^6.4.1"
   },
   "main": "app.js",
   "keywords": [],
