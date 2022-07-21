@@ -1,0 +1,38 @@
+.caixa-produto{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 3rem;
+    background: rgb(178, 228, 178);
+    padding: 1rem 0 1rem 0;
+    border-radius: 6px;
+}
+
+.produto-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.produto-conteudo button{
+    width: 200px;
+}
+
+.produto-conteudo p{
+    text-align: justify;
+    width: 550px;
+}
+
+@media (max-width: 725px){
+    .caixa-produto {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+    };
+    .produto-conteudo {
+        flex-wrap: wrap;
+        display: flex;
+    }
+
+}

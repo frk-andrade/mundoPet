@@ -47,9 +47,11 @@
 
 
 .font-2-l-b {
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.015em;
   text-transform: uppercase;
+  font-family: "Open Sans";
+
 }
 
 .font-1-xl {

@@ -4,7 +4,7 @@ const controller = {}
 
 controller.index = async (req, res) => {
    const {id} = req.params
-   const categorias = Categorias.findAll()
+   const categorias = await Categorias.findAll()
    const produto = await Produto.findByPk(id,
       {
          include: [

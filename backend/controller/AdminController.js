@@ -66,10 +66,11 @@ controller.listaProdutos = async (req, res) => {
       
     })
 
-    res.render('form-novo-produto', {marcas, categorias, produtos})
+        res.render('form-novo-produto', {marcas, categorias, produtos})
 }
 
 controller.addProdutos = async (req, res) => {
+
 
     const {nome, descricao, preco, promocao, marca, categoria} = req.body
     let precoSql = valorSql(preco)

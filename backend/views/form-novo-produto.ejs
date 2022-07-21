@@ -7,7 +7,7 @@
       window.history.back()
     }
   </script>
-  <button onclick="goBack()" class="botao-contato font-1-m-b"> < Voltar</button>
+  <button onclick="goBack()" class="botao-contato font-1-m-b"> &#129044; Voltar</button>
   <section class="formularioproduto" aria-label="Formulário">
     <fieldset class="conta-contato">
       <h2 class="font-1-xl">Novo Produto</h2>
@@ -79,8 +79,8 @@
           <td class="align-top font-2-xs"><%= produto.descricao %></td>
           <td class="align-top font-2-xs"><%= produto.preco %></td>
           <td class="align-top font-2-xs"><%= produto.promocao %></td>
-          <td class="align-top font-2-xs"><%= produto.marca %></td>
-          <td class="align-top font-2-xs"><%= produto.categoria %></td>
+          <td class="align-top font-2-xs"><%= produto.marca.nome %></td>
+          <td class="align-top font-2-xs"><%= produto.categoria.nome %></td>
           <td class="align-top"><img class="icones-descricao" src="/images/excluir.png" width="17px" alt="excluir"><img src="/images/editar-texto.png" width="17px" alt="editar">
         </tr>
   <% } %> 

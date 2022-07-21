@@ -1,8 +1,20 @@
 <%- include('partials/head') %>
 <%- include('partials/header') %> 
 
-<section>
-  <h2> produto.nome</h2>
+<section class="container">
+  <div class="caixa-produto">
+  <div>
+      <img src= "/images/imagemDefault.svg  " alt="">
+  </div>
+  <div class="produto-conteudo">
+      <h2 class= "font-2-l-b" > <%= produto.nome %></h2>
+      <h2 class="font-2-m"> <%= produto.categoria.nome %> </h2> <h2 class="font-2-m"><%= produto.marca.nome %></h2>
+      <h2 class="font-2-xs font-1-m-b"> <%= produto.preco %></h2>
+      <button class="botao-comprar font-2-xs">Adicionar ao carrinho</button>
+      <h2 class="font-2-xs font-1-m-b"> Descrição: </h2>
+      <p class="font-1-xs"> <%= produto.descricao %></p>
+  </div>
+</div>
 </section>
 
 <%- include('partials/footer') %>
