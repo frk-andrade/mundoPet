@@ -54,7 +54,17 @@ controller.listaProdutos = async (req, res) => {
 
     const categorias = await Categorias.findAll()
 
-    const produtos = await db.query('SELECT p.*, marcas.nome as marca, categorias.nome as categoria FROM produtos p INNER JOIN marcas ON marcas.id = p.marca_id INNER JOIN categorias ON categorias.id = p.categoria_id', {type: Sequelize.QueryTypes.SELECT})
+    const produtos = await Produto.findAll({
+        include: [
+            {
+              association: 'marca'
+            },
+            {
+              association: 'categoria'
+            }
+          ]
+      
+    })
 
     res.render('form-novo-produto', {marcas, categorias, produtos})
 }

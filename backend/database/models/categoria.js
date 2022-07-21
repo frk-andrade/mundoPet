@@ -11,9 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Categoria.hasMany(models.Produto, {
-        as: 'produto'
-      })
+      // Categoria.hasMany(models.Produto, {
+      //   as: 'produto'
+      // })
     }
   }
   Categoria.init({
