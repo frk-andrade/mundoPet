@@ -9,7 +9,7 @@ const controller = {}
     } else {
 
 
-      const cat = await Categoria.findOne({
+      const cat = await Categorias.findOne({
         where: {
           link: req.params.categoria
         }
