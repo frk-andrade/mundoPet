@@ -1,4 +1,4 @@
-const {Categoria, Endereco, Item, Marca, Pedido, Produto, Usuario} = require('../database/models')
+const {Categorias, Endereco, Item, Marca, Pedido, Produto, Usuario} = require('../database/models')
 
 
 const controller = {}
@@ -9,14 +9,14 @@ controller.index = async (req, res) => {
   // Esse valor do ID vai ser resgatado quando tivermos as sessões funcionando
   // const { id } = session.id_usuario
 
-  const categorias = await Categoria.findAll()
+  const categorias = await Categorias.findAll()
   const usuario = await Usuario.findByPk(1)
   res.render('minha-conta', { title: "Index", categorias, usuario })
 }
 
 controller.showEndereco = async (req, res) => {
   const { id } = req.params
-  const categorias = await Categoria.findAll()
+  const categorias = await Categorias.findAll()
   const endereco = await Endereco.findByPk(id)
 
   // tem que verificar se esse endereço é do usuario que tá pedindo

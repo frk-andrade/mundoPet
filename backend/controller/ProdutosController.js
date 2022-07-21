@@ -1,8 +1,8 @@
-const {Categoria, Produto} = require('../database/models')
+const {Categorias, Produto} = require('../database/models')
 
 const controller = {}
   controller.index = async (req, res) => {
-    const categorias = await Categoria.findAll()
+    const categorias = await Categorias.findAll()
 
     if (!req.params.categoria) {
       res.render('index', { title: 'Home' , categorias});

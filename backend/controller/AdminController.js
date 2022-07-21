@@ -1,4 +1,4 @@
-const {Categoria, Endereco, Item, Marca, Pedido, Produto, Usuario} = require('../database/models')
+const {Categorias, Endereco, Item, Marca, Pedido, Produto, Usuario} = require('../database/models')
 
 const controller = {}
 
@@ -7,11 +7,11 @@ function valorSql (valor){
 }
 
 controller.index = async (req, res) => {
-    const categorias = await Categoria.findAll()
+    const categorias = await Categorias.findAll()
     res.render('admin', {title: 'Admin', categorias })
 }
 controller.listaMarcas = async (req, res) => {
-    const categorias = await Categoria.findAll()
+    const categorias = await Categorias.findAll()
     const marcas = await Marca.findAll()
     
     res.render('listarMarcas', {title: 'Listar Marcas', marcas, categorias})
@@ -30,7 +30,7 @@ controller.addMarcas = async (req, res) => {
 
 
 controller.listaCategorias = async (req, res) => {
-    const categorias = await Categoria.findAll()
+    const categorias = await Categorias.findAll()
 
     res.render('listarCategorias', {title: 'Listar Categorias', categorias})
 }
@@ -39,7 +39,7 @@ controller.addCategorias = async (req, res) => {
     const { nome } = req.body
     const link = nome.normalize("NFD").replace(/[^a-zA-Zs]/g, "").toLowerCase()
 
-    const resultado = await Categoria.create({nome, link})
+    const resultado = await Categorias.create({nome, link})
 
     if (resultado) {
         res.redirect('/admin/categorias')
@@ -52,7 +52,7 @@ controller.listaProdutos = async (req, res) => {
 
     const marcas = await Marca.findAll() 
 
-    const categorias = await Categoria.findAll()
+    const categorias = await Categorias.findAll()
 
     const produtos = await db.query('SELECT p.*, marcas.nome as marca, categorias.nome as categoria FROM produtos p INNER JOIN marcas ON marcas.id = p.marca_id INNER JOIN categorias ON categorias.id = p.categoria_id', {type: Sequelize.QueryTypes.SELECT})
 

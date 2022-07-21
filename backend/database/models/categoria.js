@@ -21,7 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     link: DataTypes.STRING
   }, {
     sequelize,
-    modelName: 'Categoria',
+    modelName: 'Categorias',
   });
   return Categoria;
 };

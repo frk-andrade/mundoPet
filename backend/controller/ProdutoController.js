@@ -1,10 +1,10 @@
-const {Categoria, Endereco, Item, Marca, Pedido, Produto, Usuario} = require('../database/models')
+const {Categorias, Endereco, Item, Marca, Pedido, Produto, Usuario} = require('../database/models')
 
 const controller = {}
 
 controller.index = async (req, res) => {
    const {id} = req.params
-   
+   const categorias = Categorias.findAll()
    const produto = await Produto.findByPk(id,
       {
          include: [
@@ -18,6 +18,6 @@ controller.index = async (req, res) => {
       
       })
 
-res.render('produto', {title: "Produto", produto})
+res.render('produto', {title: "Produto", produto, categorias})
 }
 module.exports = controller;
