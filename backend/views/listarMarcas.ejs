@@ -16,8 +16,8 @@
         </div>
     </section>
 
-    <section class="container-form texto-tabela">
-      <table class="table table-striped table-info">
+    <section class="table-responsive bg-form">
+      <table class="table align-middle">
         <thead class="form-result">
           <tr class="font-1-xl">
             <th>Id</th>
@@ -26,9 +26,9 @@
         </thead>
         <tbody class="body-marcas">
           <% for (marca of marcas) { %> 
-            <tr>
-              <td class="font-1-m-b"><%= marca.id %> </td>
-              <td class="font-1-m-b"><%= marca.nome %> </td>
+            <tr class="descritivos">
+              <td class="align-top font-2-xs"><%= marca.id %> </td>
+              <td class="align-top font-2-xs"><%= marca.nome %> </td>
             </tr>
             <% } %> 
         </tbody>
