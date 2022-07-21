@@ -1,31 +1,34 @@
-module.exports = (sequelize, DataType) => {
-    const Item = sequelize.define('Item', {
-      id: {
-        type: DataType.INTEGER.UNSIGNED, // INT UNSIGNED
-        primaryKey: true, // PRIMARY KEY
-        autoIncrement: true, // AUTO_INCREMENT
-        allowNull: false // NOT NULL
-      },
-      pedido_id: {
-        type: DataType.INTEGER,
-        allowNull: false
-      },
-      produto_id: {
-        type: DataType.INTEGER,
-        allowNull: false
-      },
-      quantidade: {
-        type: DataType.INTEGER,
-        allowNull: false
-      },
-      valor: {
-        type: DataType.DECIMAL(10, 2),
-        allowNull: false
-      },
-    },
-      {
-        tableName: 'itens_pedido',
-        timestamps: false
+'use strict';
+const {
+  Model
+} = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+  class ItensPedido extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+      ItensPedido.belongsTo(models.Pedido, {
+        foreignKey: 'pedido_id',
+        as: 'pedido'
       })
-    return Item
+      ItensPedido.belongsTo(models.Produto, {
+        foreignKey: 'produto_id',
+        as: 'produto'
+      })
     }
+  }
+  ItensPedido.init({
+    pedido_id: DataTypes.INTEGER,
+    produto_id: DataTypes.INTEGER,
+    quantidade: DataTypes.INTEGER,
+    valor: DataTypes.DECIMAL(10, 2),
+}, {
+    sequelize,
+    modelName: 'ItensPedido',
+  });
+  return ItensPedido;
+};
