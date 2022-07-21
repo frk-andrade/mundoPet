@@ -6,11 +6,6 @@ function valorSql (valor){
     return valor.replace(',','.')
 }
 
-
-const Sequelize = require('sequelize')
-const config = require('../database/config/config.js')
-const db = new Sequelize(config)
-
 controller.index = async (req, res) => {
     const categorias = await Categoria.findAll()
     res.render('admin', {title: 'Admin', categorias })
