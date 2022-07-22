@@ -3,19 +3,22 @@
     justify-content: center;
     align-items: flex-start;
     margin-top: 3rem;
-    background: rgb(178, 228, 178);
-    padding: 1rem 0 1rem 0;
-    border-radius: 6px;
+    background: white;
+    padding: 1rem 0 1rem ;
 }
 
 .produto-conteudo {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    padding: 2rem;
+    padding-left: 8rem;
 }
-
+.teste{
+    padding-top: 2rem;
+}
 .produto-conteudo button{
-    width: 200px;
+    width: 300px;
 }
 
 .produto-conteudo p{
