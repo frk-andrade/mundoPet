@@ -3,6 +3,14 @@
   padding: 24px 20px 24px 20px;
 }
 
+.bg-menu {
+  background-color: var(--primary-color) !important;
+}
+
+.btn-bg {
+  background-color: var(--second-color);
+}
+
 .nav-menu--caixa {
   display: flex;
   justify-content: space-between;
