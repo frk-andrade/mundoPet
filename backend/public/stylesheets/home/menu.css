@@ -54,3 +54,21 @@
     margin-right: 2rem;
   }
 }
+
+@media (max-width: 425px) {
+  .navbar-brand img{
+    width: 120px;
+  }  
+}
+
+@media (max-width: 425px) {
+  .navbar-brand img{
+    width: 100px;
+  }  
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img{
+    width: 100px;
+  }  
+}
