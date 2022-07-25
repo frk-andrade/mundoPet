@@ -1,0 +1,37 @@
+.section-form{
+    margin: 40px 0px;
+}
+
+.section-form .title{
+ text-align: center;
+ font-size: 32px;
+ font-weight: bold;
+ margin-bottom: 15px;
+}
+
+.section-form .description{
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.section-form .input-group{
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: aliceblue;
+}
+.section-form .submit-group{
+    text-align: center;
+}
+
+
+
+
+.form{
+    border-radius: 10px;
+    border: 4px solid black;
+    width: 300px;
+    margin: 0px auto;
+    padding: 30px 20px;
+    background-color: rgb(1, 0, 59);
+}
