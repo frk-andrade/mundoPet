@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-light bg-menu">
   <div class="container-fluid container">
     <a class="navbar-brand" href="/"> <img src="/images/logo.svg" alt="Logo Mundo Pet"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,28 +7,28 @@
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          <a class="nav-link active font-1-s font-2-m-b" aria-current="page" href="#">Login</a>
+          <a class="nav-clicado nav-link font-1-s font-2-m-b nav-menu_texto__submenu" aria-current="page" href="#">Login</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link font-1-s font-2-m-b" href="#">Cadastre-se</a>
+          <a class="nav-clicado nav-link font-1-s font-2-m-b nav-menu_texto__submenu" href="#">Cadastre-se</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active font-1-s font-2-m-b" aria-current="page" href="#">Carrinho</a>
+          <a class=" nav-clicado nav-link font-1-s font-2-m-b nav-menu_texto__submenu" aria-current="page" href="#">Carrinho</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle font-1-s font-2-m-b" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-clicado nav-link dropdown-toggle font-1-s font-2-m-b nav-menu_texto__submenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Categorias
           </a>
-          <ul class="dropdown-menu">
+          <ul class="dropdown-menu bg-menu">
             <% for (categoria of categorias) { %> 
-              <li class="font-1-s font-2-m-b"><a href="/produtos/<%= categoria.link %> "> <%= categoria.nome %> </a>
+              <li class="font-1-s font-2-m-b nav-menu_texto__submenu"><a href="/produtos/<%= categoria.link %> "> <%= categoria.nome %> </a>
             <% } %> 
           </ul>
         </li>
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control me-2" type="search" placeholder="Busque algo para o seu pet" aria-label="Search">
+  <button class="btn font-1-s font-2-m-b btn-bg" type="submit">Pesquisar</button>
       </form>
     </div>
   </div>

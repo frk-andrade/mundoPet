@@ -3,11 +3,11 @@
   margin-bottom: 4rem;
 }
 
-.titulo {
+.titulo-parceiros {
   text-align: center;
   margin-bottom: 2rem;
   
-  color: var(--primary-color-subtitle);
+  color: var(--primary-color-subtitle)
 }
 
 .parceiros-subtitulo {
