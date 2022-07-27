@@ -1,0 +1,41 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<main class="container-form">
+  <script>
+    function goBack() {
+      window.history.back()
+    }
+  </script>
+  <button onclick="goBack()" class="botao-contato font-1-m-b"> &#129044; Voltar</button>
+  <section class="table-responsive bg-form">
+    <table class="table align-middle">
+      <thead class="form-result">
+        <tr class="align-bottom font-2-xs">
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Sobrenome</th>
+          <th>E-mail</th>
+          <th>CPF</th>
+          <th>Telefone</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody class="body-marcas">
+  <% for (usuario of usuarios) { %> 
+        <tr class="descritivos">
+          <td class="align-top font-2-xs"><%= usuario.id %></td>
+          <td class="align-top font-2-xs"><%= usuario.nome %></td>
+          <td class="align-top font-2-xs"><%= usuario.sobrenome %></td>
+          <td class="align-top font-2-xs"><%= usuario.email %></td>
+          <td class="align-top font-2-xs"><%= usuario.cpf %></td>
+          <td class="align-top font-2-xs"><%= usuario.telefone %></td>
+          <td class="align-top"><img class="icones-descricao" src="/images/excluir.png" width="17px" alt="excluir"><img src="/images/editar-texto.png" width="17px" alt="editar">
+        </tr>
+  <% } %> 
+      </tbody>
+    </table>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
