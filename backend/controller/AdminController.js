@@ -91,7 +91,14 @@ controller.addProdutos = async (req, res) => {
     }
 }
 
-controller.listaUsuarios = (req, res) => res.send('lista os usuarios com formulario de adicao')
+controller.listaUsuarios = async (req, res) => {
+
+    const usuarios = await Usuario.findAll()
+    const categorias = await Categorias.findAll()
+
+    res.render('lista-usuarios', {usuarios, categorias})
+}
+
 controller.editUsuario = (req, res) => res.send('o mesmo form de adicao, mas com dados preenchidos')
 controller.addUsuarios = (req, res) => res.send('faz o insert dos dados preenchidos no formulario da lista')
 controller.update = (req, res) => res.send('faz o update dos dados alterados no formulario de edicao')
