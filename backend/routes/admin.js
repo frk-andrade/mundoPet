@@ -4,8 +4,12 @@ const controller = require('../controller/AdminController')
 
 /* GET home page. */
 router.get('/', controller.index)
+
 router.get('/marcas', controller.listaMarcas)
 router.post('/marcas', controller.addMarcas)
+router.get('/marcas/editar/:id', controller.editMarca)
+router.put('/marcas/editar/:id', controller.updateMarcas)
+router.delete('/marcas/remover/:id', controller.deleteMarcas)
 
 router.get('/categorias', controller.listaCategorias)
 router.post('/categorias', controller.addCategorias)
