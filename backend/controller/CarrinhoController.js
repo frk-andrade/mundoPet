@@ -1,27 +1,27 @@
 const {Categorias, Endereco, Item, Marca, Pedido, Produto, Usuario} = require('../database/models')
 const controller = {}
 
-//Os itens do carrinho ficarão guardados em um array na sessão
-// var sessao.carrinho = [
-//   {
-//     id_produto: 1,
-//     quantidade: 1
-//   }
-// ]
-
 controller.index = async (req, res) => {
   categorias = Categorias.findAll()
+  itens = req.session.carrinho
 
-  res.render('index', { title: "Index", categorias, sessao.carrinho })
+  res.render('carrinho', { title: "Carrinho", categorias, itens })
   
 }
 
-contoller.addItem = (req, res) => {
+controller.addItem = (req, res) => {
+  categorias = Categorias.findAll()
+
+  res.render('index', { title: "Index", categorias })
 
 }
 
-contoller.deleteItem = (req, res) => {
-  
+controller.deleteItem = (req, res) => {
+  const {id} = req.body
+  req.session.carrinho = req.session.carrinho.filter( item => item.id_produto != id )
+
+  res.redirect('carrinho/')
+
 }
 
 
