@@ -28,6 +28,6 @@ router.get('/usuarios', controller.listaUsuarios)
 router.post('/usuarios', controller.addUsuarios)
 router.get('usuarios/editar/:id', controller.editUsuario)
 router.put('/usuarios/editar/:id', controller.updateUsuario)
-router.delete('/usuario/excluir/:id', controller.deleteUsuario)
+router.delete('/usuarios/excluir/:id', controller.deleteUsuario)
 
 module.exports = router;
