@@ -1,38 +1,56 @@
 <nav class="navbar navbar-expand-lg bg-light bg-menu">
   <div class="container-fluid container">
     <a class="navbar-brand" href="/"> <img src="/images/logo.svg" alt="Logo Mundo Pet"></a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          <a class="nav-clicado nav-link font-1-s font-2-m-b nav-menu_texto__submenu" aria-current="page" href="#">Login</a>
+          <a class="nav-clicado nav-link font-1-s font-2-m-b nav-menu_texto__submenu" aria-current="page"
+            href="#">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-clicado nav-link font-1-s font-2-m-b nav-menu_texto__submenu" href="#">Cadastre-se</a>
         </li>
         <li class="nav-item">
-          <a class=" nav-clicado nav-link font-1-s font-2-m-b nav-menu_texto__submenu" aria-current="page" href="#">Carrinho</a>
+          <a class=" nav-clicado nav-link font-1-s font-2-m-b nav-menu_texto__submenu" aria-current="page"
+            href="#">Carrinho</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-clicado nav-link dropdown-toggle font-1-s font-2-m-b nav-menu_texto__submenu" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a class="nav-clicado nav-link dropdown-toggle font-1-s font-2-m-b nav-menu_texto__submenu" href="#"
+            role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Categorias
           </a>
           <ul class="dropdown-menu bg-menu">
-            <% for (categoria of categorias) { %> 
-              <li class="font-1-s font-2-m-b nav-menu_texto__submenu"><a href="/produtos/<%= categoria.link %> "> <%= categoria.nome %> </a>
-            <% } %> 
+            <% for (categoria of categorias) { %>
+              <li class="font-1-s font-2-m-b nav-menu_texto__submenu"><a href="/produtos/<%= categoria.link %> ">
+                  <%= categoria.nome %>
+                </a>
+                <% } %>
           </ul>
         </li>
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Busque algo para o seu pet" aria-label="Search">
-  <button class="btn font-1-s font-2-m-b btn-bg" type="submit">Pesquisar</button>
+        <button class="btn font-1-s font-2-m-b btn-bg" type="submit">Pesquisar</button>
       </form>
     </div>
   </div>
 </nav>
+<section class="sub-menu">
+  <div class="container">
+    <ul>
+      <li class="font-2-xs font-2-m-b"><a href="#">Assinatura</a></li>
+      <li class="font-2-xs font-2-m-b"><a href="#">Amigo</a></li>
+      <li class="font-2-xs font-2-m-b"><a href="#">Espaço Pet</a></li>
+      <li class="font-2-xs font-2-m-b"><a href="#">Retirar na Loja</a></li>
+      <li class="font-2-xs font-2-m-b"><a href="#">Mundo Pet já</a></li>
+      <li class="font-2-xs font-2-m-b"><a href="#">Blog</a></li>
+    </ul>
+  </div>
+</section>
 
 <!-- <nav class="navbar navbar-dark bg-menu">
   <div class="container-fluid container">
@@ -77,7 +95,8 @@
 </nav> -->
 
 <!-- LOGIN -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -87,11 +106,13 @@
       <div class="modal-body">
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label font-1-s font-2-m-b">E-mail</label>
-          <input type="email" class="form-control font-1-s font-2-m-b" id="exampleFormControlInput1" placeholder="name@example.com">
+          <input type="email" class="form-control font-1-s font-2-m-b" id="exampleFormControlInput1"
+            placeholder="name@example.com">
         </div>
         <div class="mb-3">
           <label for="inputPassword" class="col-sm-2 col-form-label font-1-s font-2-m-b">Senha</label>
-            <input type="password" class="form-control font-1-s font-2-m-b" id="inputPassword" placeholder="Insira a sua senha">
+          <input type="password" class="form-control font-1-s font-2-m-b" id="inputPassword"
+            placeholder="Insira a sua senha">
         </div>
       </div>
       <div class="modal-footer">
