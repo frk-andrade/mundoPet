@@ -12,6 +12,7 @@ var produtoRouter = require('./routes/produto');
 var contaRouter = require('./routes/conta');
 var carrinhoRouter = require('./routes/carrinho');
 var adminRouter = require('./routes/admin');
+var contatoRouter = require('./routes/contato');
 
 
 
@@ -43,6 +44,7 @@ app.use('/produtos', produtosRouter);
 app.use('/produto', produtoRouter);
 app.use('/minhaconta', contaRouter);
 app.use('/carrinho', carrinhoRouter);
+app.use('/contato', contatoRouter);
 
 // produtos (listas)
 // produto (podutos individuais (ver, adicionar e editar))
