@@ -19,19 +19,62 @@
     margin-bottom: 15px;
     font-weight: bold;
     color: aliceblue;
+    
 }
-.section-form .submit-group{
-    text-align: center;
+.section-form .input-group input,
+.section-form textarea {
+    border: none;
+    outline: none;
+    border-radius: 0;
+    border-radius: 6px !important;
+    margin: 6px 0;
+    width: 100%;
+    color: #444;
+}
+.section-form textarea{
+    padding: 6px;
 }
 
+.section-form .submit-group{
+    text-align: center;
+    width: 100%;
+}
+
+.section-form .submit-group button{
+    flex: 1;
+    border: none;
+    outline: none;
+    min-height: 50px;
+    max-height: 50px;
+    width: 100%;
+    border-radius: 6px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-weight: bold;
+    transform: scale(0.95);
+    transition: all ease 0.2s;
+}
+.section-form .submit-group button:hover{
+    transform: scale(1);
+    background-color: var(--primary-color-background-button);
+}
+
+.section-form .input-group label, 
+.section-form .submit-group button,
+.section-form .input-group input,
+.section-form textarea {
+    font-family: 'Open Sans', Helvetica, sans-serif;
+}
 
 
 
 .form{
     border-radius: 10px;
-    border: 4px solid black;
-    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    min-width: 400px;
+    max-width: 400px;
+    
     margin: 0px auto;
     padding: 30px 20px;
-    background-color: rgb(1, 0, 59);
+    background-color: var(--second-color);
 }

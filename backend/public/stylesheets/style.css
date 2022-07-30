@@ -56,4 +56,7 @@
 @import './produtos/produtos.css';
 
 /* PRODUTOS */
-@import './produto/produto-comprar.css'
+@import './produto/produto-comprar.css';
+
+/* CONTATO */
+@import './contato/paginacontato.css';

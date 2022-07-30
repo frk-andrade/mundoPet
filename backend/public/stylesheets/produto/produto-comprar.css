@@ -14,9 +14,7 @@
     padding: 2rem;
     padding-left: 8rem;
 }
-.teste{
-    padding-top: 2rem;
-}
+
 .produto-conteudo button{
     width: 300px;
 }
@@ -26,16 +24,27 @@
     width: 550px;
 }
 
-@media (max-width: 725px){
+@media (max-width: 425px) {
+    .produto-conteudo {
+        padding-left: 1.75rem;
+    }
+    .produto-conteudo h2 {
+        max-width: 300px;
+        line-height: 1.5rem;
+    }
+    .produto-conteudo p {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px){
     .caixa-produto {
-        display: flex;
-        justify-content: center;
         flex-direction: column;
-        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        
     };
     .produto-conteudo {
-        flex-wrap: wrap;
-        display: flex;
+        padding: 0px;
     }
-
 }

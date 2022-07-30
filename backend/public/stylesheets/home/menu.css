@@ -3,6 +3,19 @@
   padding: 24px 20px 24px 20px;
 }
 
+.bg-menu {
+  background-color: var(--primary-color) !important;
+}
+
+.btn-bg {
+  background-color: var(--second-color);
+  color: white;
+  border-radius: 1px solid white;
+}
+.btn-bg:hover {
+  background-color: var(--primary-color-background-button);
+}
+
 .nav-menu--caixa {
   display: flex;
   justify-content: space-between;
@@ -17,6 +30,17 @@
 
 .nav-menu--texto a, h3 {
   color: white;
+}
+
+.nav-menu_texto__submenu {
+  color: white;
+}
+.nav-menu_texto__submenu:hover{
+  color: var(--second-color);
+}
+
+.nav-clicado.ativo{
+  color: var(--primary-color-subtitle)
 }
 
 @media (max-width: 450px) {
@@ -45,4 +69,22 @@
   .imagem-menu {
     margin-right: 2rem;
   }
+}
+
+@media (max-width: 425px) {
+  .navbar-brand img{
+    width: 120px;
+  }  
+}
+
+@media (max-width: 425px) {
+  .navbar-brand img{
+    width: 100px;
+  }  
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img{
+    width: 100px;
+  }  
 }
