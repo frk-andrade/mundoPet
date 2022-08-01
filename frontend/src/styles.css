@@ -1,0 +1,193 @@
+/* RESET */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* VARIÁVEIS */
+
+:root {
+  --primary-color: #012F45;
+  --primary-color-subtitle: #757373;
+  --primary-color-background-button: #FF9100;
+
+  --second-color: #67B8E4;
+  --second-color-background: #012F46;
+
+  --third-color: #FCF5A7;
+}
+
+/* Tipogragia */
+
+.font-1-xs {
+  font: 400 0.75rem/1.35 "Open Sans", sans-serif;
+}
+
+.font-2-xs {
+  font: 400 0.875rem/1.43 "Open Sans", sans-serif;
+}
+
+.font-1-s {
+  font: 400 1rem/1.5 "Open Sans", sans-serif;
+}
+
+.font-1-m-b {
+  font: 400 1.125rem/1.35 "Open Sans", sans-serif;
+}
+
+.font-1-m-b {
+  font-weight: 600;
+}
+
+.font-2-m-b {
+  font-weight: 700;
+}
+
+.font-2-m {
+  font: 500 1.125rem/1.35 "Open Sans", sans-serif;
+}
+
+.font-1-l {
+  font: 400 1.5rem/1.5 "Open Sans", sans-serif;
+}
+
+
+.font-2-l-b {
+  font-weight: 700;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+  font-family: "Open Sans";
+
+}
+
+.font-1-xl {
+  font: 600 2rem/1.25 "Open Sans", sans-serif;
+}
+
+.font-2-xl {
+  font: 500 2rem/1.25 "Open Sans", sans-serif;
+}
+
+.font-1-xxl {
+  font: 600 4rem/1.125 "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.botao-secundario {
+  color: var(--primary-color-background-button);
+  background-color: #FFFFFF;
+  
+  border-radius: 4px;
+  border: 1px solid var(--primary-color-background-button);
+  padding: .8rem 1rem .8rem 1rem;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.botao-secundario:hover {
+  background-color: var(--primary-color-background-button);
+  color: #FFFFFF;
+
+  transition: 300ms;
+}
+
+.botao-secundario-laranja {
+  background-color: var(--primary-color-background-button);
+  color: #FFFFFF;
+  
+  border-radius: 4px;
+  border: 1px solid var(--primary-color-background-button);
+  padding: .6rem 4rem .6rem 4rem;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.botao-secundario-laranja:hover {
+  background-color: #FFFFFF;
+  color: var(--primary-color-background-button);
+
+  transition: 300ms;
+}
+
+.botao-secundario-laranja:hover {
+  background-color: #FFFFFF;
+  color: var(--primary-color-background-button);
+
+  transition: 300ms;
+}
+
+.botao-comprar {
+  background-color: var(--primary-color-background-button);
+  color: #FFFFFF;
+  
+  border-radius: 4px;
+  border: 1px solid var(--primary-color-background-button);
+  padding: .8rem 1rem .8rem 1rem;
+
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.botao-comprar:hover {
+  background-color: #FFFFFF;
+  color: var(--primary-color-background-button);
+
+  transition: 300ms;
+}
