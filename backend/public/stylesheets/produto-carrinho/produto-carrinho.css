@@ -10,3 +10,13 @@
     justify-content: space-around;
     height: 300px;
 }
+
+.produto-valor {
+    display: flex;
+    gap: .5rem;
+}
+
+.produto-qtd p {
+    margin-top: 4rem;
+}
+
