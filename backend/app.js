@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const methodOverride = require('method-override');
+const session = require('express-session')
 
 var indexRouter = require('./routes/index');
 var produtosRouter = require('./routes/produtos');
@@ -11,6 +12,7 @@ var produtoRouter = require('./routes/produto');
 var contaRouter = require('./routes/conta');
 var carrinhoRouter = require('./routes/carrinho');
 var adminRouter = require('./routes/admin');
+var contatoRouter = require('./routes/contato');
 
 
 
@@ -32,6 +34,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(session({ secret: 'devEngers', resave: false, saveUninitialized: true, cookie: { maxAge: 60000 } }))
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
@@ -41,6 +44,7 @@ app.use('/produtos', produtosRouter);
 app.use('/produto', produtoRouter);
 app.use('/minhaconta', contaRouter);
 app.use('/carrinho', carrinhoRouter);
+app.use('/contato', contatoRouter);
 
 // produtos (listas)
 // produto (podutos individuais (ver, adicionar e editar))

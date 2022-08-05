@@ -60,3 +60,7 @@
 
 /* CARRINHO */
 @import './produto-carrinho/produto-carrinho.css';
+
+/* CONTATO */
+@import './contato/paginacontato.css';
+

@@ -1,4 +1,8 @@
-const controller = {
-    index: (req, res) => res.render('contato', { title: 'Contato', categorias })
+const {Categorias, Endereco, Item, Marca, Pedido, Produto, Usuario} = require('../database/models')
+    
+    index: async (req, res) => {
+        const categorias = await Categorias.findAll()
+        const usuario = await Usuario.findByPk(1)
+        res.render('contato', { title: 'Contato', categorias, usuario })
 }
 module.exports = controller

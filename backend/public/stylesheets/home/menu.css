@@ -9,6 +9,11 @@
 
 .btn-bg {
   background-color: var(--second-color);
+  color: white;
+  border-radius: 1px solid white;
+}
+.btn-bg:hover {
+  background-color: var(--primary-color-background-button);
 }
 
 .nav-menu--caixa {
@@ -25,6 +30,17 @@
 
 .nav-menu--texto a, h3 {
   color: white;
+}
+
+.nav-menu_texto__submenu {
+  color: white;
+}
+.nav-menu_texto__submenu:hover{
+  color: var(--second-color);
+}
+
+.nav-clicado.ativo{
+  color: var(--primary-color-subtitle)
 }
 
 @media (max-width: 450px) {
