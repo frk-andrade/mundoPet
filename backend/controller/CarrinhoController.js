@@ -5,15 +5,21 @@ controller.index = async (req, res) => {
   categorias = Categorias.findAll()
   itens = req.session.carrinho
 
-  res.render('carrinho', { title: "Carrinho", categorias, itens })
+  //res.render('carrinho', { title: "Carrinho", categorias, itens })
+
+  res.send(req.session)
   
 }
 
 controller.addItem = (req, res) => {
-  categorias = Categorias.findAll()
 
-  res.render('index', { title: "Index", categorias })
+  const {id} = req.body
+  if(!req.session.hasOwnProperty('carrinho'))
+    req.session.carrinho = []
+  
+  req.session.carrinho.push(id)
 
+  console.log(req.session)
 }
 
 controller.deleteItem = (req, res) => {

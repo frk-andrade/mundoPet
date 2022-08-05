@@ -5,6 +5,7 @@ const controller = require('../controller/CarrinhoController')
 
 
 router.get('/', controller.index)
+router.post('/', controller.addItem)
 router.delete('/exclui/:id_produto', controller.deleteItem)
 
 module.exports = router;
