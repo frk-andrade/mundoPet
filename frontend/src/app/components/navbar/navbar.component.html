@@ -1,0 +1,67 @@
+<nav class="navbar navbar-dark bg-menu">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src="../../../assets/logo.svg" alt=""></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark bg-menu" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title font-1-s font-2-m-b" id="offcanvasDarkNavbarLabel">Mundo Pet</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active font-1-s font-2-m-b" aria-current="page" href="#">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-1-s font-2-m-b" href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Cadastre-se</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link font-1-s font-2-m-b" href="#">Carrinho</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle font-1-s font-2-m-b" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorias
+            </a>
+            <!-- <ul class="dropdown-menu dropdown-menu-dark">
+              <% for (categoria of categorias) { %> 
+                <li class="font-1-s font-2-m-b"><a href="/produtos/<%= categoria.link %> "> <%= categoria.nome %> </a>
+              <% } %> 
+            </ul> -->
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2 font-1-s font-2-m-b" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-bg font-1-s font-2-m-b" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- LOGIN -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title font-1-s font-2-m-b" id="staticBackdropLabel">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label font-1-s font-2-m-b">E-mail</label>
+          <input type="email" class="form-control font-1-s font-2-m-b" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="inputPassword" class="col-sm-2 col-form-label font-1-s font-2-m-b">Senha</label>
+            <input type="password" class="form-control font-1-s font-2-m-b" id="inputPassword" placeholder="Insira a sua senha">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary font-1-s font-2-m-b" data-bs-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-bg font-1-s font-2-m-b">Entrar</button>
+      </div>
+    </div>
+  </div>
+</div>

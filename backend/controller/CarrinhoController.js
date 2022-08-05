@@ -1,14 +1,23 @@
 const {Categorias, Endereco, Item, Marca, Pedido, Produto, Usuario} = require('../database/models')
+
 const controller = {}
 
 controller.index = async (req, res) => {
-  categorias = Categorias.findAll()
-  itens = req.session.carrinho
-
-  //res.render('carrinho', { title: "Carrinho", categorias, itens })
-
-  res.send(req.session)
-  
+   const {id} = req.params
+   const categorias = await Categorias.findAll()
+   const produto = await Produto.findByPk(id,
+      {
+         include: [
+            {
+              association: 'categoria'
+            },
+            {
+              association: 'marca'
+            }
+          ]
+      
+      })
+  res.render ("carrinho", {title: "Carrinho", categorias, produto})
 }
 
 controller.addItem = (req, res) => {

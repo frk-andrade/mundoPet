@@ -1,0 +1,22 @@
+.produto-carrinho {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.produto-detalhe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 300px;
+}
+
+.produto-valor {
+    display: flex;
+    gap: .5rem;
+}
+
+.produto-qtd p {
+    margin-top: 4rem;
+}
+
