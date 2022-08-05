@@ -5,12 +5,12 @@ const controller = {}
 
 
 controller.index = async (req, res) => {
-  
-  // Esse valor do ID vai ser resgatado quando tivermos as sessões funcionando
-  // const { id } = session.id_usuario
-
+  if(!req.session.id_usuario)
+    res.redirect('/login')
+    
+  const id = req.session.id_usuario
   const categorias = await Categorias.findAll()
-  const usuario = await Usuario.findByPk(1)
+  const usuario = await Usuario.findByPk(id)
   res.render('minha-conta', { title: "Index", categorias, usuario })
 }
 

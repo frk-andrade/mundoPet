@@ -58,6 +58,8 @@
 /* PRODUTOS */
 @import './produto/produto-comprar.css';
 
+/* CONTATO */
+@import './contato/paginacontato.css';
 /* CARRINHO */
 @import './produto-carrinho/produto-carrinho.css';
 

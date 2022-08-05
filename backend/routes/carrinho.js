@@ -1,8 +1,11 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express')
+const router = express.Router()
 const controller = require('../controller/CarrinhoController')
 
-router.get("/", controller.index);
 
+
+router.get('/', controller.index)
+router.post('/', controller.addItem)
+router.delete('/exclui/:id_produto', controller.deleteItem)
 
 module.exports = router;

@@ -1,0 +1,21 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<main>
+    <form class="form" action="login" method="post" class="cta_form">
+        <input type="hidden" name="versao" value="">
+        <div class="input-group">
+            <label for="email">E-mail: </label>
+            <input type="email" required name="email">
+        </div>
+        <div class="input-group">
+            <label for="phone">Senha:</label>
+            <input type="password" required name="senha">
+        </div>
+        <div class="submit-group">
+            <button title="Enviar">Enviar</button>
+        </div>
+    </form>
+        <p style="color: red;"><%= mensagem %></p>
+
+<%- include('partials/footer') %>

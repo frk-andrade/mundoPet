@@ -2,7 +2,16 @@ const controller = require('../controller/IndexController')
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.get('/', controller.index);
+
+router.get('/', controller.index)
+
+router.get('/contato', controller.contato)
+router.post('/contato', controller.sendcontato)
+
+router.get('/cadastro', controller.cadastro)
+router.post('/cadastro', controller.addCadastro)
+
+
+
 
 module.exports = router;
