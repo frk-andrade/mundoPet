@@ -1,0 +1,21 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<main class="container-form">
+  <script>
+    function goBack() {
+      window.history.back()
+    }
+  </script>
+      <section aria-label="Formulário">
+      <fieldset class="conta-contato">
+        <h2 class="font-1-xl">Tem certeza que quer remover a categoria <%= categoria.nome %></h2>
+          <form class="form" action="/admin/categorias/remover/<%= categoria.id %>/?_method=delete" method="POST">
+            <button class="botao-contato font-1-m-b">Remover</button>
+        </form>
+        <button onclick="goBack()" class="botao-contato font-1-m-b"> &#129044; Cancelar</button>
+      </fieldset>
+    </section>
+  </main>
+
+<%- include('partials/footer') %>
