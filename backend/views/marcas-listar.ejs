@@ -37,8 +37,8 @@
               <td class="align-top font-2-xs"><%= marca.id %> </td>
               <td class="align-top font-2-xs"><%= marca.nome %> </td>
               <td class="align-top">
-                <a href="/admin/produtos/<%= produto.id || 0 %>/excluir"><img class="icones-descricao" src="/images/excluir.png" width="17px" alt="excluir"></a>
-                <a href="/admin/produtos/<%= produto.id || 0 %>/editar"><img src="/images/editar-texto.png" width="17px" alt="editar"></a>
+                <a href="marcas/remover/<%= marca.id %>"><img class="icones-descricao" src="/images/excluir.png" width="17px" alt="excluir"></a>
+                <a href="marcas/editar/<%= marca.id %>"><img src="/images/editar-texto.png" width="17px" alt="editar"></a>
               </td>
             </tr>
             <% } %> 
