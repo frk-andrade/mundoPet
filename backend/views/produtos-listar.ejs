@@ -11,7 +11,7 @@
   <section class="formularioproduto" aria-label="Formulário">
     <fieldset class="conta-contato">
       <h2 class="font-1-xl">Novo Produto</h2>
-      <form class="form" method="POST" action="">
+      <form class="form" method="POST" action="" enctype="multipart/form-data">
         <div class="form-info form-info-first font-2-m-b font-1-m-b mb-5">
           <label class="form-label" for="nome">Nome do Produto: </label>
           <input class="form-control form-nome-produto" type="text" name="nome" id="nome" placeholder="Nome" required>
@@ -52,6 +52,11 @@
           <input class="form-control form-descricao-produto" type="textarea" name="descricao" id="descricao" placeholder="Descrição do produto" required>
         </div>
 
+        <div class="form-info font-2-m-b font-1-m-b mb-3">
+          <label class="form-label" for="imagem">Imagem do Produto:</label>
+          <input class="form-control" type="file" name="imagem" id="imagem" >
+        </div>
+
         <button class="botao-contato font-1-m-b">Adicionar Produto</button>
       </form>
     </fieldset>
@@ -82,8 +87,8 @@
           <td class="align-top font-2-xs"><%= produto.marca.nome %></td>
           <td class="align-top font-2-xs"><%= produto.categoria.nome %></td>
           <td class="align-top">
-          <a href="/admin/produtos/<%= produto.id || 0 %>/excluir"><img class="icones-descricao" src="/images/excluir.png" width="17px" alt="excluir"></a>
-          <a href="/admin/produtos/<%= produto.id || 0 %>/editar"><img src="/images/editar-texto.png" width="17px" alt="editar"></a>
+          <a href="/admin/produtos/remover/<%= produto.id %>"><img class="icones-descricao" src="/images/excluir.png" width="17px" alt="excluir"></a>
+          <a href="/admin/produtos/editar/<%= produto.id %>"><img src="/images/editar-texto.png" width="17px" alt="editar"></a>
           </td>
         </tr>
   <% } %> 
