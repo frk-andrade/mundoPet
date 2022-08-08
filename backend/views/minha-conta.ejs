@@ -8,9 +8,9 @@
       <form class="form form-cadastro-cliente" method="POST" action="">
         <div class="form-info form-info-first font-2-m-b font-1-m-b mb-5">
           <label class="form-label" for="nome">Nome: </label>
-          <input class="form-control form-nome-produto" type="text" pattern="([aA-zZ]+)" value="<%= usuario.nome %>" name="nome" id="nome"  required>
+          <input class="form-control form-nome-produto" type="text" value="<%= usuario.nome %>" name="nome" id="nome"  required>
           <label class="form-label" for="nome">Sobrenome: </label>
-          <input class="form-control form-nome-produto" type="text" pattern="([aA-zZ]+)" value="<%= usuario.sobrenome %>" name="sobrenome" id="sobrenome" required>
+          <input class="form-control form-nome-produto" type="text" value="<%= usuario.sobrenome %>" name="sobrenome" id="sobrenome" required>
         </div>
 
         <div class="form-cadastro">
@@ -20,7 +20,7 @@
           </div>
           <div class="form-info font-2-m-b font-1-m-b mb-3">
             <label  class="form-label" for="cpf">CPF:</label>
-            <input  class="form-control" type="text" value="<%= usuario.cpf %>" name="cpf" id="cpf" pattern="([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})" required>
+            <input  class="form-control" type="text" value="<%= usuario.cpf %>" name="cpf" id="cpf" required>
           </div>
           
           <div class="form-info font-2-m-b font-1-m-b mb-3">
@@ -29,16 +29,17 @@
           </div>
         </div>
 
-        } %> 
+
         <button class="botao-contato font-1-m-b">Editar</button>
       </form>
-      <% if (!locals.enderecos) { %>
-        <!-- Não temos endereços cadastrados -->
+      <% if (!locals.usuario.endereco) { %>
+        <a href="/minhaconta/endereco/adicionar/">Adicionar Endereço</a>
       <% } else { 
-        for (const endereco of enderecos) { %>
+        for (const endereco of usuario.endereco) { %>
           <a href="/minhaconta/endereco/<%= endereco.id %>"><%= endereco.alias %></a>        
           
       <% }
+      } %> 
   </fieldset>
   </section>
 

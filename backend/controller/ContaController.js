@@ -7,7 +7,15 @@ const controller = {}
 controller.index = async (req, res) => {
   const id = req.session.id_usuario
   const categorias = await Categorias.findAll()
-  const usuario = await Usuario.findByPk(id)
+  const usuario = await Usuario.findByPk(id,
+    {
+      include: [
+        {
+          association: 'endereco'
+        }
+      ]
+})
+
   res.render('minha-conta', { title: "Index", categorias, usuario })
 }
 
@@ -16,12 +24,31 @@ controller.showEndereco = async (req, res) => {
   const categorias = await Categorias.findAll()
   const endereco = await Endereco.findByPk(id)
 
-  // tem que verificar se esse endereço é do usuario que tá pedindo
-  // if (endereco.id_usuario != session.id_usuario)
-  //   res.redirect('/minhaconta')
+  if(endereco.id_usuario !== req.session.id_usuario)
+      res.redirect('/minhaconta')
   
   res.render('endereco', { title: "Index", categorias, endereco })
 }
+
+controller.adicionarEndereco = async (req, res) => {
+  const categorias = await Categorias.findAll()
+
+  res.render('endereco', { title: "Index", categorias})
+}
+
+controller.createEndereco = async (req, res) => {
+  const {endereco, numero, complemento, bairro, cidade, estado, cep, principal } = req.body
+  
+  const insert = await Endereco.create({
+    endereco, numero, complemento, bairro, cidade, estado, cep, principal,
+    usuario_id: req.session.id_usuario
+  })
+
+  
+  res.redirect('/minhaconta')
+}
+
+
   
 
 
