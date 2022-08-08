@@ -29,8 +29,8 @@ controller.auth = async (req, res) => {
         res.render('login', { title: "login", categorias, mensagem })
     } else {
         req.session.id_usuario = usuario.id
-        // res.redirect('/')
-        res.send(req.session)
+        req.session.admin = usuario.admin
+        res.redirect('/')
     }
 }
 
