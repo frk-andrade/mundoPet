@@ -5,9 +5,6 @@ const controller = {}
 
 
 controller.index = async (req, res) => {
-  if(!req.session.id_usuario)
-    res.redirect('/login')
-    
   const id = req.session.id_usuario
   const categorias = await Categorias.findAll()
   const usuario = await Usuario.findByPk(id)
