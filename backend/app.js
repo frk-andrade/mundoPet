@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override');
 const session = require('express-session')
+const fileUpload = require('express-fileupload')
 
 const indexRouter = require('./routes/index')
 const produtosRouter = require('./routes/produtos')
@@ -26,8 +27,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(session({ secret: 'devEngers', resave: true, saveUninitialized: true, cookie: { maxAge: 3600000, httpOnly: false } }))
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(methodOverride('_method'));
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(methodOverride('_method'))
+app.use(fileUpload())
 
 app.use('/', indexRouter);
 app.use('/admin', adminRouter);

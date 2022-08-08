@@ -1,0 +1,51 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<main class="container-form">
+  <script>
+    function goBack() {
+      window.history.back()
+    }
+  </script>
+  <button onclick="goBack()" class="botao-contato font-1-m-b"> &#129044; Voltar</button>
+  <section class="formularioproduto" aria-label="Formulário">
+    <fieldset class="conta-contato">
+      <h2 class="font-1-xl">Editar Produto</h2>
+      <form class="form" method="POST" action="/admin/usuarios/editar/<%= usuario.id %>/?_method=put" >
+        <div class="form-info form-info-first font-2-m-b font-1-m-b mb-5">
+          <label class="form-label" for="nome">Nome: </label>
+          <input class="form-control form-nome-produto" type="text" name="nome" id="nome" value="<%= usuario.nome %>" required>
+        </div>
+
+        <div class="form-info form-info-first font-2-m-b font-1-m-b mb-5">
+          <label class="form-label" for="nome">Sobrenome: </label>
+          <input class="form-control form-nome-produto" type="text" name="sobrenome" id="sobrenome" value="<%= usuario.sobrenome %>" required>
+        </div>
+
+        <div class="form-info form-info-first font-2-m-b font-1-m-b mb-5">
+          <label class="form-label" for="nome">Email: </label>
+          <input class="form-control form-nome-produto" type="email" name="email" id="email" value="<%= usuario.email %>" required>
+        </div>
+
+        <div class="form-info form-info-first font-2-m-b font-1-m-b mb-5">
+          <label class="form-label" for="nome">CPF: </label>
+          <input class="form-control form-nome-produto" type="text" name="cpf" id="cpf" value="<%= usuario.cpf %>" >
+        </div>
+
+        <div class="form-info form-info-first font-2-m-b font-1-m-b mb-5">
+          <label class="form-label" for="nome">Telefone: </label>
+          <input class="form-control form-nome-produto" type="text" name="telefone" id="telefone" value="<%= usuario.telefone %>" >
+        </div>
+
+        <div class="form-info form-info-first font-2-m-b font-1-m-b mb-5">
+          <label class="form-label" for="nome">Admin</label>
+          <input class="" type="checkbox" name="admin" id="admin" value="1" <%= usuario.admin == 1 ? 'checked' : '' %> >
+        </div>
+        <button class="botao-contato font-1-m-b">Gravar</button>
+      </form>
+    </fieldset>
+  </section>
+
+</main>
+
+<%- include('partials/footer') %>

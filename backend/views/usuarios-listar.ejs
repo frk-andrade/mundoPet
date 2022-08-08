@@ -30,7 +30,10 @@
           <td class="align-top font-2-xs"><%= usuario.email %></td>
           <td class="align-top font-2-xs"><%= usuario.cpf %></td>
           <td class="align-top font-2-xs"><%= usuario.telefone %></td>
-          <td class="align-top"><img class="icones-descricao" src="/images/excluir.png" width="17px" alt="excluir"><img src="/images/editar-texto.png" width="17px" alt="editar">
+          <td class="align-top">
+            <a href="/admin/usuarios/remover/<%= usuario.id %>"><img class="icones-descricao" src="/images/excluir.png" width="17px" alt="excluir"></a>
+            <a href="/admin/usuarios/editar/<%= usuario.id %>"><img src="/images/editar-texto.png" width="17px" alt="editar"></a>
+          </td>
         </tr>
   <% } %> 
       </tbody>

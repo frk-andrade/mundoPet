@@ -36,8 +36,8 @@
               <td class="font-1-m-b"><%= categoria.id %> </td>
               <td class="font-1-m-b"><%= categoria.nome %> </td>
               <td class="align-top">
-                <a href="/admin/produtos/<%= produto.id || 0 %>/excluir"><img class="icones-descricao" src="/images/excluir.png" width="17px" alt="excluir"></a>
-                <a href="/admin/produtos/<%= produto.id || 0 %>/editar"><img src="/images/editar-texto.png" width="17px" alt="editar"></a>
+                <a href="/admin/categorias/remover/<%= categoria.id %>"><img class="icones-descricao" src="/images/excluir.png" width="17px" alt="excluir"></a>
+                <a href="/admin/categorias/editar/<%= categoria.id %>"><img src="/images/editar-texto.png" width="17px" alt="editar"></a>
               </td>
             </tr>
             <% } %> 

@@ -1,0 +1,22 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<main class="container-form">
+  <script>
+    function goBack() {
+      window.history.back()
+    }
+  </script>
+    <section aria-label="Formulário">
+      <fieldset class="conta-contato">
+        <h2 class="font-1-xl">Confirma a exclusão do Usuário <%= usuario.nome %> <%= usuario.sobrenome %>?</h2>
+          <form class="form" action="/admin/usuarios/remover/<%= usuario.id %>/?_method=delete" method="POST">
+            <button class="botao-contato font-1-m-b">SIM</button>
+          </form>
+          <button onclick="goBack()" class="botao-contato font-1-m-b"> &#129044; Voltar</button>
+      </fieldset>
+        </div>
+    </section>
+
+
+<%- include('partials/footer') %>

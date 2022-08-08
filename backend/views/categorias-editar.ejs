@@ -1,0 +1,25 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<main class="container-form">
+  <script>
+    function goBack() {
+      window.history.back()
+    }
+  </script>
+  <button onclick="goBack()" class="botao-contato font-1-m-b"> &#129044; Voltar</button>
+    <section aria-label="Formulário">
+      <fieldset class="conta-contato">
+        <h2 class="font-1-xl">Adicione uma nova categoria</h2>
+          <form class="form" action="/admin/categorias/editar/<%= categoria.id %>/?_method=put" method="POST">
+            <div class="form-info font-2-m-b font-1-m-b">
+              <label for="nome">Nome:</label>
+              <input type="text" name="nome" id="nome" value="<%= categoria.nome %>" required>
+            </div>
+            <button class="botao-contato font-1-m-b">Salvar</button>
+        </form>
+      </fieldset>
+    </section>
+  </main>
+
+<%- include('partials/footer') %>
