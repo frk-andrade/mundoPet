@@ -39,7 +39,7 @@ controller.editMarca = async (req, res) => {
     const id_marca = req.params.id
     const marca = await Marca.findByPk(id_marca)
     
-    res.render('listarMarcas', {title: 'Listar Marcas', marca, categorias})
+    res.render('marcas-editar', {title: 'Editar Marca', marca, categorias})
 }
 
 controller.updateMarca = async (req, res) => {
@@ -50,7 +50,7 @@ controller.updateMarca = async (req, res) => {
         }
     })
 
-    res.redirect(`marcas/editar/${id}`)
+    res.redirect(`/admin/marcas/`)
 }
 
 controller.removeMarca = async (req, res) => {
@@ -58,7 +58,7 @@ controller.removeMarca = async (req, res) => {
     const id_marca = req.params.id
     const marca = await Marca.findByPk(id_marca)
     
-    res.render('confirmacaoMarcas', {title: 'Confirmar Remoção Marcas', marca, categorias})
+    res.render('marcas-remover', {title: 'Confirmar Remoção Marcas', marca, categorias})
 }
 
 controller.destroyMarca = async (req, res) => {
@@ -109,7 +109,7 @@ controller.updateCategoria = async (req, res) => {
         }
     })
 
-    res.redirect(`/admin/categorias/editar/${id}`)
+    res.redirect(`/admin/categorias/`)
 }
 
 controller.removeCategoria = async (req, res) => {
@@ -152,7 +152,7 @@ controller.listaProdutos = async (req, res) => {
       
     })
 
-        res.render('form-novo-produto', {marcas, categorias, produtos})
+        res.render('produtos-listar', {marcas, categorias, produtos})
 }
 
 controller.addProdutos = async (req, res) => {
@@ -221,7 +221,7 @@ controller.editProduto = async (req, res) => {
             ]
         })
 
-    res.render('produto-editar', {title: 'Editar Produto', produto, categorias, marcas})
+    res.render('produtos-editar', {title: 'Editar Produto', produto, categorias, marcas})
 }
 
 controller.updateProduto = async (req, res) => {
@@ -258,14 +258,11 @@ controller.updateProduto = async (req, res) => {
 }
 
 controller.removeProduto = async (req, res) => {
-    const id = req.params.id
-    const deleteProduto = await Produto.destroy({
-        where: {
-            id
-        }
-    })
-    
-    res.redirect(`produtos/`)
+    const categorias = await Categorias.findAll()
+    const id_produto = req.params.id
+    const produto = await Produto.findByPk(id_produto)
+
+    res.render('produtos-remover', {title: 'Editar Produto', produto, categorias})
 }
 
 controller.destroyProduto = async (req, res) => {
@@ -276,7 +273,7 @@ controller.destroyProduto = async (req, res) => {
         }
     })
     
-    res.redirect(`produtos/`)
+    res.redirect(`/admin/produtos/`)
 }
 
 
@@ -289,7 +286,7 @@ controller.listaUsuarios = async (req, res) => {
     const usuarios = await Usuario.findAll()
     const categorias = await Categorias.findAll()
 
-    res.render('lista-usuarios', {usuarios, categorias})
+    res.render('usuarios-listar', {usuarios, categorias})
 }
 
 controller.addUsuarios = (req, res) => {
@@ -301,7 +298,7 @@ controller.editUsuario = async (req, res) => {
     const id_usuario = req.params.id
     const usuario = await Usuario.findByPk(id_usuario)
 
-    res.render('editar-usuario', {title: 'Usuário', usuario, categorias})
+    res.render('usuarios-editar', {title: 'Usuário', usuario, categorias})
 }
 
 controller.updateUsuario = async (req, res) => {
@@ -311,17 +308,15 @@ controller.updateUsuario = async (req, res) => {
             id
         }
     })
-    res.redirect(`usuarios/editar/${id}`)
+    res.redirect(`/admin/usuarios/editar/${id}`)
 }
 
 controller.removeUsuario = async (req, res) => {
-    const id = req.params.id
-    const del = await Usuario.destroy({
-        where: {
-            id
-        }
-    })
-    res.redirect('usuarios/')
+    const categorias = await Categorias.findAll()
+    const id_usuario = req.params.id
+    const usuario = await Usuario.findByPk(id_usuario)
+
+    res.render('usuarios-remover', {title: 'Usuário', usuario, categorias})
 }
 
 controller.destroyUsuario = async (req, res) => {

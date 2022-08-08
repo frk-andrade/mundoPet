@@ -40,10 +40,10 @@ router.delete('/produtos/remover/:id', controller.destroyProduto)
 router.get('/usuarios', controller.listaUsuarios)
 router.post('/usuarios', controller.addUsuarios)
 
-router.get('usuarios/editar/:id', controller.editUsuario)
+router.get('/usuarios/editar/:id', controller.editUsuario)
 router.put('/usuarios/editar/:id', controller.updateUsuario)
 
-router.delete('/usuarios/excluir/:id', controller.removeUsuario)
-router.delete('/usuarios/excluir/:id', controller.destroyUsuario)
+router.get('/usuarios/remover/:id', controller.removeUsuario)
+router.delete('/usuarios/remover/:id', controller.destroyUsuario)
 
 module.exports = router;
