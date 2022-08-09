@@ -4,6 +4,10 @@
     justify-content: space-around;
 }
 
+.produto-carrinho img {
+    height: 200px;
+}
+
 .produto-detalhe {
     display: flex;
     flex-direction: column;
@@ -14,9 +18,56 @@
 .produto-valor {
     display: flex;
     gap: .5rem;
+    align-items: center;
+}
+
+.produto-qtd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .produto-qtd p {
     margin-top: 4rem;
 }
 
+.card {
+    background-color: var(--light);
+    border-radius: var(--border-radius-quina-4);
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .3));
+     display: flex;
+    flex: 1 1 100%;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin: var(--spacing);
+    padding: var(--spacing);
+    position: relative;
+    transition: filter .3s ease-in-out;
+  }
+
+  .card:hover {
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .4));
+  }
+
+  .titulo-carrinho {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .produto-nome {
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .botao-carrinho {
+    border: none;
+    background: none;
+  }
+
+.carrinho-qtd {
+    border: 2px solid #c4c4c4;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+}

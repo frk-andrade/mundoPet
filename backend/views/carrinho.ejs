@@ -2,21 +2,33 @@
 <%- include('partials/header') %> 
 
 <section class="container">
-  <h2>Carrinho</h2>
-    <div class="produto-carrinho">
-      <img src= "/images/imagemDefault.svg  " alt="">
-      <div class="produto-detalhe">
-        <h2> Nome do produto </h2>
-        <p> DH é divertido </p>
+  <h2 class="titulo-carrinho font-2-m"> Confira o seu carrinho: </h2>
+    <article class="card">
+      <div class="produto-carrinho">
+        <img src= "/images/imagemDefault.svg  " alt="">
+          <div class="produto-detalhe">
+            <h2 class="produto-nome font-2-m"> Ração Golden Especial para cães adultos frango e carne 15Kg </h2>
+          </div>
+          <div class="produto-qtd">
+            <div class="produto-valor">
+              
+              <button class="botao-carrinho"> <span class="material-symbols-outlined">
+                remove
+                </span> 
+              </button> 
+                <a class="carrinho-qtd"> 1 </a>
+              <button class="botao-carrinho"><span class="material-symbols-outlined">
+                add
+                </span>
+              </button>
+            </div>
+            <p> R$ 300,00 </p>
+          </div>
+          <div>
+          <img style = "background-color: red" class="icones-descricao" src="/images/excluir.png" width="17px" alt="excluir"><img src="/images/editar-texto.png" width="17px" alt="editar">
+          </div>
       </div>
-      <div class="produto-qtd">
-        <div class="produto-valor">
-        <!-- <img style = "background-color: red" class="icones-descricao" src="/images/excluir.png" width="17px" alt="excluir"><img src="/images/editar-texto.png" width="17px" alt="editar"> -->
-        <span> - </span><a> Quantidade </a><span> + </span>
-        </div>
-        <p> Preço </p>
-      </div>
-    </div>
+    </article>
 </section>
 
 <%- include('partials/footer') %>
