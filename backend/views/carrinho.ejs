@@ -1,8 +1,9 @@
 <%- include('partials/head') %>
 <%- include('partials/header') %> 
 
-<section class="container">
-  <h2 class="titulo-carrinho font-2-m"> Confira o seu carrinho: </h2>
+<section class="carrinho-container">
+  <div>
+    <h2 class="titulo-carrinho font-2-m"> Confira o seu carrinho: </h2>
     <article class="card">
       <div class="produto-carrinho">
         <img src= "/images/imagemDefault.svg  " alt="">
@@ -29,6 +30,14 @@
           </div>
       </div>
     </article>
+  </div>
+  <div>
+    <article class="carrinho-valor-total">
+      <h2 class="margens">Valor Total R$ 300,00</h2>
+      <button class="botao-comprar margens"> Finalizar compra </button>
+      <button class="botao-secundario margens"> Comprar mais produtos </button>
+    </article>
+  </div>
 </section>
 
 <%- include('partials/footer') %>
