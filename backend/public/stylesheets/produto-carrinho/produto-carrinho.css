@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 0 1.5rem 0 1.5rem;
 }
 
 .produto-carrinho img {
@@ -40,7 +41,7 @@
     flex: 1 1 100%;
     flex-flow: column nowrap;
     justify-content: space-between;
-    margin: var(--spacing);
+    margin-bottom: 1rem;
     padding: var(--spacing);
     position: relative;
     transition: filter .3s ease-in-out;
@@ -78,13 +79,13 @@
     border-radius: 6px;
 }
 
-.lixeira-carrinho img{
-    background-color: blue;
+.lixeira-carrinho a {
     width: 30px !important;
     height: 30px;
     bottom: 100px;
     position: relative;
     border-radius: 3px;
+    color: #295872;
 }
 
 .carrinho-valor-total {
@@ -93,8 +94,7 @@
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .3));
     display: flex;
     align-items: center;
-    flex: 1 1 100%;
-    flex-flow: column nowrap;
+    flex-direction: column;
     justify-content: space-between;
     margin-top: 4rem;
     position: relative;
@@ -105,13 +105,10 @@
 .carrinho-container {
     display: flex;
     justify-content: space-evenly;
-    align-items: baseline;
+    align-items: center;
     max-width: 1200px;
     box-sizing: border-box;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    gap: 2rem;
 }
 
 .carrinho-finalizar {
@@ -120,4 +117,26 @@
 
 .margens {
     margin: 1rem;
+}
+
+.carrinho-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 200,
+    'opsz' 48;
+}
+
+.botao-menos {
+    color: rgb(124, 20, 20);
+}
+
+.botao-mais {
+    color: #ff9100;
 }
