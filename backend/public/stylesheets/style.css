@@ -66,3 +66,5 @@
 /* CONTATO */
 @import './contato/paginacontato.css';
 
+/* LOGIN */
+@import './login/login.css';

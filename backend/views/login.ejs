@@ -2,20 +2,42 @@
 <%- include('partials/header') %>
 
 <main>
-    <form class="form" action="login" method="post" class="cta_form">
-        <input type="hidden" name="versao" value="">
-        <div class="input-group">
-            <label for="email">E-mail: </label>
-            <input type="email" required name="email">
-        </div>
-        <div class="input-group">
-            <label for="phone">Senha:</label>
-            <input type="password" required name="senha">
-        </div>
-        <div class="submit-group">
-            <button title="Enviar">Enviar</button>
-        </div>
-    </form>
-        <p style="color: red;"><%= mensagem %></p>
+        <section class="vh-100">
+            <div class="container-fluid h-custom">
+              <div class="row d-flex justify-content-center align-items-center h-100 form-login">
+                <div class="col-md-9 col-lg-6 col-xl-5">
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                    class="img-fluid" alt="Sample image">
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 bg-login">
+                  <form action="login" method="post">
+          
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label font-1-s" for="email">Endereço de Email</label>
+                      <input type="email" name="email" class="form-control form-control-lg font-1-s"
+                        placeholder="Entre com um email válido" required/>
+                    </div>
+          
+                    <!-- Password input -->
+                    <div class="form-outline mb-3">
+                        <label class="form-label font-1-s" for="phone">Senha</label>
+                        <input type="password" name="senha" class="form-control form-control-lg font-1-s"
+                        placeholder="Entre com sua senha" required/>
+                    </div>
+          
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                      <button type="button" class="botao-comprar font-1-s"
+                        style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+                      <p class="small fw-bold mt-2 pt-1 mb-0 font-1-xs">Não possui uma conta? <a href="#!"
+                          class="link-danger font-1-xs">Registre-se</a></p>
+                    </div>
+          
+                  </form>
+                  <p style="color: red;"><%= mensagem %></p>
+                </div>
+              </div>
+            </div>
+          </section>
 
 <%- include('partials/footer') %>
