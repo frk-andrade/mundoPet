@@ -8,7 +8,7 @@
     }
   </script>
   <button onclick="goBack()" class="botao-contato font-1-m-b"> ← Voltar</button>
-  <section class="formularioproduto" aria-label="Formulário">
+  <!-- <section class="formularioproduto" aria-label="Formulário">
     <fieldset class="conta-contato">
       <h2 class="font-1-xl">Novo Produto</h2>
       <form class="form" method="POST" action="" enctype="multipart/form-data">
@@ -60,7 +60,102 @@
         <button class="botao-contato font-1-m-b">Adicionar Produto</button>
       </form>
     </fieldset>
-  </section>
+  </section> -->
+
+
+
+  <form class="row g-3 needs-validation form-minha-conta" method="POST" action="" enctype="multipart/form-data" novalidate>
+    <h2 class="font-1-l">Novo Produto</h2>
+    <div class="col-md-4">
+      <div class="form-outline">
+        <label for="nome" class="form-label font-1-s">Nome do Produto:</label>
+        <input type="text" class="form-control font-1-s" name="nome" id="nome" placeholder="Nome" required />
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="form-outline">
+        <label for="validationCustom02" class="form-label font-1-s">Marcas:</label>
+        <select class="form-select" id="marcas" name="marca" required>
+          <option class="selected" selected disabled value="">Selecione</option>
+<% for (marca of marcas) { %> 
+          <option class="selected" value="<%= marca.id %>"><%= marca.nome %> </option>
+<% } %> 
+        </select>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="form-outline">
+        <label for="validationCustom02" class="form-label font-1-s">Categoria:</label>
+        <select class="form-select form-categoria" id="categoria" name="categoria" required>
+          <option selected disabled value="">Selecione</option>
+<% for (categoria of categorias) { %> 
+            <option value="<%= categoria.id %>"><%= categoria.nome %> </option>
+<% } %> 
+          </select>
+      </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="form-outline">
+        <label for="preco" class="form-label font-1-s">Preço:</label>
+        <input type="decimal" class="form-control font-1-s" name="preco" id="preco" placeholder="Preço" required />
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="form-outline">
+        <label for="promocao" class="form-label font-1-s">Promoção:</label>
+        <input type="decimal" class="form-control font-1-s" name="promocao" id="promocao" placeholder="Promoção" />
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="form-check">
+        <label class="font-1-s" for="descricao">Descrição do produto:</label>
+        <input type="textarea" class="font-1-s descricao-produto" name="descricao" id="descricao" placeholder="Descrição do produto" required/>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="form-check">
+        <label class="form-label font-1-s" for="imagem">Imagem do Produto:</label>
+        <input class="form-input font-1-s" type="file" name="imagem" id="imagem" />
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button class="botao-contato font-1-m-b">Adicionar Produto</button>
+    </div>
+  </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   <section class="table-responsive bg-form">
     <table class="table align-middle">

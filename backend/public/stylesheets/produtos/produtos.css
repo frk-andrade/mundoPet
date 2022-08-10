@@ -1,3 +1,6 @@
-.produtos-descricao {
-  text-align: center;
+.descricao-produto {
+  height: 200px;
+  width: 300px;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
 }
