@@ -2,6 +2,11 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+.produto-carrinho img {
+    height: 200px;
 }
 
 .produto-detalhe {
@@ -14,9 +19,124 @@
 .produto-valor {
     display: flex;
     gap: .5rem;
+    align-items: center;
+}
+
+.produto-qtd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .produto-qtd p {
     margin-top: 4rem;
 }
 
+.card {
+    background-color: var(--light);
+    border-radius: 5px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .3));
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: var(--spacing);
+    position: relative;
+    transition: filter .3s ease-in-out;
+  }
+
+  .card:hover {
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, .4));
+  }
+
+  .titulo-carrinho {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .produto-nome {
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .botao-carrinho {
+    border: none;
+    background: none;
+  }
+
+.carrinho-qtd {
+    border: 2px solid #c4c4c4;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+}
+
+.carrinho-qtd:hover {
+    border: 2px solid #0a0a0a;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+}
+
+.lixeira-carrinho a {
+    width: 30px !important;
+    height: 30px;
+    bottom: 100px;
+    position: relative;
+    border-radius: 3px;
+    color: #295872;
+}
+
+.carrinho-valor-total {
+    background-color: var(--second-color);
+    border-radius: var(--border-radius-quina-4);
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, .3));
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 4rem;
+    position: relative;
+    transition: filter .3s ease-in-out;
+    border-radius: 5px;
+}
+
+.carrinho-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1200px;
+    box-sizing: border-box;
+    gap: 2rem;
+}
+
+.carrinho-finalizar {
+    margin: 1rem;
+}
+
+.margens {
+    margin: 1rem;
+}
+
+.carrinho-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 700,
+    'GRAD' 200,
+    'opsz' 48;
+}
+
+.botao-menos {
+    color: rgb(124, 20, 20);
+}
+
+.botao-mais {
+    color: #ff9100;
+}
