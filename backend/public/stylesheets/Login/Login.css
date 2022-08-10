@@ -1,0 +1,61 @@
+bory{
+    background-color: #1b1f27;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+.area-login{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #181920;
+    width: 355px;
+    height: 320px;
+    padding: 35px;
+    border-radius: 10px;
+}
+
+.login form{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.login input{
+    margin-top: 10px;
+  background-color: #252A34;
+  padding-left: 10px;
+  color: #cbd0f7;
+  border: none;
+  height: 45px;
+  outline: none;
+  border-radius: 8px; 
+}
+.login img{
+    width: 65px;
+    height: auto;
+}
+.input::placeholder{
+    color: #cbd0f7;
+    font-size: 14px;
+}
+form[type="submit"]{
+    display: block;
+    background-color: #5568fe;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+p{
+    color: #cbd0f7;
+}
+a{
+    color: #5568fe;
+    text-decoration: none;
+    margin-left: 10px;
+}
