@@ -1,4 +1,11 @@
-.form-cadastro-cliente {
-  display: flex !important;
-  flex-direction: column !important;
+.needs-validation {
+  margin-top: 3rem;
+}
+
+.form-minha-conta {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(112,155,175,1) 0%, rgba(97,171,210,1) 100%);
+  padding: 30px;
+  border-radius: 6px;
+  margin-top: 6rem;
 }

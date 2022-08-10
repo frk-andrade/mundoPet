@@ -2,13 +2,17 @@
 <%- include('partials/header') %>
 
 <main class="container-form">
-  <section class="formularioproduto" aria-label="Formulário">
+  <!-- <section class="formularioproduto" aria-label="Formulário">
     <fieldset class="conta-contato">
       <h2 class="font-1-xl">Editar Minha Conta</h2>
       <form class="form form-cadastro-cliente" method="POST" action="">
         <div class="form-info form-info-first font-2-m-b font-1-m-b mb-5">
+
+
           <label class="form-label" for="nome">Nome: </label>
           <input class="form-control form-nome-produto" type="text" value="<%= usuario.nome %>" name="nome" id="nome"  required>
+
+
           <label class="form-label" for="nome">Sobrenome: </label>
           <input class="form-control form-nome-produto" type="text" value="<%= usuario.sobrenome %>" name="sobrenome" id="sobrenome" required>
         </div>
@@ -18,6 +22,7 @@
             <label class="form-label" for="email">Email:</label>
             <input class="form-control form-nome-produto" type="email" value="<%= usuario.email %>" name="email" id="email" required>
           </div>
+          
           <div class="form-info font-2-m-b font-1-m-b mb-3">
             <label  class="form-label" for="cpf">CPF:</label>
             <input  class="form-control" type="text" value="<%= usuario.cpf %>" name="cpf" id="cpf" required>
@@ -41,7 +46,65 @@
       <% }
       } %> 
   </fieldset>
-  </section>
+  </section> -->
+
+  <form class="row g-3 needs-validation form-minha-conta" novalidate>
+    <div class="col-md-4">
+      <div class="form-outline">
+        <label for="nome" class="form-label font-1-s">Primeiro Nome:</label>
+        <input type="text" class="form-control font-1-s" id="nome" value="<%= usuario.nome %>" name="nome" required />
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="form-outline">
+        <label for="validationCustom02" class="form-label font-1-s">Sobrenome:</label>
+        <input type="text" class="form-control font-1-s" value="<%= usuario.sobrenome %>" name="sobrenome" id="sobrenome" required />
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="form-outline">
+        <label for="validationCustom02" class="form-label font-1-s">CPF:</label>
+        <input type="text" class="form-control font-1-s" value="<%= usuario.cpf %>" name="cpf" id="cpf" required />
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="form-outline">
+        <label for="validationCustom03" class="form-label font-1-s">Email:</label>
+        <input type="email" class="form-control font-1-s" value="<%= usuario.email %>" name="email" id="email" required />
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="form-outline">
+        <label for="validationCustom05" class="form-label font-1-s">Telefone:</label>
+        <input type="tel" class="form-control font-1-s" name="phone" value="<%= usuario.telefone %>" id="phone" required />
+        <div class="invalid-feedback">Please provide a valid zip.</div>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <div class="form-check">
+        <label class="form-check-label font-1-s" for="invalidCheck">Concorde com os termos e condições.</label>
+        <input class="form-check-input font-1-s" type="checkbox" value="" id="invalidCheck" required />
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button class="botao-comprar font-2-s" type="submit">Editar</button>
+    </div>
+  </form>
+
+  <!-- <% if (!locals.usuario.endereco) { %>
+    <a href="/minhaconta/endereco/adicionar/">Adicionar Endereço</a>
+  <% } else { 
+    for (const endereco of usuario.endereco) { %>
+      <a href="/minhaconta/endereco/<%= endereco.id %>"><%= endereco.alias %></a>        
+      
+  <% }
+  } %>  -->
 
 </main>
 
