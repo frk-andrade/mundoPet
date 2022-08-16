@@ -10,7 +10,7 @@
     <section aria-label="Formulário">
       <fieldset class="conta-contato">
         <h2 class="font-1-xl">Confirma a exclusão da Marca?</h2>
-          <form class="form" action="/admin/marcas/remover/?_method=delete" method="POST">
+        <form class="form" action="/admin/marcas/remover/<%= marca.id %>/?_method=delete" method="POST">
             <input type="hidden" value="<%= marca.id %>" name="id">
             <button class="botao-contato font-1-m-b">SIM</button>
           </form>

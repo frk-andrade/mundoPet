@@ -62,11 +62,14 @@ controller.removeMarca = async (req, res) => {
 }
 
 controller.destroyMarca = async (req, res) => {
-    const categorias = await Categorias.findAll()
-    const id_marca = req.params.id
-    const marca = await Marca.findByPk(id_marca)
+    const id = req.params.id
+    const deleteMarca = await Marca.destroy({
+        where: {
+            id
+        }
+    })
     
-    res.render('confirmacaoMarcas', {title: 'Confirmar Remoção Marcas', marca, categorias})
+    res.redirect(`/admin/marcas/`)
 }
 
 
