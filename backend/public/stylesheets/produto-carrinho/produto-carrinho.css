@@ -6,7 +6,8 @@
 }
 
 .produto-carrinho img {
-    height: 200px;
+    width: 50px;
+    height: 50px;
 }
 
 .produto-detalhe {
@@ -57,7 +58,6 @@
   }
 
   .produto-nome {
-    width: 300px;
     justify-content: center;
     align-items: center;
   }
@@ -71,6 +71,13 @@
     border: 2px solid #c4c4c4;
     padding: 0.5rem 1.5rem;
     border-radius: 4px;
+    width: 35px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .carrinho-qtd:hover {
@@ -82,8 +89,6 @@
 .lixeira-carrinho a {
     width: 30px !important;
     height: 30px;
-    bottom: 100px;
-    position: relative;
     border-radius: 3px;
     color: #295872;
 }
