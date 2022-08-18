@@ -35,7 +35,7 @@ function listarCarrinho() {
 
     console.log(carrinho)
 
-    if(!carrinho) {
+    if(!carrinho || carrinho.length === 0) {
       console.log('entrou')
       const mensagem = document.getElementById('mensagem')
       mensagem.innerHTML = '<h2 class="titulo-carrinho font-2-m">Carrinho ainda não tem Produtos.</h2>'
@@ -57,7 +57,9 @@ function listarCarrinho() {
         div.classList.add('produto-carrinho')
 
         const divImgNome = document.createElement('div')
+        divImgNome.classList.add('imagem-nome')
         const divQtdValor = document.createElement('div')
+        divQtdValor.classList.add('quantidade-valor')
 
         const img = document.createElement('img')
         img.src = `/images/produtos/produto-25.png`
@@ -105,6 +107,7 @@ function listarCarrinho() {
         const spanBotaoLixeira = document.createElement('span')
         spanBotaoLixeira.classList.add('material-symbols-outlined')
         spanBotaoLixeira.textContent = 'delete'
+        spanBotaoLixeira.onclick = function() { removeCarrinho(item.id) }
         botaoLixeira.appendChild(spanBotaoLixeira)
 
         divImgNome.appendChild(img)
@@ -172,6 +175,16 @@ function alteraQtd(operacao, valor, id) {
     valorTotalCarrinho.textContent = `Valor Total R$ ${valorDinheiro(novoValorTotal)}`
 
     localStorage.setItem('carrinho', JSON.stringify(novoCarrinho))
+}
+
+function removeCarrinho(id) {
+  const carrinho = JSON.parse(localStorage.getItem('carrinho'))
+  const novoCarrinho = carrinho.filter( itemCarrinho => {
+    return itemCarrinho.id !== id
+  })
+
+  localStorage.setItem('carrinho', JSON.stringify(novoCarrinho))
+  window.location.reload()
 }
 
 function valorDinheiro(valor) {
