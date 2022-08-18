@@ -7,6 +7,9 @@
     padding: 1rem 0 1rem ;
 }
 
+.caixa-produto img {
+    max-width: 400px;
+}
 .produto-conteudo {
     display: flex;
     flex-direction: column;
