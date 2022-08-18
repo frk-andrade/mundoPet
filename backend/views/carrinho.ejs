@@ -5,96 +5,17 @@
   <div>
     <h2 class="titulo-carrinho font-2-m"> Confira o seu carrinho: </h2>
 
-    <section class="card">
-      <div class="produto-carrinho">
-        <img src= "/images/imagemDefault.svg  " alt="">
-            <p class="produto-nome font-2-m"> 
-            Ração Golden Especial para cães adultos frango e carne 15Kg 
-          </p>
-              <button class="botao-carrinho botao-menos">
-                <span class="material-symbols-outlined">
-                remove
-                </span> 
-              </button> 
-
-              <input class="carrinho-qtd" type="number" value="1" min="1" 
-              onblur="mudarQuantidadeCarrinho(this.value)">
-
-              <button class="botao-carrinho botao-mais">
-                <span class="material-symbols-outlined">
-                add
-                </span>
-              </button>
-
-            <p class="produto-nome font-2-m"> R$ 300,00 </p>
-            <div class="lixeira-carrinho">
-              <a href=""> 
-                <span class="material-symbols-outlined">
-                  delete
-                </span>
-              </a>
-            </div>
-          </div>
-        </section>
-
-        <section class="card">
-          <div class="produto-carrinho">
-            <img src= "/images/imagemDefault.svg  " alt="">
-                <p class="produto-nome font-2-m"> 
-                Ração Golden Especial para cães adultos frango e carne 15Kg 
-              </p>
-                  <button class="botao-carrinho botao-menos">
-                    <span class="material-symbols-outlined">
-                    remove
-                    </span> 
-                  </button> 
-    
-                  <input class="carrinho-qtd" type="number" value="1" min="1" 
-                  onblur="mudarQuantidadeCarrinho(this.value)">
-    
-                  <button class="botao-carrinho botao-mais">
-                    <span class="material-symbols-outlined">
-                    add
-                    </span>
-                  </button>
-    
-                <p class="produto-nome font-2-m"> R$ 300,00 </p>
-                <div class="lixeira-carrinho">
-                  <a href=""> 
-                    <span class="material-symbols-outlined">
-                      delete
-                    </span>
-                  </a>
-                </div>
-              </div>
-            </section>
-        
-            <span id="listaCarrinho"></span>
-          </div>
-        
+    <span id="listaCarrinho"></span>
+    <span id="mensagem"></span>
+  </div>
           <div>
             <section class="carrinho-valor-total">
-              <h2 class="margens font-2-m">Valor Total R$ 300,00</h2>
+              <h2 class="margens font-2-m" id="valorTotal"></h2>
               <button class="botao-comprar margens font-2-m"> Finalizar compra </button>
               <button class="botao-secundario margens font-2-m"> Comprar mais produtos </button>
             </section>
           </div>
-        
-        </section>
-    
-        <span id="listaCarrinho"></span>
-    
-      </div>
-    
-      <div>
-        <section class="carrinho-valor-total">
-          <h2 class="margens font-2-m">Valor Total R$ 300,00</h2>
-          <button class="botao-comprar margens font-2-m"> Finalizar compra </button>
-          <button class="botao-secundario margens font-2-m"> Comprar mais produtos </button>
-        </section>
-      </div>
-    
-    </section>
+</section>
 
     <script>listarCarrinho()</script>
     <%- include('partials/footer') %>
