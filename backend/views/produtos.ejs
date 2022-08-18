@@ -17,12 +17,17 @@
       
       
       <% for (produto of produtos) { %> 
-      <div class="produto-racao">
-        <a href="/produto/<%= produto.id %> "><img src="/images/<%= produto.imagem %> " alt="<%= produto.nome %>"></a>
-        <p class="font-2-xs produtos-descricao"><%= produto.nome %> </p>
-        <p class="font-2-xs font-1-m-b">R$ <%= produto.preco %> </p>
-        <a href="/produto/<%= produto.id %> "><button class="botao-comprar font-2-xs">Comprar</button></a>
-      </div>
+      <a href="/produto/<%= produto.id %> ">
+        <div class="produto-racao">
+          <img src="/images/produtos/<%= produto.imagem %> " alt="<%= produto.nome %>">
+          <p class="font-2-xs produtos-descricao"><%= produto.nome %> </p>
+          <% if(produto.promocao) { %> 
+          <p class="font-2-xs produtos-preco riscado"><%= produto.preco %> </p>
+          <% } %>
+          <p class="font-2-xs font-1-m-b">R$ <%= produto.promocao ? produto.promocao : produto.preco %> </p>
+          <button class="botao-comprar font-2-xs">Comprar</button>
+        </div>
+      </a>
       <% } %> 
     </div> 
   </section>

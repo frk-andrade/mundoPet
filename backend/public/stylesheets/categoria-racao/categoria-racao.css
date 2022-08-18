@@ -25,14 +25,26 @@
 }
 
 .produto-racao {
+  border: 2px solid;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  
   gap: 0.5rem;
+  padding: 0.5rem;
 
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.produto-racao img {
+  width: auto;
+  height: 160px;
+}
+
+.riscado {
+  text-decoration: line-through;
 }
 
 @media(max-width: 980px) {
