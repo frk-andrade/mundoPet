@@ -1,29 +1,22 @@
+adicionarCarrinho = (id, nome, preco) => {
+  let carrinho = JSON.parse(localStorage.getItem('carrinho')) || []
+  console.log(carrinho)
 
-function adicionarCarrinho(id, nome, preco) {
-  let carrinho = JSON.parse(localStorage.getItem('carrinho'))
-  if(!carrinho) carrinho = []
-
-  const item = {
-    id,
-    nome,
-    quantidade: 1,
-    preco
-  }
-
-  if(carrinho.filter(itemFiltrado => itemFiltrado.id === item.id).lenght) {
-    carrinho.map( itemCarrinho => {
-      if(!itemCarrinho.id === item.id) {
-          return itemCarrinho
-      } else {
-          itemCarrinho.quantidade += 1
-          return itemCarrinho
-      }
-    })
+  if (!carrinho.some(item => item.id === id)) {
+      carrinho.push({id, nome, preco, quantidade: 1})
+      console.log('add')
   } else {
-    carrinho.push(item)
+      console.log('increment')
+      carrinho.map(item => {
+          if (!item.id == id) {
+              return item
+          } else {
+              item.quantidade+=1
+              return item
+          }
+      })
   }
-
-  localStorage.setItem('carrinho', JSON.stringify(carrinho))
+  localStorage.setItem('carrinho',JSON.stringify(carrinho))
 }
 
 function listarCarrinho() {
@@ -125,22 +118,6 @@ function listarCarrinho() {
         valorTotalCarrinho.textContent = `Valor Total R$ ${valorDinheiro(valorTotal)}`
       }
     }
-}
-
-function alterarQuantidadeCarrinho(id, quantidade) {
-  let carrinho = JSON.parse(localStorage.getItem('carrinho'))
-
-  carrinho.map( itemCarrinho => {
-    if(!itemCarrinho.id === id) {
-        return itemCarrinho
-    } else {
-        itemCarrinho.quantidade = quantidade
-        return itemCarrinho
-    }
-  })
-
-  localStorage.setItem('carrinho', JSON.stringify(carrinho))
-
 }
 
 function alteraQtd(operacao, valor, id) {
