@@ -19,7 +19,7 @@
       <p class="font-2-xs font-1-m-b" id="precoProduto"> preço: <%= produto.preco %></p>
       <p class="font-2-xs font-1-m-b" id="promocao"> promoção: <%= produto.promocao %></p>
 
-        <button class="botao-comprar font-2-xs" onclick="adicionarCarrinho(<%= produto.id %>, '<%= produto.nome %>' , <%= produto.preco %>)">Adicionar ao carrinho</button>
+        <button class="botao-comprar font-2-xs" onclick="adicionarCarrinho(<%= produto.id %>, '<%= produto.nome %>' , <%= produto.promocao ? produto.promocao : produto.preco %>)">Adicionar ao carrinho</button>
 
       <p class="teste font-1-m-b"> Descrição: </p>
       

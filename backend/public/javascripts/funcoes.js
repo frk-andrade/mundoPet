@@ -1,12 +1,9 @@
 adicionarCarrinho = (id, nome, preco) => {
   let carrinho = JSON.parse(localStorage.getItem('carrinho')) || []
-  console.log(carrinho)
 
   if (!carrinho.some(item => item.id === id)) {
       carrinho.push({id, nome, preco, quantidade: 1})
-      console.log('add')
   } else {
-      console.log('increment')
       carrinho.map(item => {
           if (!item.id == id) {
               return item
@@ -26,10 +23,8 @@ function listarCarrinho() {
     const valorTotalCarrinho = document.getElementById('valorTotal')
 
 
-    console.log(carrinho)
 
     if(!carrinho || carrinho.length === 0) {
-      console.log('entrou')
       const mensagem = document.getElementById('mensagem')
       mensagem.innerHTML = '<h2 class="titulo-carrinho font-2-m">Carrinho ainda não tem Produtos.</h2>'
       valorTotalCarrinho.textContent = `Valor Total R$ ${valorDinheiro(0)}`
@@ -55,7 +50,7 @@ function listarCarrinho() {
         divQtdValor.classList.add('quantidade-valor')
 
         const img = document.createElement('img')
-        img.src = `/images/produtos/produto-25.png`
+        img.src = `/images/produtos/produto-${item.id}.png`
         img.alt = `Nome`
         img.classList.add('img-produto-carrinho')
 
@@ -121,6 +116,8 @@ function listarCarrinho() {
 }
 
 function alteraQtd(operacao, valor, id) {
+  console.log(operacao, valor, id)
+
     if (operacao === '-'){
       if(parseInt(valor) > 1) {
         novoValor = parseInt(valor) - 1
@@ -132,27 +129,27 @@ function alteraQtd(operacao, valor, id) {
     }
 
     const carrinho = JSON.parse(localStorage.getItem('carrinho'))
-    quantidade.textContent = novoValor
+    this.quantidade.textContent = novoValor
 
     novoCarrinho = carrinho.map( itemCarrinho => {
-      if(!itemCarrinho.id === id) {
-          return itemCarrinho
-      } else {
-          itemCarrinho.quantidade = novoValor
-          return itemCarrinho
+      if(itemCarrinho.id === id) {
+        itemCarrinho.quantidade = novoValor
+        return itemCarrinho
+        } else {
+        return itemCarrinho
       }
     })
-
-    novoValorTotal = novoCarrinho.reduce((total, item) => {
-      return total + (item.preco * item.quantidade)
-    }
-    , 0)
-
-    const valorTotalCarrinho = document.getElementById('valorTotal')
-    valorTotalCarrinho.textContent = `Valor Total R$ ${valorDinheiro(novoValorTotal)}`
-
     localStorage.setItem('carrinho', JSON.stringify(novoCarrinho))
-}
+
+    // novoValorTotal = novoCarrinho.reduce((total, item) => {
+    //   return total + (item.preco * item.quantidade)
+    // }
+    // , 0)
+
+    // const valorTotalCarrinho = document.getElementById('valorTotal')
+    // valorTotalCarrinho.textContent = `Valor Total R$ ${valorDinheiro(novoValorTotal)}`
+    window.location.reload()
+  }
 
 function removeCarrinho(id) {
   const carrinho = JSON.parse(localStorage.getItem('carrinho'))
