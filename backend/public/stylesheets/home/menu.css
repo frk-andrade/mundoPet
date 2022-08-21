@@ -104,6 +104,10 @@
     justify-content: space-evenly;
     gap: 4rem!important;
   }
+
+  .lojas {
+    justify-content: center!important;
+  }
 }
 
 @media(max-width: 1024px) {
