@@ -93,3 +93,20 @@
     width: 100px;
   }  
 }
+
+@media(max-width: 1024px) {
+  .btn-mobile {
+    margin-left: 1rem;
+  }
+
+  .nav-clicado,
+  .input-mobile {
+    font-size: 14px;
+  }
+}
+
+@media(min-width: 1440px) {
+  .container-nav-mobile {
+    padding-left: 6.25rem;
+  }
+}
