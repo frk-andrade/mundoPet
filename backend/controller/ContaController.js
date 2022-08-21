@@ -15,7 +15,6 @@ controller.index = async (req, res) => {
         }
       ]
 })
-
   res.render('minha-conta', { title: "Index", categorias, usuario })
 }
 
@@ -24,10 +23,12 @@ controller.showEndereco = async (req, res) => {
   const categorias = await Categorias.findAll()
   const endereco = await Endereco.findByPk(id)
 
-  if(endereco.id_usuario !== req.session.id_usuario)
+  console.log(endereco.usuario_id, req.session.id_usuario)
+
+  if(endereco.usuario_id !== req.session.id_usuario)
       res.redirect('/minhaconta')
   
-  res.render('endereco', { title: "Index", categorias, endereco })
+  res.render('endereco-editar', { title: "Index", categorias, endereco })
 }
 
 controller.adicionarEndereco = async (req, res) => {
@@ -37,10 +38,10 @@ controller.adicionarEndereco = async (req, res) => {
 }
 
 controller.createEndereco = async (req, res) => {
-  const {endereco, numero, complemento, bairro, cidade, estado, cep, principal } = req.body
+  const {alias, endereco, numero, complemento, bairro, cidade, estado, cep, principal } = req.body
   
   const insert = await Endereco.create({
-    endereco, numero, complemento, bairro, cidade, estado, cep, principal,
+    alias, endereco, numero, complemento, bairro, cidade, estado, cep, principal,
     usuario_id: req.session.id_usuario
   })
 
@@ -48,6 +49,16 @@ controller.createEndereco = async (req, res) => {
   res.redirect('/minhaconta')
 }
 
+controller.updateEndereco  = async (req, res) => {
+  const {alias, endereco, numero, complemento, bairro, cidade, estado, cep, principal } = req.body
+  
+  const insert = await Endereco.update(req.body, {
+    where: {
+        id
+    }
+})  
+  res.redirect('/minhaconta')
+}
 
   
 

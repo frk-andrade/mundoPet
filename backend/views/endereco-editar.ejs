@@ -1,0 +1,41 @@
+<%- include('partials/head') %>
+<%- include('partials/header') %>
+
+<main class="container-form">
+  <section class="formularioproduto" aria-label="Formulário">
+    <fieldset class="conta-contato">
+      <h2 class="font-1-xl">Adicionar Novo Endereço</h2>
+      <form class="form form-cadastro-cliente" method="POST" action="/endereco/<%= endereco.id %>/?_method=put">
+        <div class="form-cadastro">
+          <div class="form-info font-2-m-b font-1-m-b mb-3">
+            <label class="form-label" for="alias">Apelido: </label>
+            <input class="form-control form-nome-produto" type="text" name="alias" id="alias" value="<%= endereco.alias %>"  required>
+            <label class="form-label" for="endereco">Endereço: </label>
+            <input class="form-control form-nome-produto" type="text" name="endereco" id="endereco" value="<%= endereco.endereco %>"  required>
+            <label class="form-label" for="numero">Numero: </label>
+            <input class="form-control form-nome-produto" type="text" name="numero" id="numero" value="<%= endereco.numero %>" required>
+            <label class="form-label" for="complemento">Complemento: </label>
+            <input class="form-control form-nome-produto" type="text" name="complemento" id="complemento" value="<%= endereco.complemento %>" required>
+
+            <label class="form-label" for="bairro">Bairro: </label>
+            <input class="form-control form-nome-produto" type="text" name="bairro" id="bairro" value="<%= endereco.bairro %>" required>
+            <label class="form-label" for="cidade">Cidade: </label>
+            <input class="form-control form-nome-produto" type="text" name="cidade" id="cidade" value="<%= endereco.cidade %>" required>
+            <label class="form-label" for="estado">Estado: </label>
+            <input class="form-control form-nome-produto" type="text" name="estado" id="estado" value="<%= endereco.estado %>" required>
+            <label class="form-label" for="cep">CEP: </label>
+            <input class="form-control form-nome-produto" type="text" name="cep" id="cep" value="<%= endereco.cep %>" required>
+            <label class="form-label" for="principal">Principal: </label>
+            <input class="" type="checkbox" name="principal" id="principal" value="1" <%= endereco.principal ? 'checked' : '' %> required>
+          </div>
+        </div>
+
+
+        <button class="botao-contato font-1-m-b">Editar</button>
+      </form>
+  </fieldset>
+  </section>
+
+</main>
+
+<%- include('partials/footer') %>
