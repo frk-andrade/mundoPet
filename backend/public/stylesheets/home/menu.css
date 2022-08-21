@@ -92,6 +92,18 @@
   .d-flex {
     display: none!important;
   }
+  .vantagens {
+    gap: 1rem;
+  }
+
+  .vantagens p {
+    font-size: 14px!important;
+  }
+
+  .parceiros-produtos {
+    justify-content: space-evenly;
+    gap: 4rem!important;
+  }
 }
 
 @media(max-width: 1024px) {
