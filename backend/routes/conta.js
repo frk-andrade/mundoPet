@@ -10,6 +10,7 @@ router.get('/endereco/adicionar', loggedMiddleware, controller.adicionarEndereco
 router.post('/endereco/adicionar', loggedMiddleware, controller.createEndereco);
 
 router.get('/endereco/:id', loggedMiddleware, controller.showEndereco);
+router.put('/endereco/:id', loggedMiddleware, controller.updateEndereco);
 
 
 module.exports = router;
