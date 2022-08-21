@@ -28,9 +28,30 @@ controller.cadastro = async (req, res) => {
 
 controller.addCadastro = async (req, res) => {
   const categorias = await Categorias.findAll()
-  const mensagem = 'Cadastro efetudado com sucesso. Faça seu login.'
+  let mensagem = 'Cadastro efetudado com sucesso. Faça seu login.'
+  const {nome, sobrenome, email, senha} = req.body
+  const usuariosCadastrados = await Usuario.findOne({ where: { email } })
 
-  res.render('login', { title: "Login" , categorias, mensagem})
+  if (usuariosCadastrados) {
+    mensagem = 'E-Mail já cadastrado, faça seu login'
+    res.render('login', { title: "Login" , categorias, mensagem})
+
+  } else {
+    const resultado = await Usuario.create({
+      nome,
+      sobrenome,
+      email,
+      senha
+    })
+    
+    if (resultado) {
+      res.render('login', { title: "Login" , categorias, mensagem})
+    } else {
+      res.render('error')
+  }
+}
+
+  
 
 }
 
