@@ -75,6 +75,11 @@
   height: 120px !important;
 }
 
+.form-check {
+  display: flex!important;
+  justify-content: flex-start;
+  align-items: center;
+}
 .form-categoria {
   margin-right: 4rem;
 }
