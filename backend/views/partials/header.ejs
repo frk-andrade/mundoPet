@@ -11,13 +11,35 @@
         <button class="btn-mobile btn font-1-s font-2-m-b btn-bg" type="submit">Pesquisar</button>
       </form>
       <ul class="navbar-nav ms-2 my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
+
+        <% if(!locals.login.id_usuario) { %> 
+   
+          <li class="nav-item">
           <a class="nav-clicado nav-link font-1-s font-2-m-b nav-menu_texto__submenu" aria-current="page"
             href="/login">Login</a>
         </li>
+        <% } else { %> 
+          <% if(login.admin === 1) { %> 
+            <li class="nav-item">
+              <a class="nav-clicado nav-link font-1-s font-2-m-b nav-menu_texto__submenu" aria-current="page"
+                href="/admin">Admin</a>
+            </li>
+          <% } %> 
+          <li class="nav-item">
+            <a class="nav-clicado nav-link font-1-s font-2-m-b nav-menu_texto__submenu" aria-current="page"
+              href="/minhaconta">Minha Conta</a>
+        <% } %> 
+
+        <% if(!locals.login.id_usuario) { %> 
         <li class="nav-item">
           <a class="nav-clicado nav-link font-1-s font-2-m-b nav-menu_texto__submenu" href="/cadastro">Cadastre-se</a>
         </li>
+        <% } else { %> 
+          <li class="nav-item">
+            <a class="nav-clicado nav-link font-1-s font-2-m-b nav-menu_texto__submenu" aria-current="page"
+              href="/logout">Logout</a>
+        <% } %> 
+
         <li class="nav-item">
           <a class=" nav-clicado nav-link font-1-s font-2-m-b nav-menu_texto__submenu" aria-current="page"
             href="/carrinho">Carrinho</a>

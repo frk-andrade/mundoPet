@@ -11,6 +11,7 @@ router.post('/contato', controller.sendcontato)
 router.get('/cadastro', controller.cadastro)
 router.post('/cadastro', controller.addCadastro)
 
+router.get('/logout', controller.logout)
 
 
 

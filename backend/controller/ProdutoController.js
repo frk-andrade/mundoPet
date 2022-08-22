@@ -17,7 +17,11 @@ controller.index = async (req, res) => {
           ]
       
       })
-
-res.render('produto', {title: "Produto", produto, categorias})
+      const login = {
+        id_usuario: req.session.id_usuario,
+        admin: req.session.admin
+      }
+    
+res.render('produto', {title: "Produto", produto, categorias, login})
 }
 module.exports = controller;
