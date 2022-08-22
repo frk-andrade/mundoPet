@@ -8,8 +8,13 @@ const controller = {}
 controller.index = async (req, res) => {
   const categorias = await Categorias.findAll()
   mensagem = ''
+  const login = {
+    id_usuario: req.session.id_usuario,
+    admin: req.session.admin
+  }
+    console.log('login >', login)
 
-  res.render('login', { title: "login", categorias, mensagem })
+  res.render('login', { title: "login", categorias, mensagem, login })
 }
 
 controller.auth = async (req, res) => {
@@ -21,8 +26,6 @@ controller.auth = async (req, res) => {
             senha
         }
     })
-
-    console.log({usuario})
 
     if(!usuario) {
         mensagem = 'Usuário ou senha incorretos!'

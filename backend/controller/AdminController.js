@@ -10,17 +10,23 @@ function valorSql (valor){
 
 controller.index = async (req, res) => {
     const categorias = await Categorias.findAll()
-    res.render('admin', {title: 'Admin', categorias })
+    const login = {
+        id_usuario: req.session.id_usuario,
+        admin: req.session.admin
+      }
+    
+    res.render('admin', {title: 'Admin', categorias, login })
 }
-
-
-
 
 controller.listaMarcas = async (req, res) => {
     const categorias = await Categorias.findAll()
     const marcas = await Marca.findAll()
+    const login = {
+        id_usuario: req.session.id_usuario,
+        admin: req.session.admin
+      }
     
-    res.render('marcas-listar', {title: 'Listar Marcas', marcas, categorias})
+    res.render('marcas-listar', {title: 'Listar Marcas', marcas, categorias, login})
 }
 
 controller.addMarcas = async (req, res) => {
@@ -38,8 +44,13 @@ controller.editMarca = async (req, res) => {
     const categorias = await Categorias.findAll()
     const id_marca = req.params.id
     const marca = await Marca.findByPk(id_marca)
+    const login = {
+        id_usuario: req.session.id_usuario,
+        admin: req.session.admin
+      }
     
-    res.render('marcas-editar', {title: 'Editar Marca', marca, categorias})
+    
+    res.render('marcas-editar', {title: 'Editar Marca', marca, categorias, login})
 }
 
 controller.updateMarca = async (req, res) => {
@@ -57,8 +68,13 @@ controller.removeMarca = async (req, res) => {
     const categorias = await Categorias.findAll()
     const id_marca = req.params.id
     const marca = await Marca.findByPk(id_marca)
+    const login = {
+        id_usuario: req.session.id_usuario,
+        admin: req.session.admin
+      }
     
-    res.render('marcas-remover', {title: 'Confirmar Remoção Marcas', marca, categorias})
+    
+    res.render('marcas-remover', {title: 'Confirmar Remoção Marcas', marca, categorias, login})
 }
 
 controller.destroyMarca = async (req, res) => {
@@ -76,8 +92,13 @@ controller.destroyMarca = async (req, res) => {
 
 controller.listaCategorias = async (req, res) => {
     const categorias = await Categorias.findAll()
+    const login = {
+        id_usuario: req.session.id_usuario,
+        admin: req.session.admin
+      }
+    
 
-    res.render('categorias-listar', {title: 'Listar Categorias', categorias})
+    res.render('categorias-listar', {title: 'Listar Categorias', categorias, login})
 }
 
 controller.addCategorias = async (req, res) => {
@@ -97,8 +118,13 @@ controller.editCategoria = async (req, res) => {
     const categorias = await Categorias.findAll()
     const id_categoria = req.params.id
     const categoria = await Categorias.findByPk(id_categoria)
+    const login = {
+        id_usuario: req.session.id_usuario,
+        admin: req.session.admin
+      }
     
-    res.render('categorias-editar', {title: 'Categoria', categoria, categorias})
+    
+    res.render('categorias-editar', {title: 'Categoria', categoria, categorias, login})
 }
 
 controller.updateCategoria = async (req, res) => {
@@ -119,8 +145,13 @@ controller.removeCategoria = async (req, res) => {
     const categorias = await Categorias.findAll()
     const id_categoria = req.params.id
     const categoria = await Categorias.findByPk(id_categoria)
+    const login = {
+        id_usuario: req.session.id_usuario,
+        admin: req.session.admin
+    }
+    
 
-    res.render('categorias-remover',{title: 'Categoria', categoria, categorias})
+    res.render('categorias-remover',{title: 'Categoria', categoria, categorias, login})
 }
 
 controller.destroyCategoria = async (req, res) => {
@@ -154,8 +185,12 @@ controller.listaProdutos = async (req, res) => {
           ]
       
     })
-
-        res.render('produtos-listar', {marcas, categorias, produtos})
+    const login = {
+        id_usuario: req.session.id_usuario,
+        admin: req.session.admin
+      }
+    
+        res.render('produtos-listar', {marcas, categorias, produtos, login})
 }
 
 controller.addProdutos = async (req, res) => {
@@ -223,8 +258,12 @@ controller.editProduto = async (req, res) => {
               }
             ]
         })
-
-    res.render('produtos-editar', {title: 'Editar Produto', produto, categorias, marcas})
+    const login = {
+        id_usuario: req.session.id_usuario,
+        admin: req.session.admin
+    }
+        
+    res.render('produtos-editar', {title: 'Editar Produto', produto, categorias, marcas, login})
 }
 
 controller.updateProduto = async (req, res) => {
@@ -264,8 +303,12 @@ controller.removeProduto = async (req, res) => {
     const categorias = await Categorias.findAll()
     const id_produto = req.params.id
     const produto = await Produto.findByPk(id_produto)
-
-    res.render('produtos-remover', {title: 'Editar Produto', produto, categorias})
+    const login = {
+        id_usuario: req.session.id_usuario,
+        admin: req.session.admin
+      }
+    
+    res.render('produtos-remover', {title: 'Editar Produto', produto, categorias, login})
 }
 
 controller.destroyProduto = async (req, res) => {
@@ -288,8 +331,12 @@ controller.listaUsuarios = async (req, res) => {
 
     const usuarios = await Usuario.findAll()
     const categorias = await Categorias.findAll()
-
-    res.render('usuarios-listar', {usuarios, categorias})
+    const login = {
+        id_usuario: req.session.id_usuario,
+        admin: req.session.admin
+      }
+    
+    res.render('usuarios-listar', {usuarios, categorias, login})
 }
 
 controller.addUsuarios = (req, res) => {
@@ -300,8 +347,12 @@ controller.editUsuario = async (req, res) => {
     const categorias = await Categorias.findAll()
     const id_usuario = req.params.id
     const usuario = await Usuario.findByPk(id_usuario)
-
-    res.render('usuarios-editar', {title: 'Usuário', usuario, categorias})
+    const login = {
+        id_usuario: req.session.id_usuario,
+        admin: req.session.admin
+      }
+    
+    res.render('usuarios-editar', {title: 'Usuário', usuario, categorias, login})
 }
 
 controller.updateUsuario = async (req, res) => {
@@ -318,8 +369,12 @@ controller.removeUsuario = async (req, res) => {
     const categorias = await Categorias.findAll()
     const id_usuario = req.params.id
     const usuario = await Usuario.findByPk(id_usuario)
-
-    res.render('usuarios-remover', {title: 'Usuário', usuario, categorias})
+    const login = {
+        id_usuario: req.session.id_usuario,
+        admin: req.session.admin
+      }
+    
+    res.render('usuarios-remover', {title: 'Usuário', usuario, categorias, login})
 }
 
 controller.destroyUsuario = async (req, res) => {
