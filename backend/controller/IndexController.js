@@ -1,13 +1,15 @@
 const {Categorias, Endereco, Item, Marca, Pedido, Produto, Usuario} = require('../database/models')
+const Sequelize = require('sequelize')
 const controller = {}
 
 controller.index = async (req, res) => {
   const categorias = await Categorias.findAll()
+  const produtos = await Produto.findAll({ order: Sequelize.literal('rand()'), limit: 10 })
   const login = {
     id_usuario: req.session.id_usuario,
     admin: req.session.admin
   }
-  res.render('index', { title: "Index" , categorias, login})
+  res.render('index', { title: "Index" , categorias, produtos, login})
 }
 
 controller.contato = async (req, res) => {
