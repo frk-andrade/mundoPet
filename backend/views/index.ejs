@@ -28,82 +28,26 @@
   </button>
 </div>
 
+<h2>Nossos Produtos</h2>
 
-
-<section class="container">
-  <div class="vantagens">
-    <div class="vantagens-icones">
-      <img src="/images/delivery.svg" alt="">
-      <p class="font-1-m-b">Frete Grátis</p>
-    </div>
-    <div class="vantagens-icones">
-      <img src="images/shower.svg" alt="">
-      <p class="font-1-m-b">Banho e Tosa</p>
-    </div>
-    <div class="vantagens-icones">
-      <img src="images/credit-card.svg" alt="">
-      <p class="font-1-m-b"> 3X Sem Juros</p>
-    </div>
-    <div class="vantagens-icones">
-      <img src="images/store.svg" alt="">
-      <p class="font-1-m-b">Retire na Loja</p>
-    </div>
-  </div>
+<section class="container lista-produtos">
+  <div class="lista-racao">
+    <% for (produto of produtos) { %> 
+    <a href="/produto/<%= produto.id %> ">
+      <div class="produto-racao">
+        <img src="/images/produtos/<%= produto.imagem %> " alt="<%= produto.nome %>">
+        <p class="font-2-xs produtos-descricao"><%= produto.nome %> </p>
+        <% if(produto.promocao) { %> 
+        <p class="font-2-xs produtos-preco riscado">R$ <%= produto.preco.replace('.', ',') %> </p>
+        <% } %>
+        <p class="font-2-xs font-1-m-b">R$ <%= produto.promocao ? produto.promocao.replace('.', ',') : produto.preco.replace('.', ',') %> </p>
+        <button class="botao-comprar font-2-xs">Comprar</button>
+      </div>
+    </a>
+    <% } %> 
+  </div> 
 </section>
 
-
-<section class="promocoes">
-  <div class="promocoes-container container">
-    <a class="promocoes-img" href=""> <img src="/images/vitaminas-40off.svg" alt="Promoção de Vitaminas e Suplementos"></a>
-    <a class="promocoes-img" href=""> <img src="images/Rectangle 48.svg" alt="Promoção de Vitaminas e Suplementos"></a>
-    <a class="promocoes-img" href=""> <img src="images/Rectangle 49.svg" alt="Promoção de Vitaminas e Suplementos"></a>
-    <a class="promocoes-img" href=""> <img src="images/Rectangle 50.svg" alt="Promoção de Vitaminas e Suplementos"></a>
-  </div>
-</section>
-
-<section class="container">
-  <div class="cupom_desconto">
-    <p class="font-1-m-b">Você tem <span class="font-1-xl"> 10% OFF</span> na 1º compra | Insira o cupom no carrinho de compras</p>
-    <img src="images/desconto10.png" alt="Cupom de desconto DESCONTO10">
-  </div>
-</section>
-
-<section class="container">
-  <div class="parceiros">
-    <h4 class="titulo-parceiros font-1-xl">Ofertas dos nossos Parceiros</h4>
-    <div class="parceiros-subtitulo">
-      <h4 class="font-1-m-b">Mais vendidos</h4>
-      <h4 class="font-1-m-b">Promoções</h4>
-    </div>
-  </div>
-
-  <div class="parceiros-produtos">
-    <div class="parceiros-produtos-oferta">
-      <a href="#"><img src="images/golden-especial 1.svg" alt="Ração Golden Especial"></a>
-      <p class="font-1-s">Ração Golden Especial</p>
-      <p class="font-2-xs font-1-m-b">R$ 200</p>
-      <button class="botao-secundario-laranja font-1-s">Adicionar ao carrinho</button>
-    </div>
-    <div class="parceiros-produtos-oferta">
-      <a href="#"><img src="images/barraca 1.svg" alt="Barraca de Camping"></a>
-      <p class="font-1-s">Barraca de Camping</p>
-      <p class="font-2-xs font-1-m-b">R$ 1800</p>
-      <button class="botao-secundario-laranja font-1-s">Adicionar ao carrinho</button>
-    </div>
-    <div class="parceiros-produtos-oferta">
-      <a href="#"><img src="images/golden-gatos 1.svg" alt="Ração Golden Gatos"></a>
-      <p class="font-1-s">Ração Golden Gatos</p>
-      <p class="font-2-xs font-1-m-b">R$ 399.99</p>
-      <button class="botao-secundario-laranja font-1-s">Adicionar ao carrinho</button>
-    </div>
-    <div class="parceiros-produtos-oferta">
-      <a href="#"><img src="images/cordeiro-molho 1.svg" alt="Sache Whiskas"></a>
-      <p class="font-1-s">Ração Whiskas</p>
-      <p class="font-2-xs font-1-m-b">R$ 2.99</p>
-      <button class="botao-secundario-laranja font-1-s">Adicionar ao carrinho</button>
-    </div>
-  </div>
-</section>
 
 <section class="container">
   <div class="lojas">

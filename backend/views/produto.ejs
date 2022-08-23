@@ -14,11 +14,12 @@
   </div>
   <div class="produto-conteudo">
       <p class= "font-2-l-b" id="nomeProduto"> <%= produto.nome %></p>
-      <p class="font-2-m"> <%= produto.categoria.nome %> </p> <p class="font-2-m">marca: <%= produto.marca.nome %></p>
+      <p class="font-2-m">Categoria: <%= produto.categoria.nome %> </p> <p class="font-2-m">Marca: <%= produto.marca.nome %></p>
 
-      <p class="font-2-xs font-1-m-b" id="precoProduto"> preço: <%= produto.preco %></p>
-      <p class="font-2-xs font-1-m-b" id="promocao"> promoção: <%= produto.promocao %></p>
-
+      <p class="font-2-xs font-1-m-b <%= produto.promocao ? 'riscado' : '' %>" id="precoProduto">Preço: R$ <%= produto.preco.replace('.', ',') %></p>
+      <% if (produto.promocao){ %>
+      <p class="font-2-xs font-1-m-b" id="promocao">Promoção: R$ <%= produto.promocao.replace('.', ',') %></p>
+        <% } %>
         <button class="botao-comprar font-2-xs" onclick="adicionarCarrinho(<%= produto.id %>, '<%= produto.nome %>' , <%= produto.promocao ? produto.promocao : produto.preco %>)">Adicionar ao carrinho</button>
 
       <p class="teste font-1-m-b"> Descrição: </p>

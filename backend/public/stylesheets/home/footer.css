@@ -5,21 +5,21 @@
 
 .footer-conteudo {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 4rem;
-  flex-wrap: wrap;
-  margin-top: 6rem;
+  flex-wrap: nowrap;
+  margin-top: 1rem;
+  flex-direction: row;
+  align-content: center;
 }
 
-.footer-links h3{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  color: #FFFFFF;
+.footer-links {
+  display: flex;
 }
 
 .footer-links ul li {
-  margin-bottom: 2rem;
+  margin-bottom: 0.2rem;
 
   color: #FFFFFF;
 }
@@ -27,17 +27,14 @@
 .footer-redes {
   background-color: var(--second-color);
   border-radius: 6px;
-
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  
-  padding: .5rem;
+  margin-top: 0.2rem;
+  padding: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.footer-redes h3{
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-
+.footer-redes p {
   color: #FFFFFF;
 }
 
