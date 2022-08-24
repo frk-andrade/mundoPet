@@ -37,6 +37,7 @@
     .container-form2 {
         max-width: max-content;
         gap: 1rem;
+        margin-bottom: 28rem;
     }
     .container-form2 ul {
         gap: 1rem;

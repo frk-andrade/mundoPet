@@ -1,6 +1,8 @@
 .footer {
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 11%, rgba(97,171,210,1) 100%, rgba(1,47,69,1) 100%);
+  padding-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .footer-conteudo {

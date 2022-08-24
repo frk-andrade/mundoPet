@@ -5,3 +5,21 @@
 .produtos-cachorro {
   margin-top: 2rem;
 }
+
+@media(max-width: 425px) {
+  .banner-cachorro img {
+    width: 425px;
+  }
+}
+
+@media(max-width: 768px) {
+  .banner-cachorro img {
+    width: 720px;
+  }
+}
+
+@media(max-width: 1024px) {
+  .banner-cachorro img {
+    width: 980px;
+  }
+}

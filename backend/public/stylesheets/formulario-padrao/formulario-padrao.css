@@ -34,3 +34,12 @@
 
   transition: 300ms;
 }
+
+@media(max-width: 425px) {
+  .conta-contato {
+    background-color: #FFFFFF;
+  }
+  .form {
+    margin: 0px !important;
+  }
+}

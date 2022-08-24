@@ -80,18 +80,18 @@
   .navbar-brand img{
     width: 100px;
   }
-  .d-flex {
+  /* .d-flex {
     display: none!important;
-  }
+  } */
 }
 
 @media (max-width: 768px) {
   .navbar-brand img{
     width: 100px;
   } 
-  .d-flex {
+  /* .d-flex {
     display: none!important;
-  }
+  } */
   .vantagens {
     gap: 1rem;
   }
