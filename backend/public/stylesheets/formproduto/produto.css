@@ -37,5 +37,6 @@ tr:nth-child(even) {
         width: initial;
         display: flex;
         flex-direction: column;
+        margin-bottom: 18.6rem;;
     }
 }

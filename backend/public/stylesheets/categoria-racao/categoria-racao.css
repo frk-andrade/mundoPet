@@ -6,10 +6,6 @@
   color: var(--primary-color-subtitle);
 }
 
-.banner-cachorro {
-  max-width: max-content;
-}
-
 .texto-cachorro {
   text-align: justify;
 }
