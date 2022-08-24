@@ -122,4 +122,4 @@ Esse projeto está sob licença do MIT. Veja o arquivo [LICENÇA](https://openso
 
 # Autores
 
-Flávio Benedini, Franklin Andrade, Luis Dandolini, Davi Silva, Vinicius Mendes,  e Thiago Oliveira.
+Flávio Benedini, Franklin Andrade, Luis Dandolini, Davi Silva, Vinicius Mendes, Marcos Andrade e Thiago Oliveira.
