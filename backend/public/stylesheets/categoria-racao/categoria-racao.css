@@ -49,6 +49,33 @@
   text-decoration: line-through;
 }
 
+@media(max-width: 425px) {
+  .container {
+    max-width: initial;
+    box-sizing: initial;
+    margin-left: initial;
+    margin-right: initial;
+    padding-left: initial;
+    padding-right: initial;
+  }
+  .lista-racao {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+  }
+  .produto-racao {
+    width: 200px;
+  } 
+
+  .produto-racao img {
+    height: 100px;
+  }
+
+  .produto-racao button {
+    padding: 0.8rem 2rem 0.8rem 2rem;
+  }
+}
+
 @media(max-width: 980px) {
   .lista-racao {
     display: grid;
