@@ -59,6 +59,8 @@
   text-align: center;
 
   cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .botao-comprar-produto:hover {

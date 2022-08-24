@@ -25,7 +25,7 @@
 }
 
 .produto-racao {
-  border: 2px solid;
+  border: 3px solid var(--primary-color-subtitle);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
