@@ -55,9 +55,9 @@
     padding-right: initial;
   }
   .lista-racao {
-    display: grid;
-    align-items: center;
-    grid-template-columns: 1fr 1fr;
+    display: grid !important;
+    align-items: center !important;
+    grid-template-columns: 1fr 1fr !important;
   }
   .produto-racao {
     width: 200px;
@@ -72,24 +72,18 @@
   }
 }
 
-@media(max-width: 980px) {
+@media(max-width: 768px) {
   .lista-racao {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media(max-width: 600px) {
-  .lista-racao {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: grid !important;
+    align-items: center !important;
+    grid-template-columns: 1fr 1fr !important;
   }
 }
 
 @media(max-width: 1024px) {
   .lista-racao {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 1rem;
   }
 }
