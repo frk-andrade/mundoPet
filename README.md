@@ -7,8 +7,6 @@ O site do Mundo Pet é uma aplicação full stack web e mobile construída duran
 
 A aplicação consiste na utilização de diversas ferramentas.
 
-Etapa 1 - Entrega do Wireframe (escopo da página main)
-
 # Tecnologias utilizadas 
 ## Back end
 - JavaScript
@@ -32,7 +30,6 @@ git clone https://github.com/frk-andrade/mundoPet.git
 cd backend
 
 # Instalar as dependências
-
 npm install
 
 # executar o projeto
@@ -41,7 +38,7 @@ npm run dev
 
 ## 🤝 Colaboradores
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
+DEVengers que contribuíram para este projeto:
 
 <table>
   <tr>
