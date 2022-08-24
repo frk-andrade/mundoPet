@@ -5,7 +5,7 @@
 
 O site do Mundo Pet é uma aplicação full stack web e mobile construída durante o curso de desenvolvimento Web Full Stack. Trata-se de um projeto integrador exigido pela Digital House para testar a aplicação prática do conteúdo ministrado.
 
-A aplicação consiste em aplicação de várias ferramentas.
+A aplicação consiste na utilização de diversas ferramentas.
 
 Etapa 1 - Entrega do Wireframe (escopo da página main)
 
