@@ -19,3 +19,9 @@
   max-width: 700px;
   color: var(--primary-color-subtitle);
 }
+
+@media(max-width: 1024px) {
+  .lojas {
+    justify-content: center;
+  }
+}
