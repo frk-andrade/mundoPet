@@ -128,6 +128,7 @@ input::-webkit-inner-spin-button {
     max-width: 1200px;
     box-sizing: border-box;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 .carrinho-finalizar {
@@ -158,4 +159,10 @@ input::-webkit-inner-spin-button {
 
 .botao-mais {
     color: #ff9100;
+}
+
+@media (max-width: 425px) {
+    .card {
+        width: 100vw;
+    }
 }
