@@ -103,6 +103,11 @@
   transition: 300ms;
 }
 
+.input-cadastro {
+  width: 300px;
+  border-radius: 4px;
+}
+
 @media (max-width: 425px) {
   .form {
     display: initial;
@@ -114,6 +119,11 @@
 
   .formulario-cadastro {
     margin: 0px !important;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .form-nome-produto {
